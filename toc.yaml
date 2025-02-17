@@ -1,0 +1,23 @@
+#  Name your file `toc.yaml`
+#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs-internal/writing?topic=writing-code-nav
+#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
+---
+toc:
+  properties:
+    subcollection: hcx-migration-vmware
+    href: /docs/hcx-migration-vmware
+    path: hcx-migration-vmware
+    audience: solution
+    category: solution_docs
+    content-type: deployment
+  # industry: industry-value # Replace
+    use-case: VirtualPrivateCloud # Replace
+   # compliance: compliance-value # Replaces
+    description: Deploying VMware HCX on IBM Cloud environment. # Replace
+    label: Deploying VMware HCX on IBM Cloud environment # Replace
+  entries:
+  - navgroup:
+      id: overview
+      topics:
+      - topic.md
+ 
