@@ -20,4 +20,8 @@ toc:
       id: overview
       topics:
       - topic.md
- 
+  - navgroup:
+      id: architecture
+      topics:
+      - hcx-vcs.md
+      - hcx-vcf.md
