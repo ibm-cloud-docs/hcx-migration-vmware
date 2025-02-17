@@ -27,29 +27,8 @@ This is a short description that introduces the content in this topic.
 ### HCX Overview
 {: #hcxoverview}
 
-
-This is an introductory sentence to this unordered list.
-
-Overview: VMware HCX etc. HCX options on IBM cloud.
-Pre-requisites, Introduction:
-Solution overview:    
-Diagram architecture
-  Client side
-  IBM Cloud side
-    VMware VCS.
-    Vmware VCF
-    Vmware VSS
-    VMware VPC VCF
-     Networking integrations
-      NSX design requirement at Client side
-      NSX design and architecture at IBM Cloud side.
-  Migration considerations:
-  Pre reqs to migrate
-  How to migrate?
-  Talk all 3 options of migration
-  References on IBM cloud & Broadcom
-
 VMware HCX on IBM Cloud: Overview
+
 VMware HCX (Hybrid Cloud Extension) on IBM Cloud is a powerful solution designed to simplify and automate the migration of VMware-based workloads between on-premises data centers and IBM Cloud. It enables enterprises to seamlessly extend, migrate, and modernize applications across hybrid cloud environments with minimal disruption.
 
 What is VMware HCX?
@@ -92,10 +71,8 @@ Businesses can leverage IBM Cloud as a secondary site for disaster recovery, ens
 4. Application Modernization
 Once in IBM Cloud, workloads can be modernized with IBM’s AI, Kubernetes, and automation services, enabling businesses to innovate faster.
 
-Why IBM Cloud for VMware HCX?
-Fully Managed VMware Solutions – IBM Cloud offers a native VMware experience with integrated HCX.
-Security and Compliance – IBM Cloud provides high security and industry compliance (e.g., HIPAA, GDPR).
-Global Reach – IBM’s worldwide data centers enable multi-region deployments.
-Hybrid Cloud Expertise – IBM’s deep expertise in hybrid cloud and AI enhances VMware workloads.
-Conclusion
-VMware HCX on IBM Cloud is a robust solution that simplifies workload migration, hybrid cloud expansion, and disaster recovery. It enables enterprises to seamlessly move VMware workloads to the cloud while maintaining security, scalability, and cost efficiency. By leveraging IBM Cloud’s infrastructure and HCX’s automation, businesses can modernize their IT operations while ensuring business continuity.
+Deployment Models:
+
+**IBM Cloud for VMware Solutions Dedicated:** A single-tenant model offering higher levels of isolation for enhanced security and compliance readiness. This model is ideal for organizations requiring dedicated resources and greater control over their environment. 
+VMWARE.COM
+**IBM Cloud for VMware Cloud Foundation (VCF):** Provides a fully integrated VMware software-defined data center (SDDC) stack, including vSphere, vSAN, NSX-T, and HCX, deployed on IBM Cloud's Virtual Private Cloud (VPC) infrastructure. This deployment supports both consolidated and standard architecture models, allowing flexibility based on organizational needs. 
