@@ -14,7 +14,7 @@ subcollection: hcx-migration-vmware
 
 
 # HCX on VCS 
-{: #overview}
+{: #vcs}
 
 This is a short description that introduces the content in this topic.
 {: shortdesc}
