@@ -58,7 +58,8 @@ HCX’s Layer 2 network extension allows businesses to extend on-premises VLANs 
 5. Simplified Operations and Automation
 HCX simplifies workload migration with an intuitive interface, reducing manual efforts and operational complexity. It automates VM movement, ensuring faster cloud adoption without impacting productivity.
 
-Use Cases
+### Use Cases
+{: #usecases}
 1. Cloud Migration
 Enterprises can migrate large-scale VMware workloads to IBM Cloud without re-architecting applications. This accelerates digital transformation while maintaining operational consistency.
 
@@ -71,7 +72,8 @@ Businesses can leverage IBM Cloud as a secondary site for disaster recovery, ens
 4. Application Modernization
 Once in IBM Cloud, workloads can be modernized with IBM’s AI, Kubernetes, and automation services, enabling businesses to innovate faster.
 
-Deployment Models:
+### Deployment Models:
+{: #deploymentmodel}
 
 **IBM Cloud for VMware Solutions Dedicated:** A single-tenant model offering higher levels of isolation for enhanced security and compliance readiness. This model is ideal for organizations requiring dedicated resources and greater control over their environment. 
 VMWARE.COM
