@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-20"
 
 keywords:
 
@@ -96,23 +96,36 @@ VMware HCX (Hybrid Cloud Extension) is a powerful migration technology designed 
     * vSphere 6.0 or later (recommended vSphere 6.5 and above)
     * VMware HCX installed and licensed
     * VMware NSX
+    * Meet the minimum compute requirements for HCX components as per below.
+
+    https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-9/vmware-hcx-user-guide-4-9/preparing-for-hcx-installations/system-requirements-for-hcx.html
 2.  **Network Connectivity**
     * VPN or Direct Connect (IBM Cloud Classic or IBM Cloud VPC)
     * Public IPs (if required for public-facing workloads)
     * Ensure proper firewall and security policies
+
+    https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-9/vmware-hcx-user-guide-4-9/preparing-for-hcx-installations/network-port-and-protocol-requirements.html
 3.  **HCX Deployment Resources**
-    * HCX Manager installed on-premises
+    * HCX Connector installed on-premises
     * Sufficient resources (compute, storage, and network bandwidth) for migration
+
+### Prepare for HCX Installations:  
+
+https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-9/vmware-hcx-user-guide-4-9/preparing-for-hcx-installations/system-requirements-for-hcx.html 
 
 ### IBM Cloud Requirements
 
-1.  **IBM Cloud VMware Solutions (ICVS)**
-    * Subscription to IBM Cloud VMware Solutions
-    * HCX Advanced or Enterprise license activated on IBM Cloud
+https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-hcx-con 
+
+1.  **IBM Cloud VMware Solutions**
+    * For choosing VMware Cloud Foundation for Classic - Automated with NSX-T™ instances, HCX is supported for NSX-T 3.1 or later and for VMware vSphere® 7.
+    * For choosing VCF for Classic - Automated with NSX-V instances (VMware Solutions V4.7 and earlier), HCX is supported for vSphere 6.7.
 2.  **IBM Cloud Network Configurations**
     * IBM Cloud Direct Link for private, high-speed connectivity
     * VPN for site-to-site secure connection
-    * NSX-T or NSX-V integration for network segmentation and security
+    * NSX-T integration for network segmentation and security
+
+https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-hcx-xconnectivity
 
 ## **Diagram Architecture**
 
@@ -127,14 +140,14 @@ Below is a high-level architecture showing how VMware HCX facilitates migration 
 * Install HCX Connector in the on-premises VMware environment.
 * Configure VPN or Direct Link for secure connectivity.
 * Validate the VM hardware compatibility for IBM Cloud VMware Solutions.
-* Set up HCX Network Extensions to ensure seamless L2 networking.
+* Set up HCX Network Extensions for extending L2 networking if applicable.
 
 ## IBM Cloud Side Configuration
 
-* Deploy IBM Cloud VMware Solutions and configure vCenter access.
+* Deploy IBM Cloud VMware Solutions and size your compute clusters.
 * Install HCX Cloud Manager in IBM Cloud VMware environment.
 * Establish connectivity with the on-premises HCX instance.
-* Ensure that IBM Cloud Direct Link or VPN is set up for performance optimization.
+* Ensure that IBM Cloud Direct Link or VPN is set up for connectivity.
 
 ## Networking Integrations
 
@@ -144,7 +157,7 @@ Below is a high-level architecture showing how VMware HCX facilitates migration 
 2.  **Site-to-Site VPN:** Good for secure, encrypted migration over the internet.
 3.  **NSX-T/NSX-V Integration:** Enables Layer 2 network extension and security policies.
 
-### Addressing Networking Challenges
+### Additonal Networking Considerations
 
 * Extend VLANs using HCX Network Extension to avoid re-IPing workloads.
 * Use NSX DFW (Distributed Firewall) for security and micro-segmentation.
@@ -155,6 +168,7 @@ Below is a high-level architecture showing how VMware HCX facilitates migration 
 ### A. Pre-Requisites to Migrate
 
 * Ensure vCenter and ESXi versions are compatible with HCX.
+* Establish secure connectivity between on-prem and IBM Cloud.
 * Validate application dependencies before migration.
 * Set up monitoring and alerts for tracking migration performance.
 * Ensure sufficient storage & compute resources in IBM Cloud VMware.
@@ -162,10 +176,9 @@ Below is a high-level architecture showing how VMware HCX facilitates migration 
 ### B. How to Migrate?
 
 1.  Deploy HCX Connector on-premises and HCX Cloud Manager in IBM Cloud.
-2.  Establish secure connectivity between on-prem and IBM Cloud.
-3.  Set up HCX Network Extension to preserve IP addressing.
-4.  Select migration type (live, bulk, cold, replication-assisted) based on business needs.
-5.  Execute migration via HCX vMotion or Replication-Assisted vMotion.
+2.  Set up HCX Network Extension to preserve IP addressing if applicable.
+3.  Select migration type (live, bulk, cold, replication-assisted) based on business needs.
+4.  Execute migration via HCX vMotion or Replication-Assisted vMotion.
 
 ### Migration Options with VMware HCX
 
