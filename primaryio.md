@@ -13,8 +13,8 @@ subcollection: hcx-migration-vmware
 {{site.data.keyword.attribute-definition-list}}
 
 
-# primaryio on VCF
-{: #VCF}
+# Primaryio on IBM Cloud VMware
+{: #primaryio}
 
 This is a short description that introduces the content in this topic.
 {: shortdesc}

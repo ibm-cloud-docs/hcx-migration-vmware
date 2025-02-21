@@ -13,8 +13,8 @@ subcollection: hcx-migration-vmware
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Veeam on VCF
-{: #VCF}
+# Veeam on IBM Cloud VMware
+{: #veeam}
 
 This is a short description that introduces the content in this topic.
 {: shortdesc}

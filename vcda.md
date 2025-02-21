@@ -13,8 +13,8 @@ subcollection: hcx-migration-vmware
 {{site.data.keyword.attribute-definition-list}}
 
 
-# VCDA on VCF
-{: #VCF}
+# VCDA on IBM Cloud VMware
+{: #vcda}
 
 This is a short description that introduces the content in this topic.
 {: shortdesc}

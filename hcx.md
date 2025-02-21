@@ -13,8 +13,8 @@ subcollection: hcx-migration-vmware
 {{site.data.keyword.attribute-definition-list}}
 
 
-# HCX on VCS 
-{: #vcs}
+# HCX on IBM Cloud VMware 
+{: #hcx}
 
 This is a short description that introduces the content in this topic.
 {: shortdesc}
