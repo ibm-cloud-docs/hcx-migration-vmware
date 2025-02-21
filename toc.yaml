@@ -13,8 +13,8 @@ toc:
   # industry: industry-value # Replace
     use-case: VirtualPrivateCloud # Replace
    # compliance: compliance-value # Replaces
-    description: Deploying VMware HCX on IBM Cloud environment. # Replace
-    label: Deploying VMware HCX on IBM Cloud environment # Replace
+    description: Migrating to IBM Cloud environment. # Replace
+    label: Migrating to IBM Cloud environment # Replace
   entries:
   - navgroup:
       id: overview
