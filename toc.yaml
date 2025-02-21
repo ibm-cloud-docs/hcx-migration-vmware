@@ -13,8 +13,8 @@ toc:
   # industry: industry-value # Replace
     use-case: VirtualPrivateCloud # Replace
    # compliance: compliance-value # Replaces
-    description: Migrating to IBM Cloud environment. # Replace
-    label: Migrating to IBM Cloud environment # Replace
+    description: VMware Migration options to  IBM Cloud environment. # Replace
+    label: VMware Migration options to IBM Cloud environment # Replace
   entries:
   - navgroup:
       id: overview
@@ -23,5 +23,8 @@ toc:
   - navgroup:
       id: architecture
       topics:
-      - hcx-vcs.md
-      - hcx-vcf.md
+      - hcx.md
+      - veeam.md
+      - zerto.md
+      - vcda.md
+      - primaryio.md

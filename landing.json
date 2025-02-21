@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "title": "Migration to  IBM Cloud environment",
-  "introduction": "Migration to IBM Cloud environment",
+  "title": "VMware workloads migration options to IBM Cloud environment",
+  "introduction": "VMware workloads migration options to IBM Cloud environment",
   "product_page": "https://ibm.com/cloud/solution-page",
   "deployment_url": "https://cloud.ibm.com/catalog/content/url/to/deploy",
   "section_topics": {
