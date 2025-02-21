@@ -13,7 +13,7 @@ subcollection: hcx-migration-vmware
 {{site.data.keyword.attribute-definition-list}}
 
 
-# HCX on VCF
+# VCDA on VCF
 {: #VCF}
 
 This is a short description that introduces the content in this topic.
