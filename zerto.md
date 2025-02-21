@@ -13,7 +13,7 @@ subcollection: hcx-migration-vmware
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Zerto on IBM Cloud VMware
+## Zerto on IBM Cloud VMware
 {: #zerto}
 
 This is a short description that introduces the content in this topic.

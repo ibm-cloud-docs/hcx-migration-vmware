@@ -12,7 +12,6 @@ subcollection: hcx-migration-vmware
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # Primaryio on IBM Cloud VMware
 {: #primaryio}
 

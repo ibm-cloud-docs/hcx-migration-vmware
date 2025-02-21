@@ -12,7 +12,6 @@ subcollection: hcx-migration-vmware
 
 {{site.data.keyword.attribute-definition-list}}
 
-
 # VCDA on IBM Cloud VMware
 {: #vcda}
 
