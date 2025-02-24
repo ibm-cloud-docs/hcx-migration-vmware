@@ -80,37 +80,37 @@ Once in IBM Cloud, workloads can be modernized with IBM’s AI, Kubernetes, and 
 
 **IBM Cloud for VMware Cloud Foundation (VCF):** Provides a fully integrated VMware software-defined data center (SDDC) stack, including vSphere, vSAN, NSX-T, and HCX, deployed on IBM Cloud's Virtual Private Cloud (VPC) infrastructure. This deployment supports both consolidated and standard architecture models, allowing flexibility based on organizational needs. 
 
-# Key Components of VMware HCX Network Architecture
+## Key Components of VMware HCX Network Architecture
 
 A successful HCX deployment relies on several key components that ensure secure, efficient, and optimized migration of workloads:
 
-## HCX Manager
+### HCX Manager
 - Acts as the central control point for orchestrating the deployment and management of HCX services across both source and destination sites.
 
-## Interconnect Service
+### Interconnect Service
 - Establishes a secure, optimized transport layer between environments.
 - Facilitates encrypted data transfer with WAN optimization for improved performance.
 
-## Network Extension Service
+### Network Extension Service
 - Extends Layer 2 networks across sites.
 - Allows virtual machines (VMs) to retain their IP and MAC addresses, ensuring minimal disruption.
 
-## WAN Optimization Service
+### WAN Optimization Service
 - Enhances data transfer efficiency by reducing bandwidth consumption.
 - Uses techniques such as deduplication and compression to improve throughput.
 
-## Replication Service
+### Replication Service
 - Manages the replication of VM data to ensure consistency.
 - Supports various migration types, including cold, live, and bulk migrations.
 
-# Pre-Requisites for Migration
+## Pre-Requisites for Migration
 
 For a successful HCX-based migration, organizations must meet specific prerequisites both on-premises and in IBM Cloud.
 
 ## On-Premises Requirements (Client-Side)
 
 ### VMware Environment
-- vSphere 6.0 or later (recommended vSphere 6.5 and above).
+- Supported vSphere environment.
 - VMware HCX installed and licensed.
 - VMware NSX deployed for network virtualization (if required).
 
@@ -125,11 +125,34 @@ For a successful HCX-based migration, organizations must meet specific prerequis
 
 ## IBM Cloud Requirements
 
-### IBM Cloud VMware Solutions (ICVS)
+### IBM Cloud VMware Solutions
 - Active subscription to IBM Cloud VMware Solutions.
-- HCX Advanced or Enterprise license activated on IBM Cloud.
+- For NSX-T instances, HCX requires you to use one of the following licenses: NSX Data Center SP Base Professional, Advanced or Enterprise Plus (E+) from IBM Cloud, or an equivalent BYOL license.
+- For NSX-V instances, HCX requires you to use one of the following licenses: NSX Advanced or NSX Enterprise from IBM Cloud, or an equivalent BYOL license.
+- As an HCX customer, you are limited to three simultaneous connections.
+- HCX supported platforms
+    - vSphere v5.1,v5.5
+    - vSphere 6.0,6.5,6.7
+    - vSphere 7.0
+    - vSphere 8.0
 
 ### IBM Cloud Network Configurations
 - IBM Cloud Direct Link for private, high-speed connectivity.
 - VPN for secure site-to-site communication.
 - NSX-T or NSX-V integration for network segmentation and security enforcement.
+
+# VMware HCX Architectural Decisions
+
+| **Category**          | **Decision Factor**               | **Options**                                                                 | **Recommendations & Considerations**                                                                 |
+|-----------------------|------------------------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| **Networking**        | **Connectivity Type**             | - HCX over VPN (IPsec/SSL VPN) <br> - HCX over IBM Cloud Direct Link        | **Direct Link**: Preferred for production workloads (high bandwidth, low latency, SLA-backed). <br> **VPN**: Suitable for PoC, dev/test, or small-scale migrations. |
+|                       | **Bandwidth Requirements**        | - VPN (limited by ISP bandwidth) <br> - Direct Link (dedicated bandwidth)  | Use Direct Link for large data volumes (>1 Gbps). VPN may require WAN optimization for throughput.    |
+|                       | **Latency Tolerance**             | - VPN (higher latency) <br> - Direct Link (low latency)                    | Direct Link ensures sub-10ms latency for latency-sensitive workloads (e.g., databases, real-time apps). |
+| **Compute**           | **HCX Resource Allocation**       | - On-premises HCX Manager <br> - Cloud-side HCX (IBM Cloud VMware Solutions)| Allocate sufficient compute/storage for HCX appliances (4 vCPU, 16GB RAM minimum). Scale for bulk migrations. |
+| **Migration Type**    | **Method Selection**              | - HCX vMotion <br> - Replication-Assisted vMotion (RAV) <br> - Bulk Migration <br> - Cold Migration | **HCX vMotion**: Zero downtime; ideal for single VM live migration. <br> **RAV**: Near-zero downtime; uses replica copy for production workloads. <br> **Bulk Migration**: Scheduled downtime; best for non-critical large-scale migrations. <br> **Cold Migration**: High downtime; use for non-production or maintenance windows. |
+|                       | **Data Volume**                   | - Bulk Migration <br> - Incremental Sync                                   | Bulk migration for large datasets. Replication service handles incremental syncs for consistency.     |
+| **HCX Deployment**    | **Deployment Model**              | - HCX Advanced <br> - HCX Enterprise                                       | HCX Enterprise recommended for advanced features (e.g., stretched networks, mobility groups).         |
+| **Security**          | **Data Encryption**               | - VPN (IPsec/SSL encryption) <br> - Direct Link (private encryption)       | Both options encrypt data in transit. Direct Link avoids public internet exposure.                     |
+|                       | **Compliance**                    | - HIPAA/GDPR/PCI-DSS                                                       | Direct Link meets strict compliance needs (private backbone). VPN requires additional audit controls.  |
+| **Network Extension** | **Layer 2 Stretch**               | - Network Extension Service (retain IP/MAC) <br> - Re-IP workflows         | Use Network Extension Service for zero IP changes. Re-IP only if network overlap exists.              |
+| **WAN Optimization**  | **Bandwidth Efficiency**          | - Deduplication <br> - Compression                                         | Enable WAN optimization for limited bandwidth. Disable if network bandwidth is sufficient.            |
