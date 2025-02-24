@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-02-21"
+lastupdated: "2025-02-24"
 
 keywords:
 
@@ -79,3 +79,57 @@ Once in IBM Cloud, workloads can be modernized with IBM’s AI, Kubernetes, and 
 
 
 **IBM Cloud for VMware Cloud Foundation (VCF):** Provides a fully integrated VMware software-defined data center (SDDC) stack, including vSphere, vSAN, NSX-T, and HCX, deployed on IBM Cloud's Virtual Private Cloud (VPC) infrastructure. This deployment supports both consolidated and standard architecture models, allowing flexibility based on organizational needs. 
+
+# Key Components of VMware HCX Network Architecture
+
+A successful HCX deployment relies on several key components that ensure secure, efficient, and optimized migration of workloads:
+
+## HCX Manager
+- Acts as the central control point for orchestrating the deployment and management of HCX services across both source and destination sites.
+
+## Interconnect Service
+- Establishes a secure, optimized transport layer between environments.
+- Facilitates encrypted data transfer with WAN optimization for improved performance.
+
+## Network Extension Service
+- Extends Layer 2 networks across sites.
+- Allows virtual machines (VMs) to retain their IP and MAC addresses, ensuring minimal disruption.
+
+## WAN Optimization Service
+- Enhances data transfer efficiency by reducing bandwidth consumption.
+- Uses techniques such as deduplication and compression to improve throughput.
+
+## Replication Service
+- Manages the replication of VM data to ensure consistency.
+- Supports various migration types, including cold, live, and bulk migrations.
+
+# Pre-Requisites for Migration
+
+For a successful HCX-based migration, organizations must meet specific prerequisites both on-premises and in IBM Cloud.
+
+## On-Premises Requirements (Client-Side)
+
+### VMware Environment
+- vSphere 6.0 or later (recommended vSphere 6.5 and above).
+- VMware HCX installed and licensed.
+- VMware NSX deployed for network virtualization (if required).
+
+### Network Connectivity
+- VPN or Direct Connect (IBM Cloud Classic or IBM Cloud VPC) for secure communication.
+- Public IPs (if required for public-facing workloads).
+- Proper firewall and security policies configured to allow necessary traffic.
+
+### HCX Deployment Resources
+- HCX Manager installed on-premises.
+- Sufficient resources (compute, storage, and network bandwidth) available to support migration activities.
+
+## IBM Cloud Requirements
+
+### IBM Cloud VMware Solutions (ICVS)
+- Active subscription to IBM Cloud VMware Solutions.
+- HCX Advanced or Enterprise license activated on IBM Cloud.
+
+### IBM Cloud Network Configurations
+- IBM Cloud Direct Link for private, high-speed connectivity.
+- VPN for secure site-to-site communication.
+- NSX-T or NSX-V integration for network segmentation and security enforcement.
