@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-02-24"
+lastupdated: "2025-02-26"
 
 keywords:
 
@@ -113,11 +113,16 @@ For a successful HCX-based migration, organizations must meet specific prerequis
 - Supported vSphere environment.
 - VMware HCX installed and licensed.
 - VMware NSX deployed for network virtualization (if required).
+- [System Requirements for HCX](https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-9/vmware-hcx-user-guide-4-9/preparing-for-hcx-installations/system-requirements-for-hcx.html)
 
 ### Network Connectivity
 - VPN or Direct Connect (IBM Cloud Classic or IBM Cloud VPC) for secure communication.
 - Public IPs (if required for public-facing workloads).
 - Proper firewall and security policies configured to allow necessary traffic.
+- [Network Port Requirements](https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-9/vmware-hcx-user-guide-4-9/preparing-for-hcx-installations/network-port-and-protocol-requirements.html)
+- To extend on-premises networks to IBM Cloud.We must connect to a vSphere Distributed Switch (vDS) at on-premises.
+
+
 
 ### HCX Deployment Resources
 - HCX Manager installed on-premises.
@@ -129,7 +134,6 @@ For a successful HCX-based migration, organizations must meet specific prerequis
 - Active subscription to IBM Cloud VMware Solutions.
 - For NSX-T instances, HCX requires you to use one of the following licenses: NSX Data Center SP Base Professional, Advanced or Enterprise Plus (E+) from IBM Cloud, or an equivalent BYOL license.
 - For NSX-V instances, HCX requires you to use one of the following licenses: NSX Advanced or NSX Enterprise from IBM Cloud, or an equivalent BYOL license.
-- As an HCX customer, you are limited to three simultaneous connections.
 - HCX supported platforms
     - vSphere v5.1,v5.5
     - vSphere 6.0,6.5,6.7
@@ -141,7 +145,7 @@ For a successful HCX-based migration, organizations must meet specific prerequis
 - VPN for secure site-to-site communication.
 - NSX-T or NSX-V integration for network segmentation and security enforcement.
 
-# VMware HCX Architectural Decisions
+## VMware HCX Architectural Decisions
 
 | **Category**          | **Decision Factor**               | **Options**                                                                 | **Recommendations & Considerations**                                                                 |
 |-----------------------|------------------------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
