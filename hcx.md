@@ -12,18 +12,15 @@ subcollection: hcx-migration-vmware
 {{site.data.keyword.attribute-definition-list}}
 
 # HCX on IBM Cloud VMware
-
-{: \#hcx}
+{: #hcx}
 
 This is a short description that introduces the content in this topic. {: shortdesc}
 
 ## IBM Cloud VMWare overview
-
-{: \#ibmcloud-overview}
+{: #ibmcloud-overview}
 
 ### HCX Overview
-
-{: \#hcxoverview}
+{: #hcxoverview}
 
 VMware HCX on IBM Cloud: Overview
 
@@ -45,8 +42,7 @@ HCX vMotion – Live migration of virtual machines (VMs) without downtime. HCX B
 4.  Simplified Operations and Automation HCX simplifies workload migration with an intuitive interface, reducing manual efforts and operational complexity. It automates VM movement, ensuring faster cloud adoption without impacting productivity.
 
 ### Use Cases
-
-{: \#usecases}
+{: #usecases}
 
 1.  Cloud Migration Enterprises can migrate large-scale VMware workloads to IBM Cloud without re-architecting applications. This accelerates digital transformation while maintaining operational consistency.
 2.  Data Center Extension HCX enables organizations to extend their existing VMware environment to IBM Cloud, providing additional capacity without upfront hardware investment.
@@ -54,8 +50,7 @@ HCX vMotion – Live migration of virtual machines (VMs) without downtime. HCX B
 4.  Application Modernization Once in IBM Cloud, workloads can be modernized with IBM’s AI, Kubernetes, and automation services, enabling businesses to innovate faster.
 
 ### Deployment Models:
-
-{: \#deploymentmodel}
+{: #deploymentmodel}
 
 **IBM Cloud for VMware Solutions Dedicated:** A single-tenant model offering higher levels of isolation for enhanced security and compliance readiness. This model is ideal for organizations requiring dedicated resources and greater control over their environment.
 
