@@ -50,7 +50,6 @@ b. Architecture of Veeam on IBM Cloud VCF Side
 
 Within the IBM Cloud VCF environment, Veeam components are deployed to integrate seamlessly with the client's VBR server. This includes setting up Veeam proxies within the management domain of the VCF architecture. These proxies handle data processing tasks, facilitating efficient backup and replication operations. Backup repositories can also be established within the IBM Cloud VCF environment to store backup data securely. This setup ensures that data protection operations are optimized and aligned with the VCF infrastructure.
 
-[ondeck.console.cloud.ibm.com](https://ondeck.console.cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-con&utm_source=chatgpt.com)
 
 c. Migration Considerations and Requirements
 
@@ -67,36 +66,18 @@ Migrating VMware workloads to IBM Cloud using Veeam provides a robust and flexib
 
 ## E. References**
 
--   Veeam on IBM Cloud:
-
-    [ibm.com](https://www.ibm.com/products/veeam?utm_source=chatgpt.com)
-
 -   IBM Cloud Docs: Veeam Deployment on VMware Cloud Foundation:
 
-    [ondeck.console.cloud.ibm.com](https://ondeck.console.cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-con&utm_source=chatgpt.com)
-
+    [ondeck.console.cloud.ibm.com](https://ondeck.console.cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-con)
 -   IBM Cloud Docs: Veeam Replication Connectivity on VMware Cloud Foundation:
 
-    [ondeck.console.cloud.ibm.com](https://ondeck.console.cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-xconnectivity&utm_source=chatgpt.com)
+    [ondeck.console.cloud.ibm.com](https://ondeck.console.cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-xconnectivity)
 
--   IBM Cloud Docs: Deploying IBM Cloud Resiliency Design for Veeam on VMware:
-
-    [ondeck.console.cloud.ibm.com](https://ondeck.console.cloud.ibm.com/docs/vmware-cross-region-dr?topic=vmware-cross-region-dr-deploy-veeam-arch&utm_source=chatgpt.com)
 
 -   IBM Cloud Docs: Veeam Backup Service for VMware Cloud Foundation:
 
-    [cloud.ibm.com](https://cloud.ibm.com/docs/vmware-service?topic=vmware-service-tenant-veeam&utm_source=chatgpt.com)
+    [cloud.ibm.com](https://cloud.ibm.com/docs/vmware-service?topic=vmware-service-tenant-veeam)
 
--   Veeam Knowledge Base: Support for IBM Cloud for VMware Solutions:
+-   Veeam on IBM Cloud [Veeam on IBM Cloud](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-con)
 
-    [veeam.com](https://www.veeam.com/kb4006?utm_source=chatgpt.com)
-
--   IBM Cloud Migration Tools:
-
-    [github.com](https://github.com/IBM-Cloud/vpc-migration-tools?utm_source=chatgpt.com)
-
--   IBM Cloud Migration Services:
-
-    [ibm.com](https://www.ibm.com/cloud/migrate?utm_source=chatgpt.com)
-
-https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-xconnectivity
+-   Veeam VCF network connectivity[Veeam Network connectivity](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-xconnectivity)
