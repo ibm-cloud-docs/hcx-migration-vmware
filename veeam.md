@@ -14,31 +14,14 @@ subcollection: hcx-migration-vmware
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Migrating VMware Workloads to IBM Cloud Using Veeam
+# Migrating VMware Workloads Using Veeam
 {: #veeam}
-
-
-1.  Overview of Veeam on IBM cloud.
-2.  Deployment of Veeam for IBM cloud Classic environment architecture( please provide some description and references to what is available on IBM cloud).
-    1.  Architecture of Veeam on Client side.
-    2.  Architecture of Veeam on IBM Cloud VCS side.
-    3.  Migration considerations requirements
-3.  Deployment of Veeam for IBM cloud VCF architecture( please provide some description and references to what is available on IBM cloud).
-    1.  Architecture of Veeam on Client side.
-    2.  Architecture of Veeam on IBM Cloud VCF side.
-    3.  Migration considerations requirements
-4.  Conclusions.
-5.  References from IBM Cloud for VCS classic
-
-## Veeam overview
-
-### A. Overview of Veeam on IBM Cloud
 
 Veeam on IBM Cloud is a third-party add-on service that seamlessly integrates with IBM Cloud for VMware Solutions, providing robust backup and recovery capabilities for VMware workloads. This service ensures high availability and offers recovery points for critical applications and data, including enterprise solutions like Oracle and SAP HANA. By leveraging Veeam's integration, businesses can achieve rapid and reliable restoration of files, individual items, or entire virtual machines (VMs) across on-premises, hybrid, and public cloud environments. Additionally, Veeam facilitates the efficient movement of backup files to cost-effective IBM Cloud Object Storage, optimizing storage costs without compromising data accessibility.
 
-[ibm.com](https://www.ibm.com/products/veeam?utm_source=chatgpt.com)
+[Veeam on IBM Cloud](https://www.ibm.com/products/veeam)
 
-### B. Deployment of Veeam in IBM Cloud Classic Environment
+## B. Deployment of Veeam in IBM Cloud Classic Environment
 
 a. Architecture of Veeam on Client Side
 
@@ -57,7 +40,7 @@ When planning a migration to IBM Cloud Classic using Veeam, consider the followi
 -   Compatibility: Verify that the on-premises VMware environment is compatible with IBM Cloud's VMware offerings to ensure a smooth migration process.
 -   Downtime Planning: Develop a strategy to minimize downtime during the migration, possibly by leveraging Veeam's replication capabilities to synchronize data before cutting over to the new environment.
 
-### C. Deployment of Veeam in IBM Cloud VMware Cloud Foundation (VCF) Environment**
+## C. Deployment of Veeam in IBM Cloud VMware Cloud Foundation (VCF) Environment**
 
 a. Architecture of Veeam on Client Side
 
@@ -78,11 +61,11 @@ Key considerations for migrating to IBM Cloud VCF using Veeam include:
 -   Integration Testing: Conduct thorough testing to validate the integration between on-premises Veeam components and the IBM Cloud VCF infrastructure, ensuring compatibility and performance standards are achieved.
 -   Data Consistency: Utilize Veeam's replication features to maintain data consistency during the migration process, reducing the risk of data loss or corruption.
 
-### D. Conclusions
+## D. Conclusions
 
 Migrating VMware workloads to IBM Cloud using Veeam provides a robust and flexible solution for enterprises seeking to enhance their data protection and disaster recovery capabilities. By leveraging Veeam's seamless integration with IBM Cloud's VMware offerings, businesses can achieve high availability, secure backup, and efficient recovery of critical applications and data. Careful planning and consideration of network configurations, resource allocation, and compatibility are essential to ensure a smooth and successful migration process.
 
-### E. References**
+## E. References**
 
 -   Veeam on IBM Cloud:
 
