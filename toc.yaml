@@ -19,7 +19,7 @@ toc:
   - navgroup:
       id: overview
       topics:
-      - topic.md
+      - overview.md
   - navgroup:
       id: architecture
       topics:
