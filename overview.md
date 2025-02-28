@@ -13,17 +13,13 @@ subcollection: hcx-migration-vmware
 
 # Overview
 
-{: \#overview}
+{: #overview}
 
 This is a short description that introduces the content in this topic. {: shortdesc}
 
 ## IBM Cloud VMWare overview
 
-{: \#ibmcloud-overview}
-
-### HCX Overview
-
-{: \#hcxoverview}
+{: #ibmcloud-overview}
 
 Introduction
 
@@ -35,7 +31,7 @@ Migration Approaches
 
 Each of the following migration methods offers unique advantages, addressing different use cases such as workload mobility, disaster recovery, data replication, and cost efficiency.
 
-A. VMware HCX – Enterprise-Grade Live Migration
+## A. VMware HCX – Enterprise-Grade Live Migration
 
 VMware HCX (Hybrid Cloud Extension) is a purpose-built solution designed to simplify workload migration and interconnectivity between on-premises data centers and IBM Cloud. It enables live migrations without downtime, making it ideal for businesses that require continuous availability.
 
@@ -51,7 +47,7 @@ Offers disaster recovery capabilities to minimize risks.
 
 Ideal for companies requiring long-term hybrid cloud strategies.
 
-B. Veeam – Backup & Replication for Data Protection
+## B. Veeam – Backup & Replication for Data Protection
 
 Veeam is an industry leader in backup, replication, and disaster recovery. Organizations leveraging Veeam can backup on-premises VMware environments and restore them directly into IBM Cloud.
 
@@ -65,7 +61,7 @@ Ransomware protection through immutable storage and encrypted backups.
 
 Works well for enterprises that require a backup-first approach before migration.
 
-C. Zerto – Continuous Data Protection & Disaster Recovery
+##  C. Zerto – Continuous Data Protection & Disaster Recovery
 
 Zerto specializes in disaster recovery and workload mobility by offering continuous data replication with near-zero downtime. This solution is well-suited for organizations requiring high availability and resilience.
 
@@ -79,7 +75,7 @@ Works across multi-cloud and hybrid environments, giving businesses flexibility.
 
 Best for companies with strict RTO/RPO requirements.
 
-D. VMware Cloud Director Availability (VCDA) – Native VMware Cloud Migration
+##  D. VMware Cloud Director Availability (VCDA) – Native VMware Cloud Migration
 
 VCDA is a VMware-native migration tool designed for cloud service providers and enterprises using VMware Cloud Director on IBM Cloud. It offers an integrated approach for disaster recovery and migration.
 
@@ -93,7 +89,7 @@ Offers self-service capabilities for enterprises to manage their workloads.
 
 Recommended for businesses already using VMware Cloud Director.
 
-E. PrimaryIO – Optimized VMware Migration with Cost Efficiency
+## E. PrimaryIO – Optimized VMware Migration with Cost Efficiency
 
 PrimaryIO offers a unique approach to workload migration and disaster recovery, focusing on reducing data transfer costs and accelerating time to cloud.
 
