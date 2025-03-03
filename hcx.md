@@ -22,7 +22,7 @@ This is a short description that introduces the content in this topic. {: shortd
 ### HCX Overview
 {: #hcxoverview}
 
-VMware HCX on IBM Cloud: Overview
+VMware HCX on IBM Cloud: [Overview](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
 
 VMware HCX (Hybrid Cloud Extension) on IBM Cloud is a powerful solution designed to simplify and automate the migration of VMware-based workloads between on-premises data centers and IBM Cloud. It enables enterprises to seamlessly extend, migrate, and modernize applications across hybrid cloud environments with minimal disruption.
 
@@ -32,9 +32,14 @@ When deployed on IBM Cloud, VMware HCX facilitates the movement of workloads fro
 
 Key Features and Benefits
 
-1.  Seamless and Live Workload Migration VMware HCX on IBM Cloud supports multiple migration types, including:
+Seamless and Live Workload Migration VMware HCX on IBM Cloud supports multiple migration types, including:
 
-HCX vMotion – Live migration of virtual machines (VMs) without downtime. HCX Bulk Migration – Scheduled migration of multiple VMs with minimal disruption. HCX Replication-Assisted vMotion (RAV) – Combines replication and vMotion for efficient migration. HCX Cold Migration – Moves powered-off VMs in bulk. These capabilities allow organizations to move workloads to the cloud without major reconfiguration or performance impact.
+- HCX vMotion – Live migration of virtual machines (VMs) without downtime. 
+- HCX Bulk Migration – Scheduled migration of multiple VMs with minimal disruption. 
+- HCX Replication-Assisted vMotion (RAV) – Combines replication and vMotion for efficient migration. 
+- HCX Cold Migration – Moves powered-off VMs in bulk. 
+
+These capabilities allow organizations to move workloads to the cloud without major reconfiguration or performance impact.
 
 1.  Hybrid Cloud Mobility HCX provides an automated and secure extension of VMware environments between on-premises data centers and IBM Cloud. It creates high-performance, encrypted network tunnels between environments, enabling workload mobility without network reconfiguration.
 2.  Disaster Recovery and Business Continuity With HCX Disaster Recovery (HCX DR), organizations can protect their applications by replicating workloads between on-premises and IBM Cloud. This ensures business continuity and minimizes downtime during unplanned outages.
@@ -49,85 +54,52 @@ HCX vMotion – Live migration of virtual machines (VMs) without downtime. HCX B
 3.  Disaster Recovery Businesses can leverage IBM Cloud as a secondary site for disaster recovery, ensuring business continuity in case of on-premises failures.
 4.  Application Modernization Once in IBM Cloud, workloads can be modernized with IBM’s AI, Kubernetes, and automation services, enabling businesses to innovate faster.
 
-### Deployment Models:
+### Deployment Models on IBM Cloud:
 {: #deploymentmodel}
 
 **IBM Cloud for VMware Solutions Dedicated:** A single-tenant model offering higher levels of isolation for enhanced security and compliance readiness. This model is ideal for organizations requiring dedicated resources and greater control over their environment.
 
 **IBM Cloud for VMware Cloud Foundation (VCF):** Provides a fully integrated VMware software-defined data center (SDDC) stack, including vSphere, vSAN, NSX-T, and HCX, deployed on IBM Cloud's Virtual Private Cloud (VPC) infrastructure. This deployment supports both consolidated and standard architecture models, allowing flexibility based on organizational needs.
 
-## Key Components of VMware HCX Network Architecture
+**HCX supported platforms :** 
 
-A successful HCX deployment relies on several key components that ensure secure, efficient, and optimized migration of workloads:
-
-### HCX Manager
-
--   Acts as the central control point for orchestrating the deployment and management of HCX services across both source and destination sites.
-
-### Interconnect Service
-
--   Establishes a secure, optimized transport layer between environments.
--   Facilitates encrypted data transfer with WAN optimization for improved performance.
-
-### Network Extension Service
-
--   Extends Layer 2 networks across sites.
--   Allows virtual machines (VMs) to retain their IP and MAC addresses, ensuring minimal disruption.
-
-### WAN Optimization Service
-
--   Enhances data transfer efficiency by reducing bandwidth consumption.
--   Uses techniques such as deduplication and compression to improve throughput.
-
-### Replication Service
-
--   Manages the replication of VM data to ensure consistency.
--   Supports various migration types, including cold, live, and bulk migrations.
-
-## Pre-Requisites for Migration
-
-For a successful HCX-based migration, organizations must meet specific prerequisites both on-premises and in IBM Cloud.
-
-## On-Premises Requirements (Client-Side)
-
-### VMware Environment
-
--   Supported vSphere environment.
--   VMware HCX installed and licensed.
--   VMware NSX deployed for network virtualization (if required).
--   [System Requirements for HCX](https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-9/vmware-hcx-user-guide-4-9/preparing-for-hcx-installations/system-requirements-for-hcx.html)
-
-### Network Connectivity
-
--   VPN or Direct Connect (IBM Cloud Classic or IBM Cloud VPC) for secure communication.
--   Public IPs (if required for public-facing workloads).
--   Proper firewall and security policies configured to allow necessary traffic.
--   [Network Port Requirements](https://techdocs.broadcom.com/us/en/vmware-cis/hcx/vmware-hcx/4-9/vmware-hcx-user-guide-4-9/preparing-for-hcx-installations/network-port-and-protocol-requirements.html)
--   To extend on-premises networks to IBM Cloud.We must connect to a vSphere Distributed Switch (vDS) at on-premises.
-
-### HCX Deployment Resources
-
--   HCX Manager installed on-premises.
--   Sufficient resources (compute, storage, and network bandwidth) available to support migration activities.
-
-## IBM Cloud Requirements
-
-### IBM Cloud VMware Solutions
-
--   Active subscription to IBM Cloud VMware Solutions.
--   For NSX-T instances, HCX requires you to use one of the following licenses: NSX Data Center SP Base Professional, Advanced or Enterprise Plus (E+) from IBM Cloud, or an equivalent BYOL license.
--   For NSX-V instances, HCX requires you to use one of the following licenses: NSX Advanced or NSX Enterprise from IBM Cloud, or an equivalent BYOL license.
--   HCX supported platforms
     -   vSphere v5.1,v5.5
     -   vSphere 6.0,6.5,6.7
     -   vSphere 7.0
     -   vSphere 8.0
 
-### IBM Cloud Network Configurations
+## VMware HCX Deployment architecture/Key Components
+
+Deploying VMware HCX requires details about your vSphere sites, networks, and configurations. VMware HCX includes a virtual management component at both the source and destination sites, along with various Interconnect service appliances. The HCX services are configured and activated at the source site, where virtual appliances are deployed. A corresponding peer appliance is then deployed at the destination site.
+
+- [Architecture](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-overview)
+- [Ordering HCX](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx_ordering)
+- [HCX Architecture-VCF on VPC](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-hcx-con)
+- [HCX site peering & service mesh in IBM Cloud](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-hcx-xconnectivity)
+
+## Pre-Requisites for Migration
+
+Deploying VMware HCX for migration requires meeting specific prerequisites on both the client-side (on-premises) and server-side (IBM Cloud). Ensuring these requirements are met is crucial for a seamless migration experience.
+
+### On-Premises Requirements
+- [Source site](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-source)
+- [Client Deployment setup](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-planning-prep-install)
+
+### IBM Cloud Requirements
+- [Target site with NSX-V deployments](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-target-v)
+- [Target site with NSX-T deployments](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-target-t)
+
+
+### Network Connectivity Requirements 
 
 -   IBM Cloud Direct Link for private, high-speed connectivity.
--   VPN for secure site-to-site communication.
+-   VPN for low speed secure site-to-site communication.
 -   NSX-T or NSX-V integration for network segmentation and security enforcement.
+-   Public IPs (if required for public-facing workloads).
+-   Proper firewall and security policies configured to allow necessary traffic.
+-   [Network Port Requirements](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-port-req)
+-   To extend on-premises networks to IBM Cloud.We must connect to a vSphere Distributed Switch (vDS) at on-premises.
+
 
 ## VMware HCX Architectural Decisions
 
