@@ -111,3 +111,13 @@ Deploying VMware HCX for migration requires meeting specific prerequisites on bo
 | **Security**             | **Data Encryption & Compliance**         | - VPN (IPsec/SSL encryption) <br> - Direct Link (private encryption)                 | Both options encrypt data **in transit**. **Direct Link** avoids **public internet exposure**.                                                                                                                                            | For secure, enterprise-grade VMware HCX migrations, Direct Link is the best choice to protect workloads, ensure compliance, and prevent data exposure. |
 | **Network Extension**    | **Layer 2 Stretch**         | - Network Extension Service (retain IP/MAC) <br> - Re-IP workflows                   | Use **Network Extension Service** for **zero IP changes**. Re-IP only if **network overlap** exists.                                                                                                                                     | Network L2 Extension avoids IP address changes,minimize disruptions,security policy changes, between on premises and cloud |
 | **WAN Optimization**     | **Bandwidth Efficiency**    | - Deduplication <br> - Compression                                                   | Enable **WAN optimization** for **limited bandwidth**. Disable if **network bandwidth is sufficient**.                                                                                                                                    | Improves migration speed and efficiency. |
+
+## Conclusions
+
+Migrating VMware workloads to IBM Cloud using HCX provides a robust and flexible solution for enterprises seeking to migrate workloads from On premises to IBM Cloud for  rehosting application workloads with cloud agility.With HCX, you can migrate workloads from vSphere and non-vSphere (KVM and Hyper-V) environments to IBM Cloud with zero downtime and enable moving applications to the latest VCF software and hardware environment.
+
+## References
+
+- [Vmware HCX on IBM Cloud](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
+- [Vmware Solutions on IBM Cloud](https://cloud.ibm.com/docs/vmwaresolutions)
+- [Offical HCX Documentation from Broadcom](https://techdocs.broadcom.com/us/en/vmware-cis/hcx.html)
