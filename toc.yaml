@@ -21,7 +21,7 @@ toc:
       topics:
       - overview.md
   - navgroup:
-      id: architecture
+      id: migrate
       topics:
       - hcx.md
       - veeam.md
