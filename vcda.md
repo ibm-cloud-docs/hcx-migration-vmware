@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-02-21"
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: hcx-migration-vmware
 
 {{site.data.keyword.attribute-definition-list}}
 
-# VCDA on IBM Cloud VMware
+# Migrate with VCDA
 {: #vcda}
 
 This is a short description that introduces the content in this topic.

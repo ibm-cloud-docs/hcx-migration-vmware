@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -13,7 +13,7 @@ subcollection: hcx-migration-vmware
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Migration workloads using Zerto
+# Migrate with Zerto
 {: #zerto}
 Migrating VMware Workloads to IBM Cloud Using Zerto
 

@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -11,7 +11,7 @@ subcollection: hcx-migration-vmware
 
 {{site.data.keyword.attribute-definition-list}}
 
-# HCX on IBM Cloud VMware
+# Migrate with HCX
 {: #hcx}
 
 This is a short description that introduces the content in this topic. {: shortdesc}

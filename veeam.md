@@ -4,7 +4,7 @@ copyright:
 
 years: 2024
 
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: hcx-migration-vmware
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Migrating VMware Workloads Using Veeam
+# Migrate with Veeam
 {: #veeam}
 
 ## Overview

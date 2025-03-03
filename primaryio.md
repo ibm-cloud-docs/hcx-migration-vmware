@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-02-27"
+lastupdated: "2025-03-03"
 
 keywords:
 
@@ -12,7 +12,7 @@ subcollection: hcx-migration-vmware
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Primaryio on IBM Cloud VMware
+# Migrate with Primaryio
 {: #primaryio}
 
 PrimaryIO is a Silicon Valley-based technology company that collaborates closely with IBM to facilitate seamless transitions to the IBM Cloud. Their suite of proprietary software solutions and services is designed to assist organizations in migrating, protecting, and managing their VMware workloads within the IBM Cloud environment.
