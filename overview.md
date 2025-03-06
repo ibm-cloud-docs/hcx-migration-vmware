@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2025-03-04"
+lastupdated: "2025-03-06"
 
 keywords:
 
@@ -12,13 +12,11 @@ subcollection: hcx-migration-vmware
 {{site.data.keyword.attribute-definition-list}}
 
 # Overview
-
 {: #overview}
 
 This is a short description that introduces the content in this topic. {: shortdesc}
 
 ## IBM Cloud VMWare overview
-
 {: #ibmcloud-overview}
 
 Introduction
@@ -37,7 +35,7 @@ Migration Approaches
 Each of the following migration methods offers unique advantages, addressing different use cases such as workload mobility, disaster recovery, data replication, and cost efficiency.
 
 ## (1) VMware HCX – Enterprise-Grade Live Migration
-
+{: #ibmcloud-overview-hcx}
 VMware HCX (Hybrid Cloud Extension) is a purpose-built solution designed to simplify workload migration and interconnectivity between on-premises data centers and IBM Cloud. It enables live migrations without downtime, making it ideal for businesses that require continuous availability.
 
 Key Benefits:
