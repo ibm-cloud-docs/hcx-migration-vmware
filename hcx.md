@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2025-03-04"
+lastupdated: "2025-03-06"
 
 keywords:
 
@@ -14,7 +14,7 @@ subcollection: hcx-migration-vmware
 # Migrate with HCX
 {: #hcx}
 
-This is a short description that introduces the content in this topic. {: shortdesc}
+VMware HCX on IBM Cloud is a robust solution for seamless workload migration, disaster recovery, and application mobility between on-premises VMware environments and IBM Cloud. It enables enterprises to modernize infrastructure with minimal downtime by automating large-scale live migrations and optimizing network performance. HCX provides secure, encrypted connectivity, simplifying hybrid cloud adoption without requiring application refactoring. Integrated with IBM Cloud for VMware Solutions, it ensures high availability, scalability, and operational consistency. Businesses benefit from reduced migration complexity, lower costs, and enhanced disaster recovery capabilities, making it ideal for enterprises transitioning to a hybrid or multi-cloud architecture.
 
 ## IBM Cloud VMWare overview
 {: #ibmcloud-overview}
@@ -22,13 +22,16 @@ This is a short description that introduces the content in this topic. {: shortd
 ### HCX Overview
 {: #hcxoverview}
 
-VMware HCX on IBM Cloud: [Overview](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
+VMware HCX on IBM Cloud: 
 
 VMware HCX (Hybrid Cloud Extension) on IBM Cloud is a powerful solution designed to simplify and automate the migration of VMware-based workloads between on-premises data centers and IBM Cloud. It enables enterprises to seamlessly extend, migrate, and modernize applications across hybrid cloud environments with minimal disruption.
 
 What is VMware HCX? VMware HCX is a multi-cloud application mobility platform that enables businesses to securely migrate workloads between different VMware environments. It abstracts the underlying infrastructure, allowing seamless workload mobility, disaster recovery, and hybrid cloud operations without requiring application refactoring.
 
 When deployed on IBM Cloud, VMware HCX facilitates the movement of workloads from on-premises VMware environments to IBM’s global cloud infrastructure. This helps enterprises leverage IBM Cloud’s scalability, high availability, and security while maintaining compatibility with their existing VMware workloads.
+Please visit thte following link for further reading on HCX.
+
+[HCX Overview on IBM Cloud](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
 
 Key Features and Benefits
 
@@ -111,8 +114,6 @@ Deploying VMware HCX for migration requires meeting specific prerequisites on bo
 | **Security** | **Data Encryption & Compliance** | - VPN (IPsec/SSL encryption) <br> - Direct Link (private encryption) | Direct Link offers better security by avoiding public internet exposure. | Both options encrypt data **in transit**. **Direct Link** ensures a more secure migration. |
 | **Network Extension** | **Layer 2 Stretch** | - Network Extension Service (retain IP/MAC) <br> - Re-IP workflows | L2 Extension prevents IP changes and minimizes security disruptions. Re-IP is used only if there's an IP conflict. | Use **Network Extension Service** for **zero IP changes**. Re-IP only if **network overlap** exists. |
 | **WAN Optimization** | **Bandwidth Efficiency** | - Deduplication <br> - Compression | Enhances migration speed when bandwidth is limited. | Enable **WAN optimization** for **limited bandwidth**. Disable if **network bandwidth is sufficient**. |
-
-
 
 
 
