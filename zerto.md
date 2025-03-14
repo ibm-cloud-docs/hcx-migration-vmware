@@ -68,7 +68,6 @@ One private portable subnet dedicated to the VRA deployment
 
 ### Migration Considerations and Requirements
 {: #migrationclassic}
-
 Network Connectivity: Establish IBM Cloud Direct Link or VPN for seamless connectivity. The Zerto Virtual Manager needs to connect the Call Home feature for Zerto, on public internet. This requires to configure it by using a proxy or NAT connection to the public network. Also, the Zerto replication doesn't support Network Address Translation (NAT) traversal. Establishing connectivity between the IBM Cloud Zerto instance and your own data center might require customization of routes on the Zerto Virtual Manager appliances or Zerto Virtual Replication Appliances (VRAs) on either side.
 
 Storage & Compute Resources: Ensure IBM Cloud has enough capacity to handle incoming workloads. The VRA appliances alone require 100GB of disk themselves. 
