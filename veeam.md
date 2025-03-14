@@ -4,7 +4,7 @@ copyright:
 
 years: 2024
 
-lastupdated: "2025-03-12"
+lastupdated: "2025-03-14"
 
 keywords:
 
@@ -34,7 +34,7 @@ Veeam on IBM Cloud is a third-party add-on service that seamlessly integrates wi
 
 In the IBM Cloud Classic environment, the client-side architecture involves deploying the Veeam Backup & Replication (VBR) server within the client's on-premises infrastructure. This setup allows for centralized management of backup and replication tasks. The VBR server coordinates with Veeam proxies and repositories to handle data processing and storage. Proxies are responsible for data movement, optimizing the transfer between source and target, while repositories serve as storage locations for the backup data. This configuration ensures efficient data protection and recovery processes.
 
-### Architecture of Veeam on IBM Cloud VMware Solutions (VCF).
+### Architecture of Veeam on IBM Cloud VMware Solutions (VCF for Classic)
 {: #vcfveeamclassis}
 
 On the IBM Cloud classic VCF side, Veeam components are deployed to facilitate seamless integration with the client's on-premises VBR server. This includes setting up Veeam proxies within the IBM Cloud environment to handle incoming replication traffic and manage data efficiently. These proxies communicate with the on-premises VBR server, enabling secure and optimized data transfer. Additionally, backup repositories can be configured within IBM Cloud to store replicated data, providing a scalable and secure solution for disaster recovery and data archiving.

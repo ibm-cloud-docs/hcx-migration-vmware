@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2025-03-06"
+lastupdated: "2025-03-14"
 
 keywords:
 
@@ -54,8 +54,7 @@ These capabilities allow organizations to move workloads to the cloud without ma
 
 1.  Cloud Migration Enterprises can migrate large-scale VMware workloads to IBM Cloud without re-architecting applications. This accelerates digital transformation while maintaining operational consistency.
 2.  Data Center Extension HCX enables organizations to extend their existing VMware environment to IBM Cloud, providing additional capacity without upfront hardware investment.
-3.  Disaster Recovery Businesses can leverage IBM Cloud as a secondary site for disaster recovery, ensuring business continuity in case of on-premises failures.
-4.  Application Modernization Once in IBM Cloud, workloads can be modernized with IBM’s AI, Kubernetes, and automation services, enabling businesses to innovate faster.
+
 
 ### Deployment Models on IBM Cloud:
 {: #deploymentmodel}
@@ -63,17 +62,6 @@ These capabilities allow organizations to move workloads to the cloud without ma
 **IBM Cloud for VMware Solutions Dedicated:** A single-tenant model offering higher levels of isolation for enhanced security and compliance readiness. This model is ideal for organizations requiring dedicated resources and greater control over their environment.
 
 **IBM Cloud for VMware Cloud Foundation (VCF):** Provides a fully integrated VMware software-defined data center (SDDC) stack, including vSphere, vSAN, NSX-T, and HCX, deployed on IBM Cloud's Virtual Private Cloud (VPC) infrastructure. This deployment supports both consolidated and standard architecture models, allowing flexibility based on organizational needs.
-
-**HCX supported platforms :** 
-
-    -   vSphere v5.1,v5.5
-    -   vSphere 6.0,6.5,6.7
-    -   vSphere 7.0
-    -   vSphere 8.0
-
-## VMware HCX Deployment architecture/Key Components
-
-Deploying VMware HCX requires details about your vSphere sites, networks, and configurations. VMware HCX includes a virtual management component at both the source and destination sites, along with various Interconnect service appliances. The HCX services are configured and activated at the source site, where virtual appliances are deployed. A corresponding peer appliance is then deployed at the destination site.
 
 - [Architecture](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-overview)
 - [Ordering HCX](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx_ordering)
@@ -116,7 +104,12 @@ Deploying VMware HCX for migration requires meeting specific prerequisites on bo
 | **WAN Optimization** | **Bandwidth Efficiency** | - Deduplication <br> - Compression | Enhances migration speed when bandwidth is limited. | Enable **WAN optimization** for **limited bandwidth**. Disable if **network bandwidth is sufficient**. |
 
 
+HCX supported platforms: 
 
+    -   vSphere v5.1,v5.5
+    -   vSphere 6.0,6.5,6.7
+    -   vSphere 7.0
+    -   vSphere 8.0
 
 ## Conclusions
 
