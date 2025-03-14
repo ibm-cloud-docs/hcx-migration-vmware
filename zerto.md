@@ -18,6 +18,7 @@ subcollection: hcx-migration-vmware
 Migrating VMware Workloads to IBM Cloud Using Zerto
 
 ## Overview of Zerto on IBM Cloud
+{: #zertooverview}
 
 Zerto is a disaster recovery and migration solution that provides continuous data protection (CDP) for VMware workloads. It enables near-zero data loss and minimal downtime during migration by leveraging real-time replication, journal-based recovery, and automation.
 It brings together disaster recovery and data protection across on-premises, hybrid, and multi-cloud environments. A single, unified, and automated recovery and data management semplifies the experience across all virtualized or cloud-based workloads.
@@ -39,8 +40,10 @@ Key Features and Benefits
 On IBM Cloud, Zerto automatic deployment is supported on VMware Cloud Foundation for Classic - Automated instances and can be deployed as an add-on service to the VCF instance. 
 
 ## Deployment of Zerto for IBM Cloud VMware Cloud Foundation for Classic
+{: #deploymentclassic}
 
 ### Architecture of Zerto on the on prem Site
+{: #architectureclassiconprem}
 
 The on prem site architecture includes:
 
@@ -51,6 +54,7 @@ Zerto Virtual Replication Appliances (VRAs): Installed on each ESXi host to repl
 WAN Connection: Secure VPN or Direct Link connection between on-premises and IBM Cloud.
 
 ### Architecture of Zerto on IBM Cloud VCF Side
+{: #architectureclassicvcf}
 
 On IBM Cloud VCF, the architecture involves:
 
@@ -63,6 +67,7 @@ One portable private IP address for the Zerto Virtual Manager
 One private portable subnet dedicated to the VRA deployment
 
 ### Migration Considerations and Requirements
+{: #migrationclassic}
 
 Network Connectivity: Establish IBM Cloud Direct Link or VPN for seamless connectivity. The Zerto Virtual Manager needs to connect the Call Home feature for Zerto, on public internet. This requires to configure it by using a proxy or NAT connection to the public network. Also, the Zerto replication doesn't support Network Address Translation (NAT) traversal. Establishing connectivity between the IBM Cloud Zerto instance and your own data center might require customization of routes on the Zerto Virtual Manager appliances or Zerto Virtual Replication Appliances (VRAs) on either side.
 
@@ -74,9 +79,9 @@ Testing & Validation: Perform test failovers before production migration.
 
 
 ## Deployment of Zerto for IBM Cloud VMware Cloud Foundation for VPC
-
+{: #deploymentvpc}
 ### Architecture of Zerto on the on prem Site
-
+{: #architecturevpconprem}
 The on prem site architecture includes:
 
 Zerto Virtual Manager (ZVM): Installed on a Windows VM, managing replication and orchestrating recovery operations.
@@ -86,7 +91,7 @@ Zerto Virtual Replication Appliances (VRAs): Installed on each ESXi host to repl
 WAN Connection: Secure VPN or Direct Link connection between on-premises and IBM Cloud.
 
 ### Architecture of Zerto on IBM Cloud VCF Side
-
+{: #architecturevpcvcf}
 Zerto is not supported as an add on service on VCF for VPC so there is no automation and all the components need to be manually installed.
 
 Zerto VRAs: Installed on each ESXi hosts within the VCF environment.
@@ -97,7 +102,7 @@ Transit Gateway: deployed and connected to the VMWAre VPC to allow connectivity 
 
 
 ## Migration Considerations and Requirements
-
+{: #migrationvpc}
 Multi-Site Recovery: Plan for failover and failback between on-prem and IBM Cloud VCF.
 
 Network Connectivity: implement appropriate networking configurations to ensure secure and efficient data transfer between on-premises systems and the IBM Cloud VCF environment
@@ -106,5 +111,5 @@ Security & Compliance: Align with regulatory requirements for data protection.
 Automation & Monitoring: Leverage IBM Cloud monitoring tools for monitoring the infrastucture
 
 ## Conclusions
-
+{: #conclusions}
 Migrating VMware workloads to IBM Cloud using Zerto offers a seamless, low-downtime solution with continuous replication and automated failover. Organizations can leverage IBM Cloud for scalable, resilient disaster recovery while ensuring high availability of critical applications. Planning, testing, and optimizing network and storage configurations are crucial for a successful migration. 
