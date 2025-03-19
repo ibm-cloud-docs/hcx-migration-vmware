@@ -27,30 +27,24 @@ VMware HCX on IBM Cloud:
 
 VMware HCX (Hybrid Cloud Extension) on IBM Cloud is a powerful solution designed to simplify and automate the migration of VMware-based workloads between on-premises data centers and IBM Cloud. It enables enterprises to seamlessly extend, migrate, and modernize applications across hybrid cloud environments with minimal disruption.
 
-What is VMware HCX? VMware HCX is a multi-cloud application mobility platform that enables businesses to securely migrate workloads between different VMware environments. It abstracts the underlying infrastructure, allowing seamless workload mobility, disaster recovery, and hybrid cloud operations without requiring application refactoring.
+What is VMware HCX? VMware HCX is a multi-cloud application mobility platform that enables businesses to securely migrate workloads between different VMware environments. It abstracts the underlying infrastructure, allowing seamless workload mobility, and hybrid cloud operations without requiring application refactoring.
 
 When deployed on IBM Cloud, VMware HCX facilitates the movement of workloads from on-premises VMware environments to IBM’s global cloud infrastructure. This helps enterprises leverage IBM Cloud’s scalability, high availability, and security while maintaining compatibility with their existing VMware workloads.
 Please visit thte following link for further reading on HCX.
 
-HCX seamlessly extends the networks of on-premises data centers into IBM Cloud, which enables you to migrate virtual machines (VMs) to and from the IBM Cloud without any conversion or change. HCX creates an abstraction layer that enables application mobility and infrastructure hybridity through securely stretched networks. You can modernize your VMware environment from VMware vSphere v5.1 to the most recent vSphere version without having to refractor or modify your existing application. HCX allows you to bring your IP subnet ranges into IBM Cloud, which ensures IP consistency through a hybrid deployment, and it also provides high level security with end-to-end suite B encryptions.
+HCX provides the flexilbity of extending the networks of on-premises data centers into IBM Cloud,enabling to migrate virtual machines (VMs) to and from the IBM Cloud without any conversion or change. HCX creates an abstraction layer that enables application mobility and infrastructure hybridity through securely stretched networks. You can modernize your VMware environment from legacy VMware vSphere software versions to the most recent vSphere version without having to refractor or modify your existing application. HCX allows you to bring your IP subnet ranges into IBM Cloud, which ensures IP consistency through a hybrid deployment, and it also provides high level security with end-to-end suite B encryptions.
 
 [HCX Overview on IBM Cloud](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
 
 Key Features and Benefits
 
-Seamless and Live Workload Migration VMware HCX on IBM Cloud supports multiple migration types, including:
-
-- HCX vMotion – Live migration of virtual machines (VMs) without downtime. 
-- HCX Bulk Migration – Scheduled migration of multiple VMs with minimal disruption. 
-- HCX Replication-Assisted vMotion (RAV) – Combines replication and vMotion for efficient migration. 
-- HCX Cold Migration – Moves powered-off VMs in bulk. 
+Seamless and Live Workload Migration VMware HCX on IBM Cloud supports multiple migration types in line to your business requirement.
 
 These capabilities allow organizations to move workloads to the cloud without major reconfiguration or performance impact.
 
 1.  Hybrid Cloud Mobility HCX provides an automated and secure extension of VMware environments between on-premises data centers and IBM Cloud. It creates high-performance, encrypted network tunnels between environments, enabling workload mobility without network reconfiguration.
-2.  Disaster Recovery and Business Continuity With HCX Disaster Recovery (HCX DR), organizations can protect their applications by replicating workloads between on-premises and IBM Cloud. This ensures business continuity and minimizes downtime during unplanned outages.
-3.  Network Extension and Optimization HCX’s Layer 2 network extension allows businesses to extend on-premises VLANs to IBM Cloud without changing IP addresses. Additionally, WAN optimization improves performance, reducing latency and bandwidth consumption during migration.
-4.  Simplified Operations and Automation HCX simplifies workload migration with an intuitive interface, reducing manual efforts and operational complexity. It automates VM movement, ensuring faster cloud adoption without impacting productivity.
+2.  Network Extension and Optimization HCX’s Layer 2 network extension allows businesses to extend on-premises VLANs to IBM Cloud without changing IP addresses. Additionally, WAN optimization improves performance, reducing latency and bandwidth consumption during migration.
+3.  Simplified Operations and Automation HCX simplifies workload migration with an intuitive interface, reducing manual efforts and operational complexity. It automates VM movement, ensuring faster cloud adoption without impacting productivity.
 
 ### Use Cases
 {: #usecases}
