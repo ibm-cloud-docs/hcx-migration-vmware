@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-03-14"
+lastupdated: "2025-03-20"
 
 keywords:
 
@@ -87,7 +87,7 @@ Testing & Validation: Perform test failovers before production migration.
 
 The on prem site architecture includes:
 
-Zerto Virtual Manager (ZVM): Installed on a Windows VM, managing replication and orchestrating recovery operations.
+Zerto Virtual Manager (ZVM): Installed on a Linux VM, managing replication and orchestrating recovery operations.
 
 Zerto Virtual Replication Appliances (VRAs): Installed on each ESXi host to replicate data continuously.
 
@@ -100,7 +100,7 @@ Zerto is not supported as an add on service on VCF for VPC so there is no automa
 
 Zerto VRAs: Installed on each ESXi hosts within the VCF environment.
 
-Zerto Virtual Manager (ZVM): Installed on a Microsoft Windows 2019 VSI on VPC, deployed into the Management overlay networks, managing replication and orchestrating recovery operations. Access to public network to access the Call Home on Zerto is required
+Zerto Virtual Manager (ZVM): Installed on a Linux VSI on VPC, deployed into the Management overlay networks, managing replication and orchestrating recovery operations. Access to public network to access the Call Home on Zerto is required
 
 Transit Gateway: deployed and connected to the VMWAre VPC to allow connectivity between the VPC and the on-prem network via Direct Link
 
