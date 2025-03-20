@@ -26,7 +26,6 @@ Veeam on IBM Cloud is a third-party add-on service that seamlessly integrates wi
 - Veeam Continuous Data Protection (CDP) is a technology that helps protect VMware virtual machines where data loss for seconds or minutes, not hours, is required. CDP also provides a minimum RTO as the CDP replicas that are in a ready-to-start state. For more information, see [Continuous Data Protection (CDP)](https://helpcenter.veeam.com/docs/backup/vsphere/cdp_replication.html?ver=120){: external}.
 - Veeam supports VM encryption, and in this pattern, protected workloads must use data encryption as General Data Protection Regulation (GPDR), and other regulations requires Personally Identifiable Information (PII) or Sensitive Personal Information (SPI) data to be protected.
 
-Veeam Git test comment
 
 ## Deployment of Veeam in IBM Cloud Classic Environment
 {: #ibmcloudclassic}
