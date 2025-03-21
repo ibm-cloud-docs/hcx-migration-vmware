@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-21"
 
 keywords:
 
@@ -93,11 +93,13 @@ Here’s a **refined whitepaper-style section** that removes "architectural deci
 
 ---
 
-## **VMware HCX Deployment Technical Considerations**  
+## VMware HCX Deployment Technical Considerations  
+{: #hcxconsideration}
 
 Successful deployment of **VMware HCX** for cloud migration requires careful planning across several key areas, including **network connectivity, migration methods, licensing, security, and performance optimization**. This section outlines the critical factors to consider when implementing **HCX for workload mobility** to **IBM Cloud**.  
 
-### **Network Connectivity**  
+### Network Connectivity
+{: #networkconnectivity}
 
 Reliable and high-performance connectivity is essential for **secure and efficient workload migration**. HCX supports multiple connectivity options:  
 - **HCX over VPN (IPsec/SSL VPN)** – Suitable for **proof of concept (PoC), development, or small-scale migrations**.  
@@ -105,7 +107,8 @@ Reliable and high-performance connectivity is essential for **secure and efficie
 
 For **production environments**, **IBM Cloud Direct Link** is the recommended approach due to its **SLA-backed performance and reliability**.  
 
-### **Migration Methods**  
+### Migration Methods
+{: #migrationmethods}
 
 VMware HCX provides multiple migration techniques to accommodate **different workload requirements, availability needs, and operational constraints**:  
 - **HCX vMotion** – Enables **live migration** with zero downtime, best suited for **critical workloads requiring continuous availability**.  
@@ -132,13 +135,13 @@ Both options ensure **secure data transfer**, but **Direct Link** is preferred f
 
 ### **Network Extension and IP Management**  
 
-Maintaining **Layer 2 network connectivity** during migration is critical to avoid reconfiguration of applications and minimize disruption:  
+Extending your network to IBM Cloud during migration is critical to avoid reconfiguration of applications and minimize disruption:  
 - **Network Extension Service** – Preserves **existing IP and MAC addresses**, ensuring seamless migration without requiring network changes.  
 - **Re-IP Workflows** – Applied when IP conflicts arise, requiring address reassignment.  
 
 For most use cases, **Network Extension Service** is recommended as it **simplifies migration and reduces reconfiguration efforts**.  
 
-### **Performance Optimization with WAN Acceleration**  
+### Performance Optimization with HCX WAN Acceleration
 
 To optimize network efficiency, HCX includes **built-in WAN acceleration features**:  
 - **Deduplication** – Eliminates redundant data transmission to improve throughput.  
