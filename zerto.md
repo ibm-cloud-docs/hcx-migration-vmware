@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-03-20"
+lastupdated: "2025-03-21"
 
 keywords:
 
@@ -67,6 +67,11 @@ One portable private IP address for the Zerto Virtual Manager
 
 One private portable subnet dedicated to the VRA deployment
 
+The following image is the migration pattern architecture for VMware workloads on {{site.data.keyword.Bluemix_notm}} VCF on Classic - Automated.
+
+![Zerto Migration Architecture](diagrams/zerto_classic.svg){: caption="Zerto migration for VMware Workloads on {{site.data.keyword.Bluemix_notm}} Classic (VCF) architecture" caption-side="bottom"}
+
+
 ### Migration Considerations and Requirements
 {: #migrationclassic}
 
@@ -104,6 +109,9 @@ Zerto Virtual Manager (ZVM): Installed on a Linux VSI on VPC, deployed into the 
 
 Transit Gateway: deployed and connected to the VMWAre VPC to allow connectivity between the VPC and the on-prem network via Direct Link
 
+The following image is the migration pattern architecture for VMware workloads on {{site.data.keyword.Bluemix_notm}} VCF on VPC.
+
+![Zerto Migration Architecture](diagrams/zerto_vpc.svg){: caption="Zerto migration for VMware Workloads on {{site.data.keyword.Bluemix_notm}} VPC (VCF) architecture" caption-side="bottom"}
 
 ## Migration Considerations and Requirements
 {: #migrationvpc}
