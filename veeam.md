@@ -4,7 +4,7 @@ copyright:
 
 years: 2024
 
-lastupdated: "2025-03-20"
+lastupdated: "2025-03-21"
 
 keywords:
 
@@ -19,13 +19,22 @@ subcollection: hcx-migration-vmware
 
 ## Overview
 {: #veeamoverview}
-Veeam on IBM Cloud is a third-party add-on service that seamlessly integrates with IBM Cloud for VMware Solutions, providing robust backup and recovery capabilities for VMware workloads. This service ensures high availability and offers recovery points for critical applications and data, including enterprise solutions like Oracle and SAP HANA. By leveraging Veeam's integration, businesses can achieve rapid and reliable restoration of files, individual items, or entire virtual machines (VMs) across on-premises, hybrid, and public cloud environments. Additionally, Veeam facilitates the efficient movement of backup files to cost-effective IBM Cloud Object Storage, optimizing storage costs without compromising data accessibility.
+Migrating VMware workloads to the IBM cloud is a strategic move that enhances scalability, resilience, and cost efficiency. However, ensuring a secure, fast, and disruption-free migration requires the right tools. Veeam on IBM Cloud provides a robust, enterprise-grade solution that simplifies VMware workload migration while ensuring business continuity, minimal downtime, and strong data protection.
 
-- Veeam is an add-on additional service that can be ordered from the {{site.data.keyword.Bluemix_notm}} catalog.
-- Veeam Replication is a technology that creates an exact copy of the protected VMware virtual machine at the recovery site. The replication maintains this copy in sync with the protected VM with Recovery Point Objective (RPO) of hours. Replication provides a minimum Recovery Time Objective (RTO) as the recovery replicas that are in a ready-to-start state. For more information, see [Replication](https://helpcenter.veeam.com/docs/backup/vsphere/replication.html?ver=120){: external}.
-- Veeam Continuous Data Protection (CDP) is a technology that helps protect VMware virtual machines where data loss for seconds or minutes, not hours, is required. CDP also provides a minimum RTO as the CDP replicas that are in a ready-to-start state. For more information, see [Continuous Data Protection (CDP)](https://helpcenter.veeam.com/docs/backup/vsphere/cdp_replication.html?ver=120){: external}.
-- Veeam supports VM encryption, and in this pattern, protected workloads must use data encryption as General Data Protection Regulation (GPDR), and other regulations requires Personally Identifiable Information (PII) or Sensitive Personal Information (SPI) data to be protected.
+With Veeam’s advanced replication and continuous data protection (CDP) technologies, organizations can move mission-critical applications such as Oracle and SAP HANA with zero impact on performance. Whether transferring entire virtual machines (VMs), critical application data, or hybrid workloads, Veeam guarantees high availability and reliability across on-premises, hybrid, and public cloud environments.
 
+# Key Benefits:
+   -	Effortless Migration & Seamless Integration – Easily deployable from the IBM Cloud catalog, ensuring a smooth migration process without complex configurations.
+
+   -	Fast, Reliable Replication & Near-Zero Data Loss with Continuous Data Protection (CDP) – Veeam Backup & Replication offers two powerful built-in migration capabilities for VMware VMs, ensuring fast, reliable replication with minimal downtime. The first approach leverages Veeam Backup Proxy, utilizing traditional backup and restore methods for secure data transfer. The second, Continuous Data Protection (CDP), provides real-time replication, delivering near-zero data loss and achieving low Recovery Point Objectives (RPOs). Designed for mission-critical workloads, CDP enables instant failover, ensuring high availability and rapid recovery in the event of a failure. [learn more](https://helpcenter.veeam.com/docs/backup/vsphere/cdp_replication.html?ver=120){: external}.
+
+   -  Enterprise-Grade Security & Compliance – Protects sensitive workloads with end-to-end encryption, ensuring compliance with regulations like GDPR while safeguarding Personally Identifiable Information (PII) and Sensitive Personal Information (SPI).
+   
+   -  Cost-Effective Storage Optimization  – Seamlessly moves migrated workloads and backup files to IBM Cloud Object Storage, reducing storage costs while maintaining easy accessibility and high performance.
+
+By leveraging Veeam on IBM Cloud, enterprises can streamline VMware workload migration, minimize risks, and accelerate their cloud transformation journey. With automated failover, robust security, and cost-optimized storage, Veeam ensures a smooth, secure, and highly efficient migration experience.
+
+Migrate smarter, reduce complexity, and future-proof your VMware workloads with Veeam on IBM Cloud!
 
 ## Deployment of Veeam in IBM Cloud Classic Environment
 {: #ibmcloudclassic}
