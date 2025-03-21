@@ -23,7 +23,7 @@ Migrating VMware workloads to the IBM cloud is a strategic move that enhances sc
 
 With Veeam’s advanced replication and continuous data protection (CDP) technologies, organizations can move mission-critical applications such as Oracle and SAP HANA with zero impact on performance. Whether transferring entire virtual machines (VMs), critical application data, or hybrid workloads, Veeam guarantees high availability and reliability across on-premises, hybrid, and public cloud environments.
 
-# Key Benefits:
+### Key Benefits:
    -	Effortless Migration & Seamless Integration – Easily deployable from the IBM Cloud catalog, ensuring a smooth migration process without complex configurations.
 
    -	Fast, Reliable Replication & Near-Zero Data Loss with Continuous Data Protection (CDP) – Veeam Backup & Replication offers two powerful built-in migration capabilities for VMware VMs, ensuring fast, reliable replication with minimal downtime. The first approach leverages Veeam Backup Proxy, utilizing traditional backup and restore methods for secure data transfer. The second, Continuous Data Protection (CDP), provides real-time replication, delivering near-zero data loss and achieving low Recovery Point Objectives (RPOs). Designed for mission-critical workloads, CDP enables instant failover, ensuring high availability and rapid recovery in the event of a failure. [learn more](https://helpcenter.veeam.com/docs/backup/vsphere/cdp_replication.html?ver=120){: external}.
