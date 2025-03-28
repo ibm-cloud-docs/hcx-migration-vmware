@@ -51,7 +51,7 @@ Once migrated, customers can choose from a variety of platform features includin
 
 Following migration, if protecting VMs with ProtectIO, the DR Recovery Point Objective is near-zero seconds and Recovery Time Objective provides optionality to the customer based on application criticality and desire to reduce protected mode costs.
 
-## Protection of On-prem and Migrated VMs
+### Protection of On-prem and Migrated VMs
 {: #feature}
 
 | Feature                       | ProtectIO SaaS Platform                                                                                                                                                                                                                              |
@@ -101,6 +101,7 @@ Key architectural features include:
     -   Red Hat OpenShift Kubernetes (ROKs) on IBM Cloud
 
 ### Migration Considerations and Requirements
+{: #Migration-requirement}
 
 When planning a migration to IBM Cloud Classic using PrimaryIO, consider the following:
 
@@ -160,5 +161,6 @@ When planning a migration to IBM Cloud VPC using PrimaryIO, consider the followi
 -   Minimal Impact Planning: Methodology coupled with resource allocation needs to be well-planned in order to minimize impact to the applications, and by extension to the business dependent on those applications.
 
 
-### References:
+## References:
+{: #references}
 All the PrimaryIO references are listed here.
