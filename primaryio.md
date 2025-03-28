@@ -11,8 +11,8 @@ subcollection: hcx-migration-vmware
 
 {{site.data.keyword.attribute-definition-list}}
 
-# PrimaryIO Overview
-{: overview}
+# Migrate with PrimaryIO
+{: #overview}
 
 PrimaryIO is a technology-first company with an IBM Cloud-native platform wrapped in orchestrated services. Together the technology, processes and people from PrimaryIO enable the Cloud Journey for organizations. 
 As a key step in the Cloud Journey, migration can deliver strategic benefits as well as cost savings from hardware, software license and operational optimization. 
@@ -20,9 +20,13 @@ Cloud scalability and elasticity offer customers the ability to scale up and dow
 Irrespective of approach, migrations need to be well planned and well executed to minimize time, risk and cost. Due to unique tools, experience and technical depth, PrimaryIO is the leading provider of migrations into IBM Cloud; migrations have become a key offering from PrimaryIO, consumable through a tile in the IBM Cloud Catalog.  
 
 From a technology perspective, PrimaryIO is the only company to provide an IBM Cloud-native SaaS platform that supports migration into IBM Cloud. Platform use cases supported include, but are not limited to: 
+
 ● migration of lower-tier applications, like Dev/Test, while simultaneously using IBM Cloud as a DR site for on-prem production VMware VMs;
+
 ● migration of VMware VMs to IBM Cloud-native Virtual Server Instances (VSIs), thereby reducing dependence on VMware.  
+
 ● A third use case is the migration of VMware VMs into IBM’s VCFaaS hosted VMware platform.  
+
 ● The most prevalent use case is the often-cited “lift and shift” migration of VMware workloads into IBM Cloud VCF. 
 
 ## Key Benefits 
@@ -38,9 +42,14 @@ From a technology perspective, PrimaryIO is the only company to provide an IBM C
 
 • Enterprise-Grade Security is obtained as a result of encryption of all data whether in transit or at rest.
 
-• Customer data remains in the customer’s control. Customer data is not ingested into the PrimaryIO-managed control plane SaaS application. Once migrated, customers can choose from a variety of platform features including ProtectIO which provides ongoing disaster recovery and ransomware recovery capabilities. Additional optional functionality includes the conversion from VMware VMs to IBM Cloud-native VSIs via the ConvertIO utility. Following migration, if protecting VMs with ProtectIO, the DR Recovery Point Objective is near-zero seconds and Recovery Time Objective provides optionality to the customer based on application criticality and desire to reduce protected mode costs.
+• Customer data remains in the customer’s control. Customer data is not ingested into the PrimaryIO-managed control plane SaaS application. 
 
-Protection of On-prem and Migrated VMs:
+Once migrated, customers can choose from a variety of platform features including ProtectIO which provides ongoing disaster recovery and ransomware recovery capabilities. Additional optional functionality includes the conversion from VMware VMs to IBM Cloud-native VSIs via the ConvertIO utility. 
+
+Following migration, if protecting VMs with ProtectIO, the DR Recovery Point Objective is near-zero seconds and Recovery Time Objective provides optionality to the customer based on application criticality and desire to reduce protected mode costs.
+
+## Protection of On-prem and Migrated VMs
+{: #feature}
 
 | Feature                       | ProtectIO SaaS Platform                                                                                                                                                                                                                              |
 |------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -55,15 +64,15 @@ Protection of On-prem and Migrated VMs:
 | Best For                       | All VMware VMs, whether turned off and unused to business-critical application workloads. These are “future-proof” migrations that, over time, can bleed into cloud-native VSIs or Containerized applications on a per-VM basis.                         |
 
 ## Migration to IBM Cloud Classic Environment
-{: ibmcloudclassic}
+{: #ibmcloudclassic}
 
 ### Architecture of PrimaryIO platform on IBM Cloud
-{: prioarchitecture}
+{: #prioarchitecture}
 
 Supporting the IBM Cloud environment, the client (source)-side architecture involves deploying a VMware Installation Bundle (VIB) within all ESXi hosts in a cluster to be migrated or protected by DRaaS/RRaaS. The VAIO filter coordinates with a block-sending agent responsible for sending new (initial) or changed blocks to a receiver agent running in the customer’s target site in IBM Cloud. Upon receipt of workload data, those blocks are committed to storage. The metadata keeping track of what VMs are being migrated (and potentially protected) and where the VM data resides are all kept in the SaaS control plane - an IBM Cloud-native Red Hat Openshift Kubernetes application running in IBM Cloud VPC. This architecture is a truly modern application reflecting the state-of-the-art, in-depth knowledge of VMware, IBM Cloud and cloud-native design - a differentiating expertise of PrimaryIO.
 
 ### Architecture of PrimaryIO platform on IBM Cloud VMware Solutions (VCF for Classic)
-{: vcfprioclassic}
+{: #vcfprioclassic}
 
 Supporting VCF for IBM Cloud classic, PrimaryIO utilizes its flagship control plane SaaS platform. There is no application to install to orchestrate actions such as migration (initial sync), failover or firedrill. These capabilities are always up and running in the ProtectIO DRaaS web-accessible application.
 
@@ -89,6 +98,7 @@ Key architectural features include:
     -   Red Hat OpenShift Kubernetes (ROKs) on IBM Cloud
 
 ### Migration Considerations and Requirements
+
 When planning a migration to IBM Cloud Classic using PrimaryIO, consider the following:
 
 -   Network Connectivity: Data integrity, reliability and speed will be a function of the connectivity between the migration source VMs and the IBM Cloud target site. This must be in place prior to migration.
@@ -96,7 +106,8 @@ When planning a migration to IBM Cloud Classic using PrimaryIO, consider the fol
 -   Compatibility: On prem VMs including edge security must be provisioned in a compatible IBM Cloud environment.
 -   Minimal Impact Planning: Methodology coupled with resource allocation needs to be well-planned in order to minimize impact to the applications, and by extension to the business dependent on those applications.
 
-## MIgration to IBM Cloud VPC environment
+## Migration to IBM Cloud VPC environment
+{: #primaryiovpc}
 
 -   PrimaryIO has no significant architectural differences distinguishing IBM Cloud VPC from its IBM Cloud Classic offering. In fact, the SaaS platform is the same, whether on Cloud Classic or VPC.
 -   Due to differences between Classic and VPC, there are infrastructure and functional differences between migrated VMs in the two cloud environments
@@ -104,13 +115,13 @@ When planning a migration to IBM Cloud Classic using PrimaryIO, consider the fol
 
 
 ### Architecture of PrimaryIO platform on IBM Cloud
-{: prioarchitecture}
+{: #prioarchitecturevpc}
 
 Supporting the IBM Cloud environment, the client (source)-side architecture involves deploying a VMware Installation Bundle (VIB) within all ESXi hosts in a cluster to be migrated or protected by DRaaS/RRaaS. The VAIO filter coordinates with a block-sending agent responsible for sending new (initial) or changed blocks to a receiver agent running in the customer’s target site in IBM Cloud. Upon receipt of workload data, those blocks are committed to storage. The metadata keeping track of what VMs are being migrated (and potentially protected) and where the VM data resides are all kept in the SaaS control plane - an IBM Cloud-native Red Hat Openshift Kubernetes application running in IBM Cloud VPC. This architecture is a truly modern application reflecting the state-of-the-art, in-depth knowledge of VMware, IBM Cloud and cloud-native design - a differentiating expertise of PrimaryIO.
 
 ### Architecture of PrimaryIO platform on IBM Cloud VMware Solutions (VCF for VPC)
 
-{: vcfpriovpc}
+{: #vcfpriovpc}
 
 Supporting VCF for IBM Cloud VPC, PrimaryIO utilizes its flagship control plane SaaS platform. There is no application to install to orchestrate actions such as migration (initial sync), failover or firedrill. These capabilities are always up and running in the ProtectIO DRaaS web-accessible application.
 
@@ -136,6 +147,7 @@ Key architectural features include:
     -   Red Hat OpenShift Kubernetes (ROKs) on IBM Cloud
 
 ### Migration Considerations and Requirements
+{: #vcfpriovpc}
 
 When planning a migration to IBM Cloud VPC using PrimaryIO, consider the following:
 
