@@ -22,7 +22,7 @@ As a key step in the Cloud Journey, migration can deliver strategic benefits as 
 Cloud scalability and elasticity offer customers the ability to scale up and down according to need. Migrations are ideally tailored to the specific requirements, whether a swift “big bang” move, or a methodical, timed series of workload waves. 
 Irrespective of approach, migrations need to be well planned and well executed to minimize time, risk and cost. Due to unique tools, experience and technical depth, PrimaryIO is the leading provider of migrations into IBM Cloud; migrations have become a key offering from PrimaryIO, consumable through a tile in the IBM Cloud Catalog.  
 
-From a technology perspective, PrimaryIO is the only company to provide an IBM Cloud-native SaaS platform that supports migration into IBM Cloud. Platform use cases supported include, but are not limited to: 
+From a technology perspective, PrimaryIO provide an IBM Cloud-native SaaS platform that supports migration into IBM Cloud. Platform use cases supported include, but are not limited to: 
 
 1.  Migration of lower-tier applications, like Dev/Test, while simultaneously using IBM Cloud as a DR site for on-prem production VMware VMs;
 
