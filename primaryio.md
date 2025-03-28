@@ -12,6 +12,9 @@ subcollection: hcx-migration-vmware
 {{site.data.keyword.attribute-definition-list}}
 
 # Migrate with PrimaryIO
+{: #migratewithprimaryio}
+
+## Overview
 {: #overview}
 
 PrimaryIO is a technology-first company with an IBM Cloud-native platform wrapped in orchestrated services. Together the technology, processes and people from PrimaryIO enable the Cloud Journey for organizations. 
@@ -21,28 +24,28 @@ Irrespective of approach, migrations need to be well planned and well executed t
 
 From a technology perspective, PrimaryIO is the only company to provide an IBM Cloud-native SaaS platform that supports migration into IBM Cloud. Platform use cases supported include, but are not limited to: 
 
-● migration of lower-tier applications, like Dev/Test, while simultaneously using IBM Cloud as a DR site for on-prem production VMware VMs;
+1.  Migration of lower-tier applications, like Dev/Test, while simultaneously using IBM Cloud as a DR site for on-prem production VMware VMs;
 
-● migration of VMware VMs to IBM Cloud-native Virtual Server Instances (VSIs), thereby reducing dependence on VMware.  
+2.  Migration of VMware VMs to IBM Cloud-native Virtual Server Instances (VSIs), thereby reducing dependence on VMware.  
 
-● A third use case is the migration of VMware VMs into IBM’s VCFaaS hosted VMware platform.  
+3.  A third use case is the migration of VMware VMs into IBM’s VCFaaS hosted VMware platform.  
 
-● The most prevalent use case is the often-cited “lift and shift” migration of VMware workloads into IBM Cloud VCF. 
+4.  The most prevalent use case is the often-cited “lift and shift” migration of VMware workloads into IBM Cloud VCF. 
 
 ## Key Benefits 
 {: #priobenefits} 
 
-• Rapid, predictable relocation of VMware VMs to IBM Cloud as either a primary site, DR site or even a tertiary DR site. • Easy-to-consume functionality via IBM Cloud Catalog tile. 
+1.  Rapid, predictable relocation of VMware VMs to IBM Cloud as either a primary site, DR site or even a tertiary DR site. • Easy-to-consume functionality via IBM Cloud Catalog tile. 
 
-• Initiated engagements with assessment and discovery enabling an optimization of cloud-based infrastructure thereby reducing cost and leveraging the most efficient cloud-available IaaS, such as Intel 4th Gen Xeon (“Sapphire Rapids”) server configurations. 
+2.  Initiated engagements with assessment and discovery enabling an optimization of cloud-based infrastructure thereby reducing cost and leveraging the most efficient cloud-available IaaS, such as Intel 4th Gen Xeon (“Sapphire Rapids”) server configurations. 
 
-• As an optional capability, conversion, at scale, through automation to IBM Cloud-native Virtual Server Instances (VSIs).
+3.  As an optional capability, conversion, at scale, through automation to IBM Cloud-native Virtual Server Instances (VSIs).
 
-• Due to proprietary Block Stream Protocol and the Continuous Data Protection of changed blocks, on-prem changes are synced with the Cloud-based VMs, resulting in seamless migrations.
+4.  Due to proprietary Block Stream Protocol and the Continuous Data Protection of changed blocks, on-prem changes are synced with the Cloud-based VMs, resulting in seamless migrations.
 
-• Enterprise-Grade Security is obtained as a result of encryption of all data whether in transit or at rest.
+5.  Enterprise-Grade Security is obtained as a result of encryption of all data whether in transit or at rest.
 
-• Customer data remains in the customer’s control. Customer data is not ingested into the PrimaryIO-managed control plane SaaS application. 
+6.  Customer data remains in the customer’s control. Customer data is not ingested into the PrimaryIO-managed control plane SaaS application. 
 
 Once migrated, customers can choose from a variety of platform features including ProtectIO which provides ongoing disaster recovery and ransomware recovery capabilities. Additional optional functionality includes the conversion from VMware VMs to IBM Cloud-native VSIs via the ConvertIO utility. 
 
