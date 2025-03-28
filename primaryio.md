@@ -158,3 +158,7 @@ When planning a migration to IBM Cloud VPC using PrimaryIO, consider the followi
 -   Resource Allocation: The necessary credentialing as well as compute, network and storage resources must be properly provisioned in IBM Cloud in order to assure that anticipated performance of the migrated VMs in IBM Cloud.
 -   Compatibility: On prem VMs including edge security must be provisioned in a compatible IBM Cloud environment.
 -   Minimal Impact Planning: Methodology coupled with resource allocation needs to be well-planned in order to minimize impact to the applications, and by extension to the business dependent on those applications.
+
+
+### References:
+All the PrimaryIO references are listed here.
