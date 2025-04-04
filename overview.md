@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2025-03-06"
+lastupdated: "2025-04-04"
 
 keywords:
 
@@ -34,7 +34,7 @@ Migration Approaches
 
 Each of the following migration methods offers unique advantages, addressing different use cases such as workload mobility, disaster recovery, data replication, and cost efficiency.
 
-## (1) VMware HCX – Enterprise-Grade Live Migration
+## VMware HCX
 {: #ibmcloud-overview-hcx}
 VMware HCX (Hybrid Cloud Extension) is a purpose-built solution designed to simplify workload migration and interconnectivity between on-premises data centers and IBM Cloud. It enables live migrations without downtime, making it ideal for businesses that require continuous availability.
 
@@ -50,7 +50,7 @@ Offers disaster recovery capabilities to minimize risks.
 
 Ideal for companies requiring long-term hybrid cloud strategies.
 
-## (2) Veeam – Backup & Replication for Data Protection
+## Veeam – Backup & Replication for Data Protection
 
 Veeam is an industry leader in backup, replication, and disaster recovery. Organizations leveraging Veeam can backup on-premises VMware environments and restore them directly into IBM Cloud.
 
@@ -64,7 +64,7 @@ Ransomware protection through immutable storage and encrypted backups.
 
 Works well for enterprises that require a backup-first approach before migration.
 
-## (3) Zerto – Continuous Data Protection & Disaster Recovery
+## Zerto – Continuous Data Protection & Disaster Recovery
 
 Zerto specializes in disaster recovery and workload mobility by offering continuous data replication with near-zero downtime. This solution is well-suited for organizations requiring high availability and resilience.
 
@@ -78,7 +78,7 @@ Works across multi-cloud and hybrid environments, giving businesses flexibility.
 
 Best for companies with strict RTO/RPO requirements.
 
-## (4) VMware Cloud Director Availability (VCDA) – Native VMware Cloud Migration
+## VMware Cloud Director Availability (VCDA)
 
 VCDA is a VMware-native migration tool designed for cloud service providers and enterprises using VMware Cloud Director on IBM Cloud. It offers an integrated approach for disaster recovery and migration.
 
@@ -92,7 +92,7 @@ Offers self-service capabilities for enterprises to manage their workloads.
 
 Recommended for businesses already using VMware Cloud Director.
 
-## (5) PrimaryIO – Optimized VMware Migration with Cost Efficiency
+## PrimaryIO
 
 PrimaryIO offers a unique approach to workload migration and disaster recovery, focusing on reducing data transfer costs and accelerating time to cloud.
 

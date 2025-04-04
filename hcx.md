@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2025-03-21"
+lastupdated: "2025-04-04"
 
 keywords:
 
@@ -13,6 +13,8 @@ subcollection: hcx-migration-vmware
 
 # Migrate with HCX
 {: #hcx}
+## VMware HCX Overview
+{: #hcxoverview-hcx}
 
 VMware HCX on IBM Cloud is a robust solution for seamless workload migration and application mobility between on-premises VMware environments and IBM Cloud. It enables enterprises to modernize infrastructure with minimal downtime by automating large-scale live migrations and optimizing network performance. HCX provides secure, encrypted connectivity, simplifying hybrid cloud adoption without requiring application refactoring. Integrated with IBM Cloud for VMware Solutions, it ensures high availability, scalability, and operational consistency. Businesses benefit from reduced migration complexity, lower costs, and enhanced disaster recovery capabilities, making it ideal for enterprises transitioning to a hybrid or multi-cloud architecture.
 
@@ -20,7 +22,7 @@ VMware HCX on IBM Cloud is a robust solution for seamless workload migration and
 ## IBM Cloud VMWare overview
 {: #ibmcloud-overview}
 
-### HCX Overview
+### Overview
 {: #hcxoverview}
 
 VMware HCX on IBM Cloud: 
@@ -34,7 +36,7 @@ Please visit thte following link for further reading on HCX.
 
 HCX provides the flexilbity of extending the networks of on-premises data centers into IBM Cloud,enabling to migrate virtual machines (VMs) to and from the IBM Cloud without any conversion or change. HCX creates an abstraction layer that enables application mobility and infrastructure hybridity through securely stretched networks. You can modernize your VMware environment from legacy VMware vSphere software versions to the most recent vSphere version without having to refractor or modify your existing application. HCX allows you to bring your IP subnet ranges into IBM Cloud, which ensures IP consistency through a hybrid deployment, and it also provides high level security with end-to-end suite B encryptions.
 
-[HCX Overview on IBM Cloud](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
+For further information regarding HCX on IBM Cloud please follow this link [HCX Overview on IBM Cloud](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
 
 Key Features and Benefits
 
@@ -90,7 +92,7 @@ Deploying VMware HCX for migration requires meeting specific prerequisites on bo
 -   NSX-T or NSX-V integration for network segmentation and security enforcement.
 -   Public IPs (if required for public-facing workloads).
 -   Proper firewall and security policies configured to allow necessary traffic.
--   [Network Port Requirements](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-port-req)
+-   For further networking port configuration and understanding the requirement, visit the following link [Network Port Requirements](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-port-req)
 -   To extend on-premises networks to IBM Cloud.We must connect to a vSphere Distributed Switch (vDS) at on-premises.
 
 ---
@@ -145,6 +147,7 @@ To optimize network efficiency, HCX includes built-in WAN acceleration features:
 ---
 
 
+Here is the linst of supported HCX platform 
 [HCX supported platforms](https://cloud.ibm.com/infrastructure/vmware-solutions/console/newserviceentry/HCX/vcs_nsx_t): 
 
     -   vSphere v5.1,v5.5
