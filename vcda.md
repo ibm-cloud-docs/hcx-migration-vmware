@@ -48,15 +48,17 @@ VMware Cloud Foundation (VCF) as a Service multitenant instances are deployed to
 ## Key Components
 {: #key components}
 
-a. On-Premises Components
+a. On-Premises
 
 - Replication Manager: Orchestrates VM replication and failover.
 - Tunnel Server: Secures encrypted data transfer over public/private networks.
 - vSphere Environment: Source ESXi hosts and vCenter Server.
 
-b. IBM Cloud Components
+b. IBM Cloud
 
 - VCFaas Subscription
+- vCloud Director
+- VCDA Cloud Appliances
 
 ## Pre-requisites
 {: #pre reqs}
@@ -66,7 +68,7 @@ Successful migration requires preparation at both the on-premises and IBM Cloud 
 On-Premises Prerequisites
 
 - VCDA Deployment: Install and configure the VCDA On-Premises to Cloud Director Replication Appliance. This requires downloading the OVF template from VMware and deploying it via vCenter.
-- Network Connectivity: Ensure outbound access to IBM Cloud for replication traffic. A VPN or Direct Link to IBM Cloud is necessary.
+- Network Connectivity: Ensure outbound access to IBM Cloud for replication traffic. A VPN or Direct Link to IBM Cloud is necessary.Direct Link is preferred for low latency and faster migrations.
 
 IBM Cloud Prerequisites
 - VCFaaS Subscription: An active IBM Cloud account with VCFaaS provisioned, including a virtual data center (VDC) managed by vCloud Director.
@@ -75,9 +77,30 @@ IBM Cloud Prerequisites
 - Storage Profiles: Define destination storage policies (e.g., vSAN or NFS) in vCloud Director to accommodate migrated VMs.
 - Security: Implement firewalls, encryption, and access controls as per organizational policies.
 
+## VCDA Architecture
+{: #VCDA Architecture}
 
+## VCDA Migration Details:
+{: #VCDA Migration Details}
 
-## Architecture
+VMware vCloud Director Availability (VCDA) serves as the cornerstone for migrating VMware workloads from an on-premises vSphere environment to IBM Cloud VMware Solutions, specifically the VMware Cloud Foundation as a Service (VCFaaS) delivered through vCloud Director. VCDA facilitates this process by leveraging asynchronous replication to transfer virtual machines (VMs) and vApps with minimal downtime, ensuring data integrity and operational continuity. The migration operates in a source-to-target model, where the on-premises environment acts as the source and the IBM Cloud VCFaaS environment serves as the target.
 
+The migration architecture relies on a set of interconnected components that bridge the on-premises and IBM Cloud environments. Below is an overview of these components and how they communicate:
+
+On-Premises Components:
+- vCenter Server: Manages the source vSphere environment, hosting the VMs and vApps targeted for migration. It provides the VCDA appliances with access to VM metadata and storage.
+- VCDA On-Premises Appliance: Comprises the Replication Management Appliance and Tunnel Appliance. The Replication Manager orchestrates replication tasks, while the Tunnel Appliance establishes a secure, encrypted connection (port 8048) to IBM Cloud for data transfer.
+- ESXi Hosts: Execute the VMs and facilitate disk-level replication via integration with VCDA.
+
+IBM Cloud Components:
+- vCloud Director: Acts as the management layer for the VCFaaS environment, providing tenant isolation, resource allocation, and the target VDC for migrated workloads.
+- VCDA Cloud Appliances: Deployed within IBM Cloud, these include the Cloud Director Replication Management Appliance (paired with vCloud Director) and the Tunnel Appliances, which receives and processes replicated data.
+- VMware Cloud Foundation Stack: Includes vSphere, vSAN, and NSX-T, hosted on IBM Cloud infrastructure, serving as the runtime environment for migrated workloads.
+- Cloud Networking : Ensures secure, high-speed connectivity between on-premises and cloud networks, often supplemented by Direct Link or VPN.
+
+Migration flow:
+- The on-premises VCDA Replication Manager communicates with vCenter to identify VMs and initiate replication. It then coordinates with the Tunnel Appliance to send encrypted data over the internet or a private connection to the IBM Cloud Tunnel Appliance.
+- In IBM Cloud, the VCDA Cloud Appliances receive the data and integrate it into the target VDC via vCloud Director. vCloud Director assigns compute, storage, and networking resources from the underlying VCFaaS stack.
+- NSX-T optionally enables Layer 2 network extension, allowing VMs to retain their IP addresses, while the Edge Gateway manages external connectivity. For more details. [Refer](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/availability-admin-guide-4-7/vcav-administration-on-premises/stretching-l2-on-premises-networks.html)
 
 For Additonal details - [Refer](https://cloud.ibm.com/docs/vmware-service?topic=vmware-service-vcda-migrating-onprem)
