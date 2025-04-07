@@ -80,6 +80,10 @@ IBM Cloud Prerequisites
 ## VCDA Architecture
 {: #VCDA Architecture}
 ![VCDA VCFAaas Architecture](diagrams/VCDA-reference-architecture-vcfaas.svg){: caption=VCDA architecture}
+- The on-premises VCDA Replication Manager communicates with vCenter to identify VMs and initiate replication. It then coordinates with the Tunnel Appliance to send encrypted data over the internet or a private connection to the IBM Cloud Tunnel Appliance.
+- In IBM Cloud, the VCDA Cloud Appliances receive the data and integrate it into the target VDC via vCloud Director. vCloud Director assigns compute, storage, and networking resources from the underlying VCFaaS stack.
+- NSX-T optionally enables Layer 2 network extension, allowing VMs to retain their IP addresses, while the Edge Gateway manages external connectivity. For more details. [Refer](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/availability-admin-guide-4-7/vcav-administration-on-premises/stretching-l2-on-premises-networks.html)
+
 
 ## VCDA Migration Details:
 {: #VCDA Migration Details}
@@ -99,9 +103,14 @@ IBM Cloud Components:
 - VMware Cloud Foundation Stack: Includes vSphere, vSAN, and NSX-T, hosted on IBM Cloud infrastructure, serving as the runtime environment for migrated workloads.
 - Cloud Networking : Ensures secure, high-speed connectivity between on-premises and cloud networks, often supplemented by Direct Link or VPN.
 
-Migration flow:
-- The on-premises VCDA Replication Manager communicates with vCenter to identify VMs and initiate replication. It then coordinates with the Tunnel Appliance to send encrypted data over the internet or a private connection to the IBM Cloud Tunnel Appliance.
-- In IBM Cloud, the VCDA Cloud Appliances receive the data and integrate it into the target VDC via vCloud Director. vCloud Director assigns compute, storage, and networking resources from the underlying VCFaaS stack.
-- NSX-T optionally enables Layer 2 network extension, allowing VMs to retain their IP addresses, while the Edge Gateway manages external connectivity. For more details. [Refer](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/availability-admin-guide-4-7/vcav-administration-on-premises/stretching-l2-on-premises-networks.html)
-
 For Additonal details - [Refer](https://cloud.ibm.com/docs/vmware-service?topic=vmware-service-vcda-migrating-onprem)
+## Conclusions
+{: #conclusion}
+
+Migrating VMware workloads to IBM Cloud using VCDA provides a robust and flexible solution for enterprises seeking to migrate workloads from On premises to IBM Cloud for rehosting application workloads with cloud agility.With VCDA, you can migrate workloads from vSphere  environments to IBM Cloud VCFaas with options to host your VMware workloads on a single tenant VCF stack or completely managed VCFaaS VMware stack.
+
+
+## References:
+{: #Reference}
+- [VCFaas](https://cloud.ibm.com/docs/vmware-service?topic=vmware-service-getting-started)
+- [Broadcom VCDA](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/what-is-vcda.html)
