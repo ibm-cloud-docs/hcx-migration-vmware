@@ -79,6 +79,7 @@ IBM Cloud Prerequisites
 
 ## VCDA Architecture
 {: #VCDA Architecture}
+![VCDA VCFAaas Architecture](diagrams/VCDA-reference-architecture-vcfaas.svg){: caption=VCDA architecture}
 
 ## VCDA Migration Details:
 {: #VCDA Migration Details}
