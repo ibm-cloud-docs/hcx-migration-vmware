@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-04-07"
+lastupdated: "2025-04-09"
 
 keywords:
 
@@ -24,6 +24,8 @@ This is a short description that introduces the content in this topic.
 
 The VMware Cloud Director Availability™ solution enables migration from on premises to IBM Cloud  for VMware Cloud Director™ and  vCenter Server workloads at both the virtual machine and at the vApp level.
 
+VCDA is oficially the recommended tool of choice for VMware migrations from on-premises to IBM Cloud VCFaaS. 
+
 The VCDA service is included by default in all multitenant virtual data centers (VDCs) and optionally included in your single-tenant VCF as a Service Cloud Director site order at no charge. For a VCDA disaster recovery configuration, a monthly charge is incurred per protected virtual machine (VM).
 
 IBM Cloud® for VMware Cloud Foundation as a Service with VCDA supports several migration scenarios:
@@ -39,7 +41,7 @@ IBM provides public instance endpoints with VCDA. Endpoints are used to access t
 ## Deployment Models Overview
 {: #Deployment-overview}
 
-IBM Cloud® for VCF as a Service provides the VMware Cloud Director™ platform as either a dedicated or shared managed service.
+IBM Cloud® for VCF as a Service provides the VMware Cloud Director™ platform as either a dedicated single tenant  or a shared multi tenant managed service.
 
 IBM® performs the configuration, hosting, operations, and lifecycle management of the VMware® by Broadcom software so you can quickly deploy your VMware-based cloud computing environments. Compute resources are available as either dedicated or multitenant hosts that use IBM Cloud bare metal servers. Dedicated single-tenant VMware sites provide additional isolation and support multiple host configuration options to support flexible workload requirements.
 
