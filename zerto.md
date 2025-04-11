@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-03-31"
+lastupdated: "2025-04-11"
 
 keywords:
 
@@ -82,14 +82,11 @@ The following image is the migration pattern architecture for VMware workloads o
 ### Migration Considerations and Requirements
 {: #zertomigrationclassicconsiderations}
 
-Network Connectivity: Establish IBM Cloud Direct Link or VPN for seamless connectivity. On IBM Cloud Classic, the Direct Link or the VPN, can terminate to a Virtual Router Appliance (for example Juniper vSRX) to be deployed as Edge Cluster in the VMWare environment.
+-   Network Connectivity: Establish IBM Cloud Direct Link or VPN for seamless connectivity. On IBM Cloud Classic, the Direct Link or the VPN, can terminate to a Virtual Router Appliance (for example Juniper vSRX) to be deployed as Edge Cluster in the VMWare environment.
 The Zerto Virtual Manager needs to connect the Call Home feature for Zerto, on public internet. This requires to configure it by using a proxy or NAT connection to the public network. Also, the Zerto replication doesn't support Network Address Translation (NAT) traversal. Establishing connectivity between the IBM Cloud Zerto instance and your own data center might require customization of routes on the Zerto Virtual Manager appliances or Zerto Virtual Replication Appliances (VRAs) on either side.
-
-Storage & Compute Resources: Ensure IBM Cloud has enough capacity to handle incoming workloads. The VRA appliances alone require 100GB of disk themselves. 
-
-RPO & RTO Requirements: Define acceptable recovery point and recovery time objectives.
-
-Testing & Validation: Perform test failovers before production migration.
+-   Storage & Compute Resources: Ensure IBM Cloud has enough capacity to handle incoming workloads. The VRA appliances alone require 100GB of disk themselves. 
+-   RPO & RTO Requirements: Define acceptable recovery point and recovery time objectives.
+-   Testing & Validation: Perform test failovers before production migration.
 
 
 ## Deployment of Zerto for IBM Cloud VMware Cloud Foundation for VPC
@@ -124,10 +121,10 @@ The following image is the migration pattern architecture for VMware workloads o
 ## Migration Considerations and Requirements
 {: #zertomigrationvpcconsiderations}
 
-Network Connectivity: implement appropriate networking configurations to ensure secure and efficient data transfer between on-premises systems and the IBM Cloud VCF environment. In VPC the Direct Link will terminate into an instance of the Transit Gateway and a virtual firewall appliance on VPC (for example the Fortinet's FortiGate Next Generation Firewall) can be deployed into the VPC to control the network traffic.
-Storage Optimization: vSAN cluster (over the NVMe drives on the bare metal servers) needs to have enough capacity to handle incoming workloads.
-Security & Compliance: Align with regulatory requirements for data protection.
-Automation & Monitoring: Leverage IBM Cloud monitoring tools for monitoring the infrastucture
+-   Network Connectivity: implement appropriate networking configurations to ensure secure and efficient data transfer between on-premises systems and the IBM Cloud VCF environment. In VPC the Direct Link will terminate into an instance of the Transit Gateway and a virtual firewall appliance on VPC (for example the Fortinet's FortiGate Next Generation Firewall) can be deployed into the VPC to control the network traffic.
+-   Storage Optimization: vSAN cluster (over the NVMe drives on the bare metal servers) needs to have enough capacity to handle incoming workloads.
+-   Security & Compliance: Align with regulatory requirements for data protection.
+-   Automation & Monitoring: Leverage IBM Cloud monitoring tools for monitoring the infrastucture
 
 ## Conclusions
 {: #conclusions}
