@@ -3,7 +3,7 @@ copyright:
 
 years: 2024
 
-lastupdated: "2025-03-28"
+lastupdated: "2025-04-11"
 
 keywords:
 
@@ -143,7 +143,7 @@ Key considerations for migrating to IBM Cloud VCF using Veeam include:
 
 Migrating VMware workloads to IBM Cloud using Veeam provides a robust and flexible solution for enterprises seeking to enhance their data protection and disaster recovery capabilities. By leveraging Veeam's seamless integration with IBM Cloud's VMware offerings, businesses can achieve high availability, secure backup, and efficient recovery of critical applications and data. Careful planning and consideration of network configurations, resource allocation, and compatibility are essential to ensure a smooth and successful migration process.
 
-## References
+## References(Veeam doc Suresh)
 
 -   IBM Cloud Docs: Veeam Deployment on VMware Cloud Foundation:
     [ondeck.console.cloud.ibm.com](https://ondeck.console.cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-con)

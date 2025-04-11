@@ -80,7 +80,6 @@ Deploying VMware HCX for migration requires meeting specific prerequisites on bo
 
 ### IBM Cloud Requirements
 {: #cloud}
-- [Target site with NSX-V deployments](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-target-v)
 - [Target site with NSX-T deployments](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-target-t)
 
 
@@ -89,7 +88,7 @@ Deploying VMware HCX for migration requires meeting specific prerequisites on bo
 
 -   IBM Cloud Direct Link for private, high-speed connectivity.
 -   VPN for low speed secure site-to-site communication.
--   NSX-T or NSX-V integration for network segmentation and security enforcement.
+-   NSX-T integration for network segmentation and security enforcement.
 -   Public IPs (if required for public-facing workloads).
 -   Proper firewall and security policies configured to allow necessary traffic.
 -   For further networking port configuration and understanding the requirement, visit the following link [Network Port Requirements](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-port-req)
@@ -163,6 +162,6 @@ Migrating VMware workloads to IBM Cloud using HCX provides a robust and flexible
 ## References
 {: #reference}
 
-- [Vmware HCX on IBM Cloud](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
-- [Vmware Solutions on IBM Cloud](https://cloud.ibm.com/docs/vmwaresolutions)
+- [VMware HCX on IBM Cloud](https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
+- [VMware Solutions on IBM Cloud](https://cloud.ibm.com/docs/vmwaresolutions)
 - [Offical HCX Documentation from Broadcom](https://techdocs.broadcom.com/us/en/vmware-cis/hcx.html)

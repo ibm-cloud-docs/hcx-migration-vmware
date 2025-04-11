@@ -88,13 +88,15 @@ IBM Cloud Prerequisites
 
 ## VCDA Architecture
 {: #VCDA Architecture}
-![VCDA VCFAaas Architecture](diagrams/VCDA-reference-architecture-vcfaas.svg){: caption=VCDA architecture}
+
 - The on-premises VCDA Replication Manager communicates with vCenter to identify VMs and initiate replication. It then coordinates with the Tunnel Appliance to send encrypted data over the internet or a private connection to the IBM Cloud Tunnel Appliance.
 - In IBM Cloud, the VCDA Cloud Appliances receive the data and integrate it into the target VDC via vCloud Director. vCloud Director assigns compute, storage, and networking resources from the underlying VCFaaS stack.
 - NSX-T optionally enables Layer 2 network extension, allowing VMs to retain their IP addresses, while the Edge Gateway manages external connectivity. 
 - Additional Streched Networking details. [Refer](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/availability-admin-guide-4-7/vcav-administration-on-premises/stretching-l2-on-premises-networks.html)
-- For more VCDA Architecture  details - [Refer](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/on-prem-availability-install-config-and-upgrade-guide-4-7/installing-and-configuring-vcav-on-premises/deployment-architecture-on-premises.html)
 
+![VCDA VCFAaas Architecture](diagrams/VCDA-reference-architecture-vcfaas.svg){: caption=VCDA architecture}
+
+- For more VCDA Architecture  details - [Refer](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/on-prem-availability-install-config-and-upgrade-guide-4-7/installing-and-configuring-vcav-on-premises/deployment-architecture-on-premises.html)
 
 ## VCDA Migration Details:
 {: #VCDA Migration Details}
