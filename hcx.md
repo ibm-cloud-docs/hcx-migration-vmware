@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2025-04-04"
+lastupdated: "2025-04-11"
 
 keywords:
 
@@ -147,7 +147,7 @@ To optimize network efficiency, HCX includes built-in WAN acceleration features:
 ---
 
 
-Here is the linst of supported HCX platform 
+Here is the list of supported HCX platform 
 [HCX supported platforms](https://cloud.ibm.com/infrastructure/vmware-solutions/console/newserviceentry/HCX/vcs_nsx_t): 
 
     -   vSphere v5.1,v5.5
