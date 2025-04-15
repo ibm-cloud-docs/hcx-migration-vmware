@@ -14,7 +14,10 @@ subcollection: hcx-migration-vmware
 # Migration Overview
 {: #migration-overview}
 
-This is a short description that introduces the content in this topic. {: shortdesc}
+This whitepaper address and covers IBM Cloud migration options for customers who would like to consider migrating VMware workloads to IBM Cloud VMware environent.
+
+The Whitepaper will cover high level recommendations and approach.
+
 
 ## IBM Cloud VMWare overview
 {: #ibmcloud-overview}
