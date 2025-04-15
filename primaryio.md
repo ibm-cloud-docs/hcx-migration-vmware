@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2025-03-28"
+lastupdated: "2025-04-15"
 
 keywords:
 
@@ -14,15 +14,15 @@ subcollection: hcx-migration-vmware
 # Migrate with PrimaryIO
 {: #migratewithprimaryio}
 
-## Overview
+## PrimaryIO Overview
 {: #overview}
 
-PrimaryIO is a technology-first company with an IBM Cloud-native platform wrapped in orchestrated services. Together the technology, processes and people from PrimaryIO enable the Cloud Journey for organizations. 
-As a key step in the Cloud Journey, migration can deliver strategic benefits as well as cost savings from hardware, software license and operational optimization. 
-Cloud scalability and elasticity offer customers the ability to scale up and down according to need. Migrations are ideally tailored to the specific requirements, whether a swift “big bang” move, or a methodical, timed series of workload waves. 
-Irrespective of approach, migrations need to be well planned and well executed to minimize time, risk and cost. Due to unique tools, experience and technical depth, PrimaryIO is the leading provider of migrations into IBM Cloud; migrations have become a key offering from PrimaryIO, consumable through a tile in the IBM Cloud Catalog.  
-
-From a technology perspective, PrimaryIO provide an IBM Cloud-native SaaS platform that supports migration into IBM Cloud. Platform use cases supported include, but are not limited to: 
+1.  PrimaryIO is a technology-first company with an IBM Cloud-native platform wrapped in orchestrated services. Together the technology, processes and people from PrimaryIO enable the Cloud Journey for organizations. 
+2.  As a key step in the Cloud Journey, migration can deliver strategic benefits as well as cost savings from hardware, software license and operational optimization. 
+Cloud scalability and elasticity offer customers the ability to scale up and down according to need. 
+3.  Migrations are ideally tailored to the specific requirements, whether a swift “big bang” move, or a methodical, timed series of workload waves. 
+4.  Irrespective of approach, migrations need to be well planned and well executed to minimize time, risk and cost. Due to unique tools, experience and technical depth, PrimaryIO is the leading provider of migrations into IBM Cloud; migrations have become a key offering from PrimaryIO, consumable through a tile in the IBM Cloud Catalog.  
+5.  From a technology perspective, PrimaryIO provide an IBM Cloud-native SaaS platform that supports migration into IBM Cloud. Platform use cases supported include, but are not limited to: 
 
 1.  Migration of lower-tier applications, like Dev/Test, while simultaneously using IBM Cloud as a DR site for on-prem production VMware VMs;
 
@@ -151,6 +151,7 @@ Key architectural features include:
     -   Red Hat OpenShift Kubernetes (ROKs) on IBM Cloud
 
 ### Migration Considerations and Requirements
+
 {: #vcfpriovpc}
 
 When planning a migration to IBM Cloud VPC using PrimaryIO, consider the following:
@@ -162,5 +163,7 @@ When planning a migration to IBM Cloud VPC using PrimaryIO, consider the followi
 
 
 ## References:
+
 {: #references}
+
 All the PrimaryIO references are listed here.
