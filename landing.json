@@ -53,7 +53,7 @@
       "deployable": false
     },
     {
-      "title": "Migrating workloads from an on-premises vCenter environment to VCF as a Service",
+      "title": "Architecture pattern for Zerto replication connectivity in IBM Cloud",
       "href": "/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-zerto-xconnectivity",
       "deployable": false
     }
