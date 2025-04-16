@@ -14,8 +14,7 @@ subcollection: hcx-migration-vmware
 # Migrate with PrimaryIO
 {: #primaryio}
 
-Below 
-
+This section covers PrimaryIO Migration approaches to IBM Cloud
 ## Overview
 {: #primaryio-overview}
 
