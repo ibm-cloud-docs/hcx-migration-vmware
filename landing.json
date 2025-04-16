@@ -32,8 +32,8 @@
     {
       "title": "VMware on IBM Cloud",
       "description": "VMware on IBM Cloud",
-      "href": "/docs/vmwaresolutions?topic=vmwaresolutions-getting-started",
-      "type": "blog"
+      "href": "https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-getting-started",
+      "type": "white-paper"
     }
   ],
   "section_architectures": [
