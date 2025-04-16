@@ -7,83 +7,55 @@
   "section_topics": {
     "links": [
       {
-        "title": "Topic title",
-        "href": "/docs/overview?topic=overview-get-started-checklist"
+        "title": "Migrate with HCX",
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-hcx"
       },
       {
-        "title": "Topic title",
-        "href": "/docs/overview?topic=overview-get-started-checklist"
+        "title": "Migrate with Veeam",
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-veeam"
       },
       {
-        "title": "Topic title",
-        "href": "/docs/overview?topic=overview-get-started-checklist"
+        "title": "Migrate with VCDA",
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-vcda"
       },
       {
-        "title": "Topic title",
-        "href": "/docs/overview?topic=overview-get-started-checklist"
+        "title": "Migrate with PrimaryIO",
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-primaryio"
       },
       {
-        "title": "Topic title",
-        "href": "/docs/overview?topic=overview-get-started-checklist"
+        "title": "Migrate with Zerto",
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-zerto"
       }
     ]
   },
   "section_highlights": [
     {
-      "title": "Resource title",
-      "description": "Short description of resource content.",
-      "href": "https://www.example.ibm.com/link/to/resource",
-      "type": "blog"
-    },
-    {
-      "title": "Db2 Optimization Techniques for SAP Database Migration to the Cloud",
-      "description": "This IBM Redbook provides in-depth recommendations for the source system database export.",
-      "href": "https://www.redbooks.ibm.com/abstracts/sg248531.html",
-      "type": "redbook",
-      "recommended": true
+      "title": "VMware on IBM Cloud",
+      "description": "VMware on IBM Cloud",
+      "href": "/docs/vmwaresolutions?topic=vmwaresolutions-getting-started",
+      "type": "solution"
     }
   ],
   "section_architectures": [
     {
-      "title": "Acme Test on VPC",
-      "href": "/docs/acme-test?topic=acme-test-reference-architecture",
-      "deployable": true
+      "title": "Deploying HCX on VMware Cloud Foundation consolidated architecture",
+      "href": "/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-hcx-con",
+      "deployable": false
     },
     {
-      "title": "Acme Test on Power Virtual Servers",
-      "href": "/docs/acme-test?topic=acme-test-reference-architecture",
-      "deployable": true
+      "title": "Veeam on IBM Cloud",
+      "href": "/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview",
+      "deployable": false
     },
     {
-      "title": "Acme Test on Power Virtual Servers",
-      "href": "/docs/acme-test?topic=acme-test-reference-architecture",
-      "deployable": true
+      "title": "Migrating workloads from an on-premises vCenter environment to VCF as a Service",
+      "href": "/docs/vmware-service?topic=vmware-service-vcda-migrating-onprem",
+      "deployable": false
     },
     {
-      "title": "Acme Test on Power Virtual Servers",
-      "href": "/docs/acme-test?topic=acme-test-reference-architecture",
-      "deployable": true
+      "title": "Migrating workloads from an on-premises vCenter environment to VCF as a Service",
+      "href": "/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-zerto-xconnectivity",
+      "deployable": false
     }
-  ],
-  "section_updates": {
-    "view_more": "/docs/overview?topic=overview-whatsnew",
-    "tiles": [
-      {
-        "date": "07 August 2024",
-        "title": "Experimental: Access resources from the Resources tab"
-      },
-      {
-        "date": "07 August 2024",
-        "title": "View counts for all resources in the resource summary widget"
-      },
-      {
-        "date": "17 June 2024",
-        "title": "Experimental: Using AI to answer your questions about IBM Cloud"
-      },
-      {
-        "date": "17 June 2024",
-        "title": "Changes to IBM Cloud projects API method to list all deployed resources"
-      }
-    ]
-  }
+  ]
 }
