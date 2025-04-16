@@ -165,4 +165,3 @@ PrimaryIO references are listed below:
 * [ProtectIO DRaaS Managed Service](https://cloud.ibm.com/catalog/services/protectio-draas-managed-service)
 * [ConvertIO VMware Workload Migration and Conversion](https://cloud.ibm.com/catalog/services/convertio-vmware-workload-migration-and-conversion)
 * [VMware Cloud Migration Services](https://cloud.ibm.com/catalog/services/vmware-cloud-migration-services)
-* [HDM VMware Workload Analyzer](https://cloud.ibm.com/catalog/services/hdm-vmware-workload-analyzer?catalog_query=aHR0cHM6Ly9jbG91ZC5pYm0uY29tL2NhdGFsb2c%2Fc2VhcmNoPXByaW1hcnlpbyNzZWFyY2hfcmVzdWx0cw%3D%3D)

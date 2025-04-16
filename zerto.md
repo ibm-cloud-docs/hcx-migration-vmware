@@ -47,7 +47,7 @@ Moreover, a Virtual Replication Appliance (VRA) needs to be installed in each hy
 ## Architecture of Zerto for IBM Cloud VMware Cloud Foundation for Classic
 {: #zerto-deploymentclassic}
 
-### Architecture of Zerto on the on prem Site
+### Architecture of Zerto on the on prem
 {: #zerto-deploymentclassic-architectureclassiconprem}
 
 The on-premise site architecture includes the following:
@@ -56,7 +56,7 @@ The on-premise site architecture includes the following:
 - Zerto Virtual Replication Appliances (VRAs): Installed, from the ZVM console, to each ESXi host to replicate data continuously from the source to the target VRA.
 - WAN Connection: Secure VPN or Direct Link connection between on-premises and IBM Cloud.
 
-### Architecture of Zerto on IBM Cloud VCF Side
+### Architecture of Zerto on IBM Cloud VCF for Classic
 {: #zerto-deploymentclassic-architectureclassicvcf}
 
 On IBM Cloud VCF on Classic - Automated, the architecture includes the following:
@@ -85,7 +85,7 @@ Consider the following when migrating using Zerto:
 ## Deployment of Zerto for IBM Cloud VMware Cloud Foundation for VPC
 {: #zerto-deploymentvpc}
 
-### Architecture of Zerto on the on prem Site
+### Architecture of Zerto on the on prem
 {: #zerto-deploymentvpc-architecturevpconprem}
 
 There is are no differences for the on-premise architecture to migrate to the IBM Cloud VCF on VPC or to an IBM Cloud VCF on Classic offering. In fact, the architecture is the same and includes the following:
@@ -94,7 +94,7 @@ There is are no differences for the on-premise architecture to migrate to the IB
 - Zerto Virtual Replication Appliances (VRAs): Installed, from the ZVM console, to each ESXi host to replicate data continuously from the source to the target VRA.
 - WAN Connection: Secure VPN or Direct Link connection between on-premises and IBM Cloud.
 
-### Architecture of Zerto on IBM Cloud VCF Side
+### Architecture of Zerto on IBM Cloud VCF
 {: #zerto-deploymentvpc-architecturevpcvcf}
 
 There is no automation to install Zerto on an VCF for VPC instance, so all the components need to be manually installed:
