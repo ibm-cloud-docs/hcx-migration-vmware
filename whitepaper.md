@@ -750,7 +750,7 @@ When planning a migration to IBM Cloud VPC using PrimaryIO, consider the followi
 - Compatibility: On prem VMs including edge security must be provisioned in a compatible IBM Cloud environment.
 - Minimal Impact Planning: Methodology coupled with resource allocation needs to be well-planned in order to minimize impact to the applications, and by extension to the business dependent on those applications.
 
-### References
+#### References
 {: #primaryio-references}
 
 PrimaryIO references are listed below:

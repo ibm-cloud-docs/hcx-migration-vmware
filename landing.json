@@ -6,11 +6,11 @@
     "links": [
       {
         "title": "Migrate with HCX",
-        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-hcx?topic=hcx-migration-vmware-migration-overview#overview-hcx"
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-migration-overview#overview-hcx"
       },
       {
         "title": "Migrate with Veeam",
-        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-veeam"
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-migration-overview#overview-veeam"
       },
       {
         "title": "Migrate with VCDA",
