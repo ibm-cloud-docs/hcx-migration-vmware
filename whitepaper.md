@@ -706,28 +706,6 @@ Key architectural features include:
     -   SQL database storing key metadata (not VM application data)
     -   Red Hat OpenShift Kubernetes (ROKs) on IBM Cloud
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-#### Migration Considerations and Requirements
-{: #primaryio-vpc-migrations}
-
-When planning a migration to IBM Cloud VPC using PrimaryIO, consider the following:
-
-- Network Connectivity: Data integrity, reliability and speed will be a function of the connectivity between the migration source VMs and the IBM Cloud target site. This must be in place prior to migration.
-- Resource Allocation: The necessary credentialing as well as compute, network and storage resources must be properly provisioned in IBM Cloud in order to assure that anticipated performance of the migrated VMs in IBM Cloud.
-- Compatibility: On prem VMs including edge security must be provisioned in a compatible IBM Cloud environment.
-- Minimal Impact Planning: Methodology coupled with resource allocation needs to be well-planned in order to minimize impact to the applications, and by extension to the business dependent on those applications.
-
-#### References
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 ### References
 >>>>>>> Stashed changes
 {: #primaryio-references}
