@@ -9,7 +9,7 @@ toc:
     path: hcx-migration-vmware
     audience: solution
     category: solution_docs
-    content-type: deployment
+    content-type: white-paper
   # industry: industry-value # Replace
     use-case: VirtualPrivateCloud # Replace
    # compliance: compliance-value # Replaces
@@ -17,9 +17,9 @@ toc:
     label: VMware Migration options to IBM Cloud environment # Replace
   entries:
   - navgroup:
-      id: overview
+      id: reference
       topics:
-      - overview.md
+      - whitepaper.md
   - navgroup:
       id: migrate
       topics:
