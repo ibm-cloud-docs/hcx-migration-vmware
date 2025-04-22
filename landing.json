@@ -6,7 +6,7 @@
     "links": [
       {
         "title": "Migrate with HCX",
-        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-hcx"
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-hcx?topic=hcx-migration-vmware-migration-overview#overview-hcx"
       },
       {
         "title": "Migrate with Veeam",
@@ -14,15 +14,15 @@
       },
       {
         "title": "Migrate with VCDA",
-        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-vcda"
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-migration-overview#overview-vcda"
       },
       {
         "title": "Migrate with PrimaryIO",
-        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-primaryio"
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-migration-overview#overview-primaryio"
       },
       {
         "title": "Migrate with Zerto",
-        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-zerto"
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-migration-overview#overview-zerto"
       }
     ]
   },
