@@ -11,7 +11,7 @@ subcollection: hcx-migration-vmware
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Migration Overview
+# Migrate VMware workloads to IBM Cloud VMware environment
 {: #migration-overview}
 
 This whitepaper address and covers IBM Cloud migration options for customers who would like to consider migrating VMware workloads to IBM Cloud VMware environent.
@@ -31,7 +31,7 @@ For CTOs and CIOs evaluating cloud migration, it is crucial to choose the right 
 
 Each of the following migration methods offers unique advantages, addressing different use cases such as workload mobility, disaster recovery, data replication, and cost efficiency.
 
-## 1. VMware HCX
+## VMware HCX
 {: #overview-hcx}
 
 VMware HCX (Hybrid Cloud Extension) is a purpose-built solution designed to simplify workload migration and inter-connectivity between on-premises data centers and IBM Cloud. It enables live migrations without downtime, making it ideal for businesses that require continuous availability. Key benefits include the following:
@@ -201,7 +201,7 @@ Migrating VMware workloads to IBM Cloud using HCX provides a robust and flexible
 * [VMware Solutions on IBM Cloud](/docs/vmwaresolutions)
 * [Official HCX Documentation from Broadcom](https://techdocs.broadcom.com/us/en/vmware-cis/hcx.html){: external}
 
-## 2. Veeam – Backup & Replication for Data Protection
+## Veeam – Backup & Replication for Data Protection
 {: #overview-veeam}
 
 Veeam is an industry leader in backup, replication, and disaster recovery. Organizations leveraging Veeam can backup on-premises VMware environments and restore them directly into IBM Cloud. Key benefits include the following:
@@ -356,7 +356,7 @@ Migrating VMware workloads to IBM Cloud using Veeam provides a robust and flexib
 * [Veeam Continuous Data Protection (CDP)](https://helpcenter.veeam.com/docs/backup/vsphere/cdp_replication.html?ver=120)
 * [Veeam User Guid for Backup & Replication](https://helpcenter.veeam.com/docs/backup/vsphere/overview.html?ver=120)
 
-## 3. Zerto – Continuous Data Protection & Disaster Recovery
+##  Zerto – Continuous Data Protection & Disaster Recovery
 {: #overview-zerto}
 
 Zerto specializes in disaster recovery and workload mobility by offering continuous data replication with near-zero downtime. This solution is well-suited for organizations requiring high availability and resilience. Key benefits include the following::
@@ -456,7 +456,7 @@ The following image is the migration pattern architecture for VMware workloads o
 
 ![Zerto Migration Architecture](diagrams/zerto_vpc.svg){: caption="Zerto migration for VMware Workloads on {{site.data.keyword.Bluemix_notm}} VPC (VCF) architecture" caption-side="bottom"}
 
-## 4. VMware Cloud Director Availability (VCDA)
+##  VMware Cloud Director Availability (VCDA)
 {: #overview-vcda}
 
 VCDA is a VMware-native migration tool designed for cloud service providers and enterprises using VMware Cloud Director on IBM Cloud. It offers an integrated approach for disaster recovery and migration. Key benefits include the following:
@@ -572,7 +572,7 @@ Migrating VMware workloads to IBM Cloud VCFaaS using VCDA provides a robust and 
 * [Getting started with VCF as a Service](/docs/vmware-service?topic=vmware-service-getting-started)
 * [What is VMware Cloud Director Availability](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/what-is-vcda.html){: external}
 
-## 5. PrimaryIO
+##  PrimaryIO
 {: #overview-primaryio}
 
 PrimaryIO offers a unique approach to workload migration and disaster recovery, focusing on reducing data transfer costs and accelerating time to cloud. Key benefits include the following:
