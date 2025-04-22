@@ -708,6 +708,8 @@ Key architectural features include:
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #### Migration Considerations and Requirements
 {: #primaryio-vpc-migrations}
 
@@ -720,6 +722,10 @@ When planning a migration to IBM Cloud VPC using PrimaryIO, consider the followi
 
 #### References
 =======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 ### References
