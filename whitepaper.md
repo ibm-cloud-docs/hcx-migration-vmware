@@ -710,7 +710,6 @@ Key architectural features include:
 {: #primaryio-references}
 
 PrimaryIO references are listed below:
-
 * [PrimaryIO](https://www.primaryio.com/){: external}
 * [ProtectIO DRaaS Managed Service](https://cloud.ibm.com/catalog/services/protectio-draas-managed-service)
 * [ConvertIO VMware Workload Migration and Conversion](https://cloud.ibm.com/catalog/services/convertio-vmware-workload-migration-and-conversion)
