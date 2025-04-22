@@ -707,7 +707,6 @@ Key architectural features include:
     -   Red Hat OpenShift Kubernetes (ROKs) on IBM Cloud
 
 ### References
->>>>>>> Stashed changes
 {: #primaryio-references}
 
 PrimaryIO references are listed below:
