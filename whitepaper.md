@@ -66,21 +66,11 @@ IBM Cloud for VMware Solutions is a cloud-based offering that allows organizatio
 * Management and Control - With the self-managed model, customers have access to the native VMware stack to manage resources and workloads, similar to their on-premises environments. In the managed model, IBm manages up to and including the hypervizor so that customers can focus on the workloads
 
 IBM Cloud for VMware Solutions provides a comprehensive platform for extending and migrating VMware workloads to the cloud, offering a flexible and secure environment for running various types of applications.
-
-#### Overview
-{: #hcx-ibmcloud-overview-overview}
-
-VMware HCX (Hybrid Cloud Extension) on IBM Cloud is a powerful solution designed to simplify and automate the migration of VMware-based workloads between on-premises data centers and IBM Cloud. It enables enterprises to seamlessly extend, migrate, and modernize applications across hybrid cloud environments with minimal disruption.
-
-VMware HCX is a multi-cloud application mobility platform that enables businesses to securely migrate workloads between different VMware environments. It abstracts the underlying infrastructure, allowing seamless workload mobility, and hybrid cloud operations without requiring application refactoring.
-
-When deployed on IBM Cloud, VMware HCX facilitates the movement of workloads from on-premises VMware environments to IBM’s global cloud infrastructure. This helps enterprises leverage IBM Cloud’s scalability, high availability, and security while maintaining compatibility with their existing VMware workloads.
-
 HCX provides the flexibility of extending the networks of on-premises data centers into IBM Cloud, enabling the migration of virtual machines (VMs) to and from the IBM Cloud without any conversion or change. HCX creates an abstraction layer that enables application mobility and infrastructure hybridity through securely stretched networks. You can modernize your VMware environment from legacy VMware vSphere software versions to the most recent vSphere version without having to refractor or modify your existing application. HCX allows you to bring your IP subnet ranges into IBM Cloud, which ensures IP consistency through a hybrid deployment, and it also provides high level security with end-to-end suite B encryptions.
 
 For further information regarding HCX on IBM Cloud please follow this link [HCX Overview on IBM Cloud](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations).
 
-#### Key Features and Benefits
+### Key Features and Benefits
 {: #hcx-ibmcloud-overview-benefits}
 
 The following are the key features and benefits of VMware HCX:
@@ -93,15 +83,7 @@ The following are the key features and benefits of VMware HCX:
 * WAN optimization improves performance, reducing latency and bandwidth consumption during migration.
 * With simplified operations and automation, HCX simplifies workload migration with an intuitive interface, reducing manual efforts and operational complexity. It automates VM movement, ensuring faster cloud adoption without impacting productivity.
 
-#### Use Cases
-{: #hcx-ibmcloud-overview-usecases}
-
-Typically HCX in OBM Cloud is used in the following usecases:
-
-1. Cloud Migration - Enterprises can migrate large-scale VMware workloads to IBM Cloud without re-architecting applications. This accelerates digital transformation while maintaining operational consistency.
-2. Data Center Extension - HCX enables organizations to extend their existing VMware environment to IBM Cloud, providing additional capacity without upfront hardware investment.
-
-#### Deployment Models on IBM Cloud
+#### Deployment on IBM Cloud
 {: #hcx-ibmcloud-overview-deployment}
 
 While IBM Cloud has a number of VMware offering, only the following offer suitable deployment models for VMware HCX
@@ -206,11 +188,6 @@ To optimize network efficiency, HCX includes built-in WAN acceleration features:
 {: #hcx-prereq-vsphere-versions}
 
 See [HCX supported platforms](https://cloud.ibm.com/infrastructure/vmware-solutions/console/newserviceentry/HCX/vcs_nsx_t) for supported vSphere versions:
-
-* vSphere v5.1,v5.5
-* vSphere 6.0,6.5,6.7
-* vSphere 7.0
-* vSphere 8.0
 
 ### Conclusions
 {: #hcx-conclusion}
@@ -412,6 +389,18 @@ In the IBM Cloud environment, the architecture involves deploying the Zerto Virt
 
 Moreover, a Virtual Replication Appliance (VRA) needs to be installed in each hypervisor host where VMs are to be moved from or to. The VRA manages the replication of data from the on prem to the IBM Cloud by adjusting the compression level according to CPU usage. See [The Zerto Solution Architecture](https://help.zerto.com/bundle/Admin.VC.HTML/page/The_Zerto_Solution_Architecture.htm){: external}.
 
+#### Migration Considerations and Requirements
+{: #zerto-deploymentclassic-migrationclassicconsiderations}
+
+Consider the following when migrating using Zerto:
+
+* Network Connectivity: Establish IBM Cloud Direct Link or VPN for seamless connectivity. On IBM Cloud Classic, the Direct Link or the VPN, can terminate to a Virtual Router Appliance (for example Juniper vSRX) to be deployed as Edge Cluster in the VMWare environment. In VPC the Direct Link will terminate into an instance of the Transit Gateway and a virtual firewall appliance on VPC (for example the Fortinet's FortiGate Next Generation Firewall) can be deployed into the VPC to control the network traffic.
+  * The Zerto Virtual Manager needs to connect the Call Home feature for Zerto, on public internet. This requires to configure it by using a proxy or NAT connection to the public network.
+  * The Zerto replication doesn't support Network Address Translation (NAT) traversal. Establishing connectivity between the IBM Cloud Zerto instance and your own data center might require customization of routes on the Zerto Virtual Manager appliances or Zerto Virtual Replication Appliances (VRAs) on either side.
+* Storage & Compute Resources: Ensure your IBM Cloud VCF instance has enough capacity to handle incoming workloads. The VRA appliances alone require 100GB of disk.
+* RPO & RTO Requirements: Define acceptable recovery point and recovery time objectives.
+* Testing & Validation: Perform test fail-overs before production migration.
+
 ### Deployment of Zerto for IBM Cloud VMware Cloud Foundation for Classic
 {: #zerto-deploymentclassic}
 
@@ -438,25 +427,13 @@ The following image shows the migration pattern architecture for VMware workload
 
 ![Zerto Migration Architecture](diagrams/zerto_classic.svg){: caption="Zerto migration for VMware Workloads on {{site.data.keyword.Bluemix_notm}} Classic (VCF) architecture" caption-side="bottom"}
 
-#### Migration Considerations and Requirements
-{: #zerto-deploymentclassic-migrationclassicconsiderations}
-
-Consider the following when migrating using Zerto:
-
-* Network Connectivity: Establish IBM Cloud Direct Link or VPN for seamless connectivity. On IBM Cloud Classic, the Direct Link or the VPN, can terminate to a Virtual Router Appliance (for example Juniper vSRX) to be deployed as Edge Cluster in the VMWare environment.
-  * The Zerto Virtual Manager needs to connect the Call Home feature for Zerto, on public internet. This requires to configure it by using a proxy or NAT connection to the public network.
-  * The Zerto replication doesn't support Network Address Translation (NAT) traversal. Establishing connectivity between the IBM Cloud Zerto instance and your own data center might require customization of routes on the Zerto Virtual Manager appliances or Zerto Virtual Replication Appliances (VRAs) on either side.
-* Storage & Compute Resources: Ensure your IBM Cloud VCF instance has enough capacity to handle incoming workloads. The VRA appliances alone require 100GB of disk.
-* RPO & RTO Requirements: Define acceptable recovery point and recovery time objectives.
-* Testing & Validation: Perform test fail-overs before production migration.
-
 ### Deployment of Zerto for IBM Cloud VCF for VPC
 {: #zerto-deploymentvpc}
 
 #### Architecture of Zerto on prem
 {: #zerto-deploymentvpc-architecturevpconprem}
 
-There is are no differences for the on-premise architecture to migrate to the IBM Cloud VCF on VPC or to an IBM Cloud VCF on Classic offering. In fact, the architecture is the same and includes the following:
+There are no differences for the on-premise architecture to migrate to the IBM Cloud VCF on VPC or to an IBM Cloud VCF on Classic offering. In fact, the architecture is the same and includes the following:
 
 * Zerto Virtual Manager Applicance (ZVMA): a Linux-based virtual appliance featuring microservices for security and authentication, logging, and management. The ZVM Appliance runs on a secure Linux operating system, managing replication and orchestrating recovery operations.
 * Zerto Virtual Replication Appliances (VRAs): Installed, from the ZVM console, to each ESXi host to replicate data continuously from the source to the target VRA.
@@ -474,18 +451,6 @@ There is no automation to install Zerto on an VCF for VPC instance, so all the c
 The following image is the migration pattern architecture for VMware workloads on {{site.data.keyword.Bluemix_notm}} VCF on VPC.
 
 ![Zerto Migration Architecture](diagrams/zerto_vpc.svg){: caption="Zerto migration for VMware Workloads on {{site.data.keyword.Bluemix_notm}} VPC (VCF) architecture" caption-side="bottom"}
-
-#### Migration considerations and requirements
-{: #zerto-migrationvpcconsiderations}
-
-Consider the following when using Zerto to migrate to IBM Cloud:
-
-* Network Connectivity: implement appropriate networking configurations to ensure secure and efficient data transfer between on-premises systems and the IBM Cloud VCF environment. In VPC the Direct Link will terminate into an instance of the Transit Gateway and a virtual firewall appliance on VPC (for example the Fortinet's FortiGate Next Generation Firewall) can be deployed into the VPC to control the network traffic.
-* Storage Optimization: The vSAN cluster (the NVMe drives on the bare metal servers) needs to have enough capacity to handle incoming workloads.
-* Security & Compliance: Align with regulatory requirements for data protection.
-* Automation & Monitoring: Leverage IBM Cloud monitoring tools for monitoring the infrastucture
-
-Migrating VMware workloads to IBM Cloud using Zerto offers a seamless, low-downtime solution with continuous replication and automated failover. Organizations can leverage IBM Cloud for scalable, resilient disaster recovery while ensuring high availability of critical applications. Planning, testing, and optimizing network and storage configurations are crucial for a successful migration.
 
 ## 4. VMware Cloud Director Availability (VCDA)
 {: #overview-vcda}
@@ -662,6 +627,16 @@ The table below describes the features of the ProtectIO service:
 | VMware Dependency              | Support for current versions of vSphere. VIB installed on production (source) ESXi host                                                                                                                                                                  |
 | Best For                       | All VMware VMs, whether turned off and unused, to business-critical application workloads. These are “future-proof” migrations that, over time, can target cloud-native VSIs or containerized applications on a per-VM basis.                         |
 
+### Migration Considerations and Requirements
+{: #primaryio-ibmcloudclassic-migration-requirement}
+
+When planning a migration to IBM Cloud using PrimaryIO, consider the following:
+
+- Network Connectivity: Data integrity, reliability and speed will be a function of the connectivity between the migration source VMs and the IBM Cloud target site. This must be in place prior to migration.
+- Resource Allocation: The necessary credentialing as well as compute, network and storage resources must be properly provisioned in IBM Cloud in order to assure that anticipated performance of the migrated VMs in IBM Cloud.
+- Compatibility: On prem VMs including edge security must be provisioned in a compatible IBM Cloud environment.
+- Minimal Impact Planning: Methodology coupled with resource allocation needs to be well-planned in order to minimize impact to the applications, and by extension to the business dependent on those applications.
+
 ### Migration to IBM Cloud Classic Environment
 {: #primaryio-ibmcloudclassic}
 
@@ -695,15 +670,6 @@ Key architectural features include the following:
     -   SQL database storing key metadata (not VM application data)
     -   Red Hat OpenShift Kubernetes (ROKs) on IBM Cloud
 
-#### Migration Considerations and Requirements
-{: #primaryio-ibmcloudclassic-migration-requirement}
-
-When planning a migration to IBM Cloud Classic using PrimaryIO, consider the following:
-
-- Network Connectivity: Data integrity, reliability and speed will be a function of the connectivity between the migration source VMs and the IBM Cloud target site. This must be in place prior to migration.
-- Resource Allocation: The necessary credentialing as well as compute, network and storage resources must be properly provisioned in IBM Cloud in order to assure that anticipated performance of the migrated VMs in IBM Cloud.
-- Compatibility: On prem VMs including edge security must be provisioned in a compatible IBM Cloud environment.
-- Minimal Impact Planning: Methodology coupled with resource allocation needs to be well-planned in order to minimize impact to the applications, and by extension to the business dependent on those applications.
 
 ### Migration to IBM Cloud VPC environment
 {: #primaryio-vpc}
@@ -740,6 +706,8 @@ Key architectural features include:
     -   SQL database storing key metadata (not VM application data)
     -   Red Hat OpenShift Kubernetes (ROKs) on IBM Cloud
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 #### Migration Considerations and Requirements
 {: #primaryio-vpc-migrations}
 
@@ -751,6 +719,11 @@ When planning a migration to IBM Cloud VPC using PrimaryIO, consider the followi
 - Minimal Impact Planning: Methodology coupled with resource allocation needs to be well-planned in order to minimize impact to the applications, and by extension to the business dependent on those applications.
 
 #### References
+=======
+=======
+>>>>>>> Stashed changes
+### References
+>>>>>>> Stashed changes
 {: #primaryio-references}
 
 PrimaryIO references are listed below:
