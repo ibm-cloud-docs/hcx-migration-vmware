@@ -353,8 +353,8 @@ Migrating VMware workloads to IBM Cloud using Veeam provides a robust and flexib
 * [Veeam Replication Connectivity on VMware Cloud Foundation](/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-xconnectivity)
 * [Veeam Backup Service for VMware Cloud Foundation](/docs/vmware-service?topic=vmware-service-tenant-veeam)
 * [Veeam Network connectivity](/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-xconnectivity)
-* [Veeam Continuous Data Protection (CDP)](https://helpcenter.veeam.com/docs/backup/vsphere/cdp_replication.html?ver=120){: external}
-* [Veeam User Guid for Backup & Replication](https://helpcenter.veeam.com/docs/backup/vsphere/overview.html?ver=120){: external}
+* [Veeam Continuous Data Protection (CDP)](https://helpcenter.veeam.com/docs/backup/vsphere/cdp_replication.html?ver=120)
+* [Veeam User Guid for Backup & Replication](https://helpcenter.veeam.com/docs/backup/vsphere/overview.html?ver=120)
 
 ## 3. Zerto – Continuous Data Protection & Disaster Recovery
 {: #overview-zerto}
