@@ -20,11 +20,3 @@ toc:
       id: reference
       topics:
       - whitepaper.md
- # - navgroup:
- #     id: migrate
- #     topics:
- #     - hcx.md
- #     - veeam.md
- #     - vcda.md
- #     - primaryio.md
- #     - zerto.md 
