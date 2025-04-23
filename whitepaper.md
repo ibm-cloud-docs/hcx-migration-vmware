@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2025
-lastupdated: "2025-04-22"
+lastupdated: "2025-04-23"
 
 keywords:
 
@@ -101,29 +101,23 @@ While IBM Cloud has a number of VMware offering, only the following offer suitab
 
 #### Pre-Requisites for Migration
 {: #hcx-prereq}
-
 Deploying VMware HCX for migration requires meeting specific prerequisites on both the source side (on-premises) and target side (IBM Cloud). Ensuring these requirements are met is crucial for a seamless migration experience.
 
 ##### On-Premises Requirements
 {: #hcx-prereq-onprem}
-
 Review the following documents:
-
 * [Source site](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-source)
 * [Client Deployment setup](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-planning-prep-install)
 
 ##### IBM Cloud Requirements
 {: #hcx-prereq-cloud}
-
 Review the following document:
-
 * [Target site with NSX-T deployments](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-target-t)
 
 ##### Network Connectivity Requirements
 {: #hcx-prereq-networking}
 
 The following define the network connectivity requirements:
-
 * Internet connectivity to enable registration and product updates, and optionally network extension and migration.
 * Optionally, IBM Cloud Direct Link for private, high-speed connectivity for network extension and migration.
 * The target site requires NSX-T integration for network segmentation and security enforcement.
