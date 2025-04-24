@@ -16,6 +16,10 @@ toc:
    # compliance: compliance-value # Replaces
     description: VMware Migration options to  IBM Cloud environment
     label: VMware Migration options to IBM Cloud environment
+    authors:
+      - name: Dwarkanath P Rao
+        title: STSM IBM Cloud Complex Solutions
+        url: https://www.linkedin.com/in/dwarakanath/
   entries:
   - navgroup:
       id: overview
