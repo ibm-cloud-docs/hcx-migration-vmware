@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2025
-lastupdated: "2025-04-24"
+lastupdated: "2025-04-25"
 
 keywords:
 
@@ -21,7 +21,7 @@ As enterprises accelerate their cloud adoption journeys, moving VMware workloads
 
 For CTOs and CIOs evaluating cloud migration, it is crucial to choose the right migration approach to align with business goals, operational efficiency, and risk mitigation. An overview of the top five migration strategies for moving VMware workloads to {{site.data.keyword.Bluemix_notm}} are covered in this white paper:
 
-1. VMware Hybrid Cloud Extension (HCX) 
+1. VMware Hybrid Cloud Extension (HCX)
 2. Veeam
 3. Zerto
 4. VMware Cloud Director Availability (VCDA)
@@ -141,7 +141,7 @@ Reliable and high-performance connectivity is essential for secure and efficient
 * HCX over {{site.data.keyword.Bluemix_notm}} Direct Link: Provides higher bandwidth, lower latency, and improved security by avoiding public internet exposure.  
 
 For production environments, {{site.data.keyword.Bluemix_notm}} Direct Link is the recommended approach due to its SLA-backed performance and reliability.
-{: note} 
+{: note}
 
 #### Migration methods
 {: #hcx-prereq-migrationmethods}
@@ -180,10 +180,10 @@ To optimize network efficiency, HCX includes built-in WAN acceleration features:
 * Deduplication: Eliminates redundant data transmission to improve throughput.  
 * Compression: Reduces the data footprint for faster migration over constrained network links.
 
-#### vSphere versions
-{: #hcx-prereq-vsphere-versions}
+#### supported vSphere platforms
+{: #hcx-prereq-vsphere-platforms}
 
-For information about supported vSphere versions, see [HCX supported platforms](https://cloud.ibm.com/infrastructure/vmware-solutions/console/newserviceentry/HCX/vcs_nsx_t).
+For information about supported supported vSphere platforms, see [HCX supported platforms](https://cloud.ibm.com/infrastructure/vmware-solutions/console/newserviceentry/HCX/vcs_nsx_t).
 
 ### Conclusion
 {: #hcx-conclusion}
@@ -229,14 +229,15 @@ By using Veeam on {{site.data.keyword.Bluemix_notm}}, enterprises can streamline
 The following table depicts the key differences between the features of Veeam Backup Proxy and Veeam VMware CDP Proxy:
 
 | Feature                        | Veeam Backup Proxy                | Veeam VMware CDP Proxy                |
-|--------------------------------|-----------------------------------|---------------------------------------|
-| Function                       | Backup and restore of VMs           | Real-time replication of VMs          |
+| ------------------------------ | --------------------------------- | ------------------------------------- |
+| Function                       | Backup and restore of VMs         | Real-time replication of VMs          |
 | Technology                     | Snapshot-based backups            | VMware APIs for I/O Filtering (VAIO)  |
 | RPO (Recovery Point Objective) | Hours/Minutes (based on schedule) | Near-Zero (real-time replication)     |
 | RTO (Recovery Time Objective)  | Minutes to Hours                  | Near-Instant Failover                 |
 | Transport modes                | SAN, HotAdd, NBD                  | Uses VAIO without snapshots           |
 | VMware dependency              | Works with VMware & Hyper-V       | Only VMware (vSphere 6.5+)            |
 | Best fit for                   | Standard backups, restores, DR    | Mission-critical apps needing low RPO |
+{: caption="Veeam Backup Proxy and CDP Proxy comparison" caption-side="bottom"}
 
 ### Deployment of Veeam in {{site.data.keyword.Bluemix_notm}} classic environment
 {: #veeam-ibmcloudclassic}
@@ -352,7 +353,7 @@ Migrating VMware workloads to {{site.data.keyword.Bluemix_notm}} using Veeam pro
 * [Veeam Continuous Data Protection (CDP)](https://helpcenter.veeam.com/docs/backup/vsphere/cdp_replication.html?ver=120)
 * [Veeam User Guid for Backup & Replication](https://helpcenter.veeam.com/docs/backup/vsphere/overview.html?ver=120)
 
-##  Zerto – Continuous data protection and disaster recovery
+## Zerto – Continuous data protection and disaster recovery
 {: #overview-zerto}
 
 Zerto specializes in disaster recovery and workload mobility by offering continuous data replication with near-zero downtime. This solution is well-suited for organizations requiring high availability and resilience. Key benefits include:
@@ -418,7 +419,7 @@ The on-premises site architecture includes the following:
 
 On {{site.data.keyword.Bluemix_notm}} VCF on Classic - Automated, the architecture includes:
 
-* Zerto Virtual Manager (ZVM): Installed on a Microsoft Windows 2019 VSI on Classic, managing replication and orchestrating recovery operations. The installation os the ZVM is automated on {{site.data.keyword.Bluemix_notm}} and can be done by simply adding the Zerto service to the VCF instance.
+* Zerto Virtual Manager (ZVM): Installed on a Microsoft Windows 2019 Virtual Server Instance (VSI) on Classic, managing replication and orchestrating recovery operations. The installation of the ZVM is automated on {{site.data.keyword.Bluemix_notm}} and can be done by simply adding the Zerto service to the VCF instance.
 * Zerto Virtual Replication Appliances (VRAs): Installed on each ESXi host to replicate data continuously. They are deployed by {{site.data.keyword.Bluemix_notm}} the automation only into the default cluster.
 * One portable private IP address for the Zerto Virtual Manager.
 * One private portable subnet dedicated to the VRA deployment.
@@ -604,7 +605,7 @@ The key benefits of the PrimaryIO service include the following:
 1. Rapid, predictable relocation of VMware VMs to {{site.data.keyword.Bluemix_notm}} as either a primary site, DR site or even a tertiary DR site.
 2. Easy-to-consume ordering via a {{site.data.keyword.Bluemix_notm}} Catalog tile.
 3. Engagements are initiated with an assessment and discovery phase, enabling an optimization of cloud-based infrastructure, thereby reducing cost and leveraging the most efficient cloud-available IaaS, such as Intel 4th Gen Xeon (“Sapphire Rapids”) server configurations.
-4. As an optional capability, VM conversion at scale through automation, is available to re-platform to IBM Cloud-native Virtual Server Instances (VSIs).
+4. As an optional capability, VM conversion at scale through automation, is available to re-platform to IBM Cloud-native VSIs.
 5. Due to PrimaryIO's proprietary Block Stream Protocol and the Continuous Data Protection of changed blocks, on-premise changes are synced with the Cloud-based VMs, resulting in seamless migrations.
 6. Enterprise-grade security is obtained as a result of encryption of all data whether in transit or at rest.
 7. Customer data remains in the customer’s control. Customer data is not ingested into the PrimaryIO-managed control plane SaaS application.
