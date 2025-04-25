@@ -29,7 +29,7 @@ For CTOs and CIOs evaluating cloud migration, it is crucial to choose the right 
 
 Each of the following migration methods offers unique advantages, addressing different use cases such as workload mobility, disaster recovery, data replication, and cost efficiency.
 
-## VMware Hybrid Cloud Extension (HCX)
+## VMware Hybrid Cloud Extension (HCX) migration option
 {: #overview-hcx}
 
 VMware Hybrid Cloud Extension (HCX) is a purpose-built solution designed to simplify workload migration and inter-connectivity between on-premises data centers and {{site.data.keyword.Bluemix_notm}}. It enables live migrations without downtime, making it ideal for businesses that require continuous availability. Key benefits include:
@@ -180,10 +180,10 @@ To optimize network efficiency, HCX includes built-in WAN acceleration features:
 * Deduplication: Eliminates redundant data transmission to improve throughput.  
 * Compression: Reduces the data footprint for faster migration over constrained network links.
 
-#### supported vSphere platforms
+#### Supported vSphere platforms
 {: #hcx-prereq-vsphere-platforms}
 
-For information about supported supported vSphere platforms, see [HCX supported platforms](https://cloud.ibm.com/infrastructure/vmware-solutions/console/newserviceentry/HCX/vcs_nsx_t).
+HCX seamlessly extends the networks of on-premises data centers into IBM Cloud, which enables you to migrate virtual machines to and from the IBM Cloud without any conversion or change. For information about supported supported vSphere platforms, see [HCX supported platforms](https://cloud.ibm.com/infrastructure/vmware-solutions/console/newserviceentry/HCX/vcs_nsx_t).
 
 ### Conclusion
 {: #hcx-conclusion}
@@ -197,7 +197,7 @@ Migrating VMware workloads to {{site.data.keyword.Bluemix_notm}} using HCX provi
 * [VMware Solutions on {{site.data.keyword.Bluemix_notm}}](/docs/vmwaresolutions)
 * [Official HCX Documentation from Broadcom](https://techdocs.broadcom.com/us/en/vmware-cis/hcx.html){: external}
 
-## Veeam - Backup and replication for data protection
+## Veeam - Backup and replication for data protection migration option
 {: #overview-veeam}
 
 Veeam is an industry leader in backup, replication, and disaster recovery. Organizations using Veeam can backup on-premises VMware environments and restore them directly into {{site.data.keyword.Bluemix_notm}}. Key benefits include:
@@ -353,7 +353,7 @@ Migrating VMware workloads to {{site.data.keyword.Bluemix_notm}} using Veeam pro
 * [Veeam Continuous Data Protection (CDP)](https://helpcenter.veeam.com/docs/backup/vsphere/cdp_replication.html?ver=120)
 * [Veeam User Guid for Backup & Replication](https://helpcenter.veeam.com/docs/backup/vsphere/overview.html?ver=120)
 
-## Zerto – Continuous data protection and disaster recovery
+## Zerto – Continuous data protection and disaster recovery migration option
 {: #overview-zerto}
 
 Zerto specializes in disaster recovery and workload mobility by offering continuous data replication with near-zero downtime. This solution is well-suited for organizations requiring high availability and resilience. Key benefits include:
@@ -453,7 +453,7 @@ The following image is the migration pattern architecture for VMware workloads o
 
 ![Zerto Migration Architecture](diagrams/zerto_vpc.svg){: caption="Zerto migration for VMware Workloads on {{site.data.keyword.Bluemix_notm}} VPC (VCF) architecture" caption-side="bottom"}
 
-##  VMware Cloud Director Availability (VCDA)
+##  VMware Cloud Director Availability (VCDA) migration option
 {: #overview-vcda}
 
 VCDA is a VMware-native migration tool designed for cloud service providers and enterprises using VMware Cloud Director on {{site.data.keyword.Bluemix_notm}}. It offers an integrated approach for disaster recovery and migration. Key benefits include the following:
@@ -463,7 +463,7 @@ VCDA is a VMware-native migration tool designed for cloud service providers and 
 * Offers self-service capabilities for enterprises to manage their workloads.
 * Recommended for businesses already using VMware Cloud Director.
 
-### {{site.data.keyword.Bluemix_notm}} VCDA Overview
+### Understanding {{site.data.keyword.Bluemix_notm}} VCDA
 {: #vcda-ibmcloud-overview}
 
 The VMware Cloud Director Availability solution enables migration from on-premises to VMware Cloud Foundation as a Service as a Service (VCFaaS) at both the virtual machine and at the vApp level.
@@ -482,10 +482,10 @@ IBM provides public instance endpoints with VCDA. Endpoints are used to access t
 ### VCFaaS service models
 {: #vcda-deployment}
 
-{{site.data.keyword.Bluemix_notm}} for VMware Cloud Foundation (VCF) as a Service (VCFaaS) has two service models:
+{{site.data.keyword.Bluemix_notm}} for VMware Cloud Foundation as a Service (VCFaaS) has two service models:
 
-Single-tenant - Dedicated infrastructure to host your virtual data centers (VDCs).
-Multi-tenant  - Shared infrastructure to host your VDCs.
+* Single-tenant: Dedicated infrastructure to host your virtual data centers (VDCs).
+* Multi-tenant: Shared infrastructure to host your VDCs.
 
 VCFaaS multi-tenant instances are deployed to all supported regions by IBM. You create your VDCs on the IBM managed infrastructure. VCFaaS single-tenant instances are provisioned by your organization. For both service models, IBM performs the configuration, hosting, operations, and lifecycle management of the VMware by Broadcom software so you can quickly deploy your VMware-based cloud computing environments.
 
@@ -496,39 +496,39 @@ For more details, see [VCF as a Service overview](/docs/vmwaresolutions?topic=vm
 
 The following components are installed, configured and managed by IBM in the single-tenant and multi-tenant instances and the services provided to you.
 
-* VCFaas Subscription.
-* vCloud Director.
-* VCDA Cloud Appliances.
+* VCFaas subscription
+* vCloud director
+* VCDA Cloud appliances
 
 If the source environment is on-premises or an instance of VCF on Classic or VCF on VPC then you are responsible for the following components:
 
-* Replication Manager: Orchestrates VM replication and failover.
-* Tunnel Server: Secures encrypted data transfer over public/private networks.
-* vSphere Environment: Source ESXi hosts and vCenter Server.
+* Replication manager: Orchestrates VM replication and failover
+* Tunnel server: Secures encrypted data transfer over public/private networks
+* vSphere environment: Source ESXi hosts and vCenter Server
 
-See [Installing VCDA on-premises in VMware vCenter Server](/docs/vmware-service?topic=vmware-service-vcda-migrating). The same information can be used for installing VCDA on an instance of VCF on Classic or VCF on VPC.
+For more information, [Installing VCDA on-premises in VMware vCenter Server](/docs/vmware-service?topic=vmware-service-vcda-migrating). The same information can be used for installing VCDA on an instance of VCF on Classic or VCF on VPC.
 
-### Pre-requisites
+### Prerequisites
 {: #vcda-prereqs}
 
 Successful migration requires preparation at both the on-premises and {{site.data.keyword.Bluemix_notm}} ends.
 
 On-premises prerequisites:
 
-* VCDA Deployment: Install and configure the VCDA On-Premises to Cloud Director Replication Appliance. This requires downloading the OVF template from VMware and deploying it via vCenter.
-* Network Connectivity: Ensure outbound access to {{site.data.keyword.Bluemix_notm}} for replication traffic. An Internet connection or a Direct Link to {{site.data.keyword.Bluemix_notm}} is necessary. Direct Link is preferred for low latency and faster migrations.
-* For detailed requirements -[Refer](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/on-prem-availability-install-config-and-upgrade-guide-4-7/installing-and-configuring-vcav-on-premises/on-premises-vcav-deployment-requirements.html){: external}
-* Optionally, for layer 2 network extension, to establish the client L2 VPN session in a site not managed by NSX, download and deploy a standalone VMware NSX Edge appliance, called a NSX Autonomous Edge.
+* VCDA deployment: Install and configure the VCDA On-Premises to Cloud Director Replication Appliance. This requires downloading the OVF template from VMware and deploying it via vCenter.
+* Network connectivity: Ensure outbound access to {{site.data.keyword.Bluemix_notm}} for replication traffic. An Internet connection or a Direct Link to {{site.data.keyword.Bluemix_notm}} is necessary. Direct Link is preferred for low latency and faster migrations.
+    For more information, see [VMware Cloud Director Availability 4.7](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/on-prem-availability-install-config-and-upgrade-guide-4-7/installing-and-configuring-vcav-on-premises/on-premises-vcav-deployment-requirements.html){: external}
+* Optional: For layer 2 network extension, to establish the client L2 VPN session in a site not managed by NSX, download and deploy a standalone VMware NSX Edge appliance, called a NSX Autonomous Edge.
 
 {{site.data.keyword.Bluemix_notm}} prerequisites:
 
-* VCFaaS Subscription: An active {{site.data.keyword.Bluemix_notm}} account with VCFaaS provisioned, including a virtual data center (VDC) managed by vCloud Director.
-* VCDA Activation: VCDA is included by default in multi-tenant VDCs and optional in single-tenant VCFaaS setups. Ensure it’s enabled and paired with the on-premises appliance.
-* Network Configuration: Configure the necessary networking for connectivity. If using Layer 2 extension, you have configured matching network segments in your VDC.
-* Storage Profiles: Define destination storage policies (e.g., vSAN or NFS) in vCloud Director to accommodate migrated VMs.
+* VCFaaS subscription: An active {{site.data.keyword.Bluemix_notm}} account with VCFaaS provisioned, including a virtual data center (VDC) managed by vCloud Director.
+* VCDA activation: VCDA is included by default in multi-tenant VDCs and optional in single-tenant VCFaaS setups. Ensure it’s enabled and paired with the on-premises appliance.
+* Network configuration: Configure the necessary networking for connectivity. If using Layer 2 extension, you have configured matching network segments in your VDC.
+* Storage profiles: Define destination storage policies (e.g., vSAN or NFS) in vCloud Director to accommodate migrated VMs.
 * Security: Implement network address translations, firewall rules, VPN tunnels encryption, and access controls as per your organizational policies.
 
-### VCDA Architecture
+### VCDA architecture
 {: #Vvcda-architecture}
 
 VMware vCloud Director Availability (VCDA) serves as the cornerstone for migrating VMware workloads from a source vSphere environment to {{site.data.keyword.Bluemix_notm}} VMware Cloud Foundation as a Service (VCFaaS). VCDA facilitates this process by leveraging asynchronous replication to transfer virtual machines (VMs) and vApps with minimal downtime, ensuring data integrity and operational continuity. The migration operates in a source-to-target model, where the source environment acts as the source for data transfer and the {{site.data.keyword.Bluemix_notm}} VCFaaS environment serves as the target for the data transfer.
@@ -537,20 +537,20 @@ The migration architecture relies on a set of interconnected modules that bridge
 
 ![VCFaaS VCDA Architecture](diagrams/VCDA-reference-architecture-vcfaas.svg){: caption=VCFaaS VCDA Architecture}
 
-* The on-premises VCDA Replication Manager communicates with vCenter to identify VMs and initiate replication. It then coordinates with the Tunnel Appliance to sends encrypted data over the Internet or a private connection to the {{site.data.keyword.Bluemix_notm}} Tunnel Appliance.
-* In {{site.data.keyword.Bluemix_notm}}, the VCDA Cloud Appliances receives the data and integrates it into the target VDC via vCloud Director. vCloud Director assigns compute, storage, and networking resources from the underlying VCFaaS stack.
+* The on-premises VCDA replication manager communicates with vCenter to identify VMs and initiate replication. It then coordinates with the Tunnel Appliance to sends encrypted data over the Internet or a private connection to the {{site.data.keyword.Bluemix_notm}} Tunnel Appliance.
+* In {{site.data.keyword.Bluemix_notm}}, the VCDA Cloud Appliances receives the data and integrates it into the target VDC through vCloud Director. vCloud Director assigns compute, storage, and networking resources from the underlying VCFaaS stack.
 * NSX optionally enables Layer 2 network extension via the server L2 VPN session on the Edge Gateway. For layer 2 network extensions see [On-premises stretching layer 2 networks to the Cloud Director site](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/availability-admin-guide-4-7/vcav-administration-on-premises/stretching-l2-on-premises-networks.html){: external}
 
 Source:
 
 * vCenter Server: Manages the source vSphere environment, hosting the VMs and vApps targeted for migration. It provides the VCDA appliances with access to VM metadata and storage.
-* VCDA On-Premises Appliance: Comprises the Replication Management Appliance and Tunnel Appliance. The Replication Manager orchestrates replication tasks, while the Tunnel Appliance establishes a secure, encrypted connection (port 8048) to {{site.data.keyword.Bluemix_notm}} for data transfer.
+* VCDA on-premises appliance: Comprises the replication managementaAppliance and tunnel appliance. The replication manager orchestrates replication tasks, while the tunnel appliance establishes a secure, encrypted connection (port 8048) to {{site.data.keyword.Bluemix_notm}} for data transfer.
 * ESXi Hosts: Execute the VMs and facilitate disk-level replication via integration with VCDA.
 
 VCFaaS:
 
 * vCloud Director: Acts as the management layer for the VCFaaS environment, providing tenant isolation, resource allocation, and the target VDC for migrated workloads.
-* VCDA Cloud Appliances: Deployed within {{site.data.keyword.Bluemix_notm}}, these include the Cloud Director Replication Management Appliance (paired with vCloud Director) and the Tunnel Appliances, which receives and processes replicated data.
+* VCDA Cloud Appliances: Deployed within {{site.data.keyword.Bluemix_notm}}, these include the Cloud Director replication Management Appliance (paired with vCloud Director) and the Tunnel Appliances, which receives and processes replicated data.
 * VMware Cloud Foundation Stack: Includes vSphere, vSAN, and NSX-T, hosted on {{site.data.keyword.Bluemix_notm}} infrastructure, serving as the runtime environment for migrated workloads.
 * Cloud Networking : Ensures secure, high-speed connectivity between on-premises and cloud networks. VCDA endpoints are available on the Internet or the {{site.data.keyword.Bluemix_notm}} private network that can be reached from on-premise locations via Direct Link or VPN.
 
@@ -558,7 +558,7 @@ For more VCDA architecture details, see [Deployment architecture for the On-Prem
 
 For additional migration details, see [Migrating workloads from an on-premises vCenter environment to VCF as a Service](/docs/vmware-service?topic=vmware-service-vcda-migrating-onprem).
 
-### Conclusions
+### VCDA conclusion
 {: #vcda-conclusion}
 
 Migrating VMware workloads to {{site.data.keyword.Bluemix_notm}} VCFaaS using VCDA provides a robust and flexible solution for enterprises seeking to migrate workloads from source vSphere environments to {{site.data.keyword.Bluemix_notm}} VCFaaS for re-hosting application workloads with cloud agility. With VCDA, you can migrate workloads quickly and easily from vSphere environments to {{site.data.keyword.Bluemix_notm}} VCFaaS with options to host your VMware workloads on an IBM managed single-tenant or multi-tenant instance.
@@ -569,7 +569,7 @@ Migrating VMware workloads to {{site.data.keyword.Bluemix_notm}} VCFaaS using VC
 * [Getting started with VCF as a Service](/docs/vmware-service?topic=vmware-service-getting-started)
 * [What is VMware Cloud Director Availability](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/what-is-vcda.html){: external}
 
-##  PrimaryIO
+## PrimaryIO migration option
 {: #overview-primaryio}
 
 PrimaryIO offers a unique approach to workload migration and disaster recovery, focusing on reducing data transfer costs and accelerating time to cloud. Key benefits include the following:
@@ -579,7 +579,7 @@ PrimaryIO offers a unique approach to workload migration and disaster recovery, 
 * Offers both lift-and-shift and re-platforming options.
 * Best for enterprises looking to optimize cloud economics while migrating workloads.
 
-### PrimaryIO Overview
+### Understanding PrimaryIO
 {: #primaryio-overview}
 
 PrimaryIO is a technology-first company with an {{site.data.keyword.Bluemix_notm}}-native platform wrapped in orchestrated services. Together the technology, processes and people, PrimaryIO enables the Cloud Journey for organizations.
@@ -597,10 +597,10 @@ From a technology perspective, PrimaryIO provide an {{site.data.keyword.Bluemix_
 3. Migration of VMware VMs to {{site.data.keyword.Bluemix_notm}}-native Virtual Server Instances (VSIs), thereby reducing dependence on VMware.  
 4. Migration of VMware VMs into IBM’s managed VCFaaS platform.
 
-### Key Benefits
+### Key benefits
 {: #primaryio-benefits}
 
-The key benefits of the PrimaryIO service include the following:
+The key benefits of the PrimaryIO service include:
 
 1. Rapid, predictable relocation of VMware VMs to {{site.data.keyword.Bluemix_notm}} as either a primary site, DR site or even a tertiary DR site.
 2. Easy-to-consume ordering via a {{site.data.keyword.Bluemix_notm}} Catalog tile.
@@ -617,72 +617,72 @@ Following migration, if protecting VMs with ProtectIO, the DR Recovery Point Obj
 #### Protection of on-premise and migrated VMs
 {: #primaryio-protection}
 
-The table below describes the features of the ProtectIO service:
+The following table describes the features of the ProtectIO service:
 
-| Feature                       | ProtectIO SaaS Platform                                                                                                                                                                                                                              |
+| Feature                       | ProtectIO SaaS platform                                                                                                                                                                                                                              |
 |------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Function                      | Real-time VM replication and protection. Includes Ransomware Recovery.                                                                                                                                                                                   |
-| Technology                     | VMware APIs for I/O (VAIO) filtering. Delivers Continuous (block level) Data Protection.                                                                                                                                                                 |
-| Cloud-first                    | On-demand Cloud infrastructure enabling a minimum server configuration with instantiation of on-demand additional capacity when needed                                                                                                                   |
-| Storage                        | Migration utilizes any VM-connected file storage, typically NFS. With the DR use-case, ProtectIO delivers storage optionality including lowest-cost Cloud Object Storage. Object storage is not an appropriate storage media for primary site, migrated VMs. |
+| Function                      | Real-time VM replication and protection that includes Ransomware Recovery.                                                                                                                                                                                  |
+| Technology                     | VMware APIs for I/O (VAIO) filtering. Delivers Continuous Data Protection at the block level.                                                                                                                                                                |
+| Cloud-first                    | On-demand cloud infrastructure enabling a minimum server configuration with instantiation of on-demand additional capacity when needed.                                                                                                                   |
+| Storage                        | Migration utilizes any VM-connected file storage, typically NFS. With the DR use case, ProtectIO delivers storage optionality including lowest-cost Cloud Object Storage. Cloud object storage is not an appropriate storage media for primary site, migrated VMs. |
 | RPO (Recovery Point Objective) | Near-zero seconds                                                                                                                                                                                                                                        |
-| RTO (Recovery Time Objective)  | Seconds to Hours depending on chosen storage configuration                                                                                                                                                                                               |
+| RTO (Recovery Time Objective)  | Seconds to hours depending on the chosen storage configuration                                                                                                                                                                                               |
 | Transport Modes                | Block Stream Protocol, Continuous Data Protection                                                                                                                                                                                                        |
 | VMware Dependency              | Support for current versions of vSphere. VIB installed on production (source) ESXi host                                                                                                                                                                  |
 | Best For                       | All VMware VMs, whether turned off and unused, to business-critical application workloads. These are “future-proof” migrations that, over time, can target cloud-native VSIs or containerized applications on a per-VM basis.                         |
 
-### Migration Considerations and Requirements
+### Migration considerations and requirements
 {: #primaryio-ibmcloudclassic-migration-requirement}
 
 When planning a migration to IBM Cloud using PrimaryIO, consider the following:
 
-* Network Connectivity: Data integrity, reliability and speed will be a function of the connectivity between the migration source VMs and the IBM Cloud target site. This must be in place prior to migration.
-* Resource Allocation: The necessary credentialing as well as compute, network and storage resources must be properly provisioned in IBM Cloud in order to assure that anticipated performance of the migrated VMs in IBM Cloud.
-* Compatibility: On prem VMs including edge security must be provisioned in a compatible IBM Cloud environment.
-* Minimal Impact Planning: Methodology coupled with resource allocation needs to be well-planned in order to minimize impact to the applications, and by extension to the business dependent on those applications.
+* Network connectivity: Data integrity, reliability and speed are a function of the connectivity between the migration source VMs and the IBM Cloud target site. This must be in place prior to migration.
+* Resource allocation: The necessary credentialing as well as compute, network and storage resources must be properly provisioned in IBM Cloud in order to assure that anticipated performance of the migrated VMs in IBM Cloud.
+* Compatibility: On premises VMs including edge security must be provisioned in a compatible IBM Cloud environment.
+* Minimal impact planning: Methodology coupled with resource allocation needs to be well-planned in order to minimize impact to the applications, and by extension to the business dependent on those applications.
 
-### Migration to IBM Cloud Classic Environment
+### Migration to IBM Cloud classic environment
 {: #primaryio-ibmcloudclassic}
 
 #### Architecture of PrimaryIO platform on IBM Cloud
 {: #primaryio-ibmcloudclassic-prioarchitecture}
 
-In the source environment, a VMware Installation Bundle (VIB) is installed on all ESXi hosts in a cluster to be migrated or protected by DRaaS/RRaaS. The VAIO filter coordinates with a block-sending agent responsible for sending new (initial) or changed blocks to a receiver agent running in the customer’s target site in IBM Cloud. Upon receipt of workload data, those blocks are committed to storage. The metadata keeping track of what VMs are being migrated (and potentially protected) and where the VM data resides are all kept in the SaaS control plane - an IBM Cloud-native Red Hat Openshift Kubernetes application running in IBM Cloud VPC. The PrimaryIO architecture is a truly modern application reflecting the state-of-the-art, designed with an in-depth knowledge of VMware, IBM Cloud and cloud-native design.
+In the source environment, a VMware Installation Bundle (VIB) is installed on all ESXi hosts in a cluster to be migrated or protected by DRaaS/RRaaS. The VAIO filter coordinates with a block-sending agent responsible for sending new or changed blocks to a receiver agent running in the customer’s target site in IBM Cloud. Upon receipt of workload data, those blocks are committed to storage. The metadata keeping track of what VMs are being migrated (and potentially protected) and where the VM data resides are all kept in the SaaS control plane - an IBM Cloud-native Red Hat Openshift Kubernetes application running in IBM Cloud VPC. The PrimaryIO architecture is a truly modern application reflecting the state-of-the-art, designed with an in-depth knowledge of VMware, IBM Cloud and cloud-native design.
 
-#### Architecture of PrimaryIO platform on IBM Cloud VMware Solutions (VCF for Classic)
+#### Architecture of PrimaryIO platform on IBM Cloud VMware Solutions (VCF for classic)
 {: #primaryio-ibmcloudclassic-vcfprioclassic}
 
-Supporting VCF for IBM Cloud Classic, PrimaryIO utilizes its flagship control plane SaaS platform. There is no application to install to orchestrate actions such as migration (initial sync), failover or fire-drill. These capabilities are always up and running in the ProtectIO DRaaS web-accessible application.
+Supporting VCF for IBM Cloud classic, PrimaryIO utilizes its flagship control plane SaaS platform. There is no application to install to orchestrate actions such as migration, failover or fire-drill. These capabilities are always up and running in the ProtectIO DRaaS web-accessible application.
 
-The following architecture diagram reflects the typical components of a source site, destination site and SaaS Control Plane is support of a typical VM workload migration into IBM Cloud Classic.
+The following architecture diagram reflects the typical components of a source site, destination site and SaaS control plane in support of a typical VM workload migration into IBM Cloud classic.
 
-![PrimaryIO Migration Architecture](diagrams/On-premiseClassic.svg){: caption="PrimaryIO migration for VMware Workloads on {{site.data.keyword.Bluemix_notm}} Classic (VCF) architecture" caption-side="bottom"}
+![PrimaryIO Migration Architecture](diagrams/On-premiseClassic.svg){: caption="PrimaryIO migration for VMware Workloads on {{site.data.keyword.Bluemix_notm}} classic (VCF) architecture" caption-side="bottom"}
 
-Key architectural features include the following:
+Key architectural features:
 
-1. **Customer Source Site (On-prem or in IBM Cloud)**
+1. Customer Source Site - On-premises or in IBM Cloud
     * vSphere - VMware server
     * ESXi host with VMware Virtual Machines
-    * Connectivity (IPSec Tunnel) to IBM Public Cloud
+    * Connectivity (IPSec Tunnel) to IBM Cloud Public
     * VAIO filter sending blocks to Target Site
-2. **IBM Cloud Classic Target Site**
+2. IBM Cloud classic target site
     * DR Data Receiver Agent
     * VMware ESXi host
     * Target VMs
-3. **PrimaryIO SaaS Application Control Plane in IBM Cloud**
-    * Served UI Web Console (PIO UI)
+3. PrimaryIO SaaS application control plane in IBM Cloud
+    * Served UI web console (PIO UI)
     * SQL database storing key metadata (not VM application data)
-    * Red Hat OpenShift Kubernetes (ROKs) on IBM Cloud
+    * Red Hat OpenShift Kubernetes on IBM Cloud
 
 ### Migration to IBM Cloud VPC environment
 {: #primaryio-vpc}
 
-PrimaryIO has no significant architectural differences distinguishing IBM Cloud VPC from its IBM Cloud Classic offering. In fact, the SaaS platform is the same, whether on Cloud Classic or VPC. Due to differences between Classic and VPC, there are infrastructure and functional differences between migrated VMs in the two cloud environments. The single most significant difference between a Classic and VPC migration is the bare metal configuration options, coupled with the time it takes to implement configuration changes in the target account. The SLAs are purely a function of the IBM Cloud infrastructure limitations.
+PrimaryIO has no significant architectural differences distinguishing IBM Cloud VPC from its IBM Cloud classic offering. In fact, the SaaS platform is the same, whether on cloud classic or VPC. Due to differences between classic and VPC, there are infrastructure and functional differences between migrated VMs in the two cloud environments. The single most significant difference between a classic and VPC migration is the bare metal configuration options, coupled with the time it takes to implement configuration changes in the target account. The SLAs are purely a function of the IBM Cloud infrastructure limitations.
 
 #### Architecture of PrimaryIO platform on IBM Cloud
 {: #primaryio-vpc-prioarchitecturevpc}
 
-In the source environment, a VMware Installation Bundle (VIB) is installed on all ESXi hosts in a cluster to be migrated or protected by DRaaS/RRaaS. The VAIO filter coordinates with a block-sending agent responsible for sending new (initial) or changed blocks to a receiver agent running in the customer’s target site in IBM Cloud. Upon receipt of workload data, those blocks are committed to storage. The metadata keeping track of what VMs are being migrated (and potentially protected) and where the VM data resides are all kept in the SaaS control plane - an IBM Cloud-native Red Hat Openshift Kubernetes application running in IBM Cloud VPC. The PrimaryIO architecture is a truly modern application reflecting the state-of-the-art, designed with an in-depth knowledge of VMware, IBM Cloud and cloud-native design.
+In the source environment, a VMware Installation Bundle (VIB) is installed on all ESXi hosts in a cluster to be migrated or protected by DRaaS/RRaaS. The VAIO filter coordinates with a block-sending agent responsible for sending new or changed blocks to a receiver agent running in the customer’s target site in IBM Cloud. Upon receipt of workload data, those blocks are committed to storage. The metadata keeping track of what VMs are being migrated and potentially protected,  and where the VM data resides are all kept in the SaaS control plane - an IBM Cloud-native Red Hat Openshift Kubernetes application running in IBM Cloud VPC. The PrimaryIO architecture is a truly modern application reflecting the state-of-the-art, designed with an in-depth knowledge of VMware, IBM Cloud and cloud-native design.
 
 #### Architecture of PrimaryIO platform on IBM Cloud VMware Solutions (VCF for VPC)
 {: #primaryio-vpc-vcfpriovpc}
@@ -693,18 +693,18 @@ The following architecture diagram reflects the typical components of a source s
 
 ![PrimaryIO Migration Architecture to IBM Cloud VPC Entironment](diagrams/On-premiseVPC.svg){: caption="PrimaryIO migration for VMware Workloads on {{site.data.keyword.Bluemix_notm}} VPC (VCF) architecture" caption-side="bottom"}
 
-Key architectural features include:
+Key architectural features:
 
-1. **Customer Source Site (On-prem or in IBM Cloud)**
+1. Customer Source Site - On-premises or in IBM Cloud
     * vSphere - VMware server
     * ESXi host with VMware Virtual Machines
-    * Connectivity (IPSec Tunnel) to IBM Public Cloud
+    * Connectivity (IPSec Tunnel) to IBM Cloud Public
     * VAIO filter sending blocks to Target Site
-2. **IBM Cloud VPC Target Site**
+2. IBM Cloud VPC target site
     * DR Data Receiver Agent
     * VMware ESXi host
     * Target VMs
-3. **PrimaryIO SaaS Application Control Plane in IBM Cloud**
+3. PrimaryIO SaaS application control plane in IBM Cloud
     * Served UI Web Console (PIO UI)
     * SQL database storing key metadata (not VM application data)
     * Red Hat OpenShift Kubernetes (ROKs) on IBM Cloud
@@ -712,28 +712,23 @@ Key architectural features include:
 ### References
 {: #primaryio-references}
 
-PrimaryIO references are listed below:
-
 * [PrimaryIO](https://www.primaryio.com/){: external}
-* [ProtectIO DRaaS Managed Service](https://cloud.ibm.com/catalog/services/protectio-draas-managed-service)
-* [ConvertIO VMware Workload Migration and Conversion](https://cloud.ibm.com/catalog/services/convertio-vmware-workload-migration-and-conversion)
-* [VMware Cloud Migration Services](https://cloud.ibm.com/catalog/services/vmware-cloud-migration-services)
+* [ProtectIO DRaaS Managed Service](https://cloud.ibm.com/catalog/services/protectio-draas-managed-service){: external}
+* [ConvertIO VMware Workload Migration and Conversion](https://cloud.ibm.com/catalog/services/convertio-vmware-workload-migration-and-conversion){: external}
+* [VMware Cloud Migration Services](https://cloud.ibm.com/catalog/services/vmware-cloud-migration-services){: external}
 
-## Choosing the Right Migration Approach
+## Choosing the a migration approach
 {: #overview-approach}
 
-The ideal migration strategy depends on your organization's priorities, whether it is minimizing downtime, ensuring data protection, or optimizing costs. The table below is a high-level comparison:
+The ideal migration strategy depends on your organization's priorities, whether it is minimizing downtime, ensuring data protection, or optimizing costs. The following table is a high-level comparison:
 
-| **Migration Option** | **Best For**                          | **Key Features**                            |
+| Migration option | Best for                         | Key features                            |
 |----------------------|---------------------------------------|---------------------------------------------|
 | VMware HCX           | Live migration, hybrid cloud          | vMotion, bulk migration, WAN optimization   |
 | Veeam                | Backup-driven migration               | Secure backups, ransomware protection       |
 | Zerto                | Disaster recovery, near-zero downtime | Continuous replication, failover & failback |
 | VCDA                 | Multi-tenant cloud environments       | VMware-native integration, self-service     |
 | PrimaryIO            | Cost-optimized migration              | Selective data transfer, cloud efficiency   |
-
-## Conclusion
-{: #overview-conclusion}
 
 Migrating VMware workloads to IBM Cloud requires strategic planning and the right tools to ensure seamless execution. Whether you prioritize live migration with VMware HCX, disaster recovery with Zerto, backup-first migration with Veeam, native VMware integration with VCDA, or cost-efficient migration with PrimaryIO, IBM Cloud provides a flexible and scalable platform to support your business needs.
 
