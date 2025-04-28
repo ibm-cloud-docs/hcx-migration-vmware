@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2025
-lastupdated: "2025-04-25"
+lastupdated: "2025-04-28"
 
 keywords:
 
@@ -62,8 +62,6 @@ For more information, see [VMware HCX](https://www.vmware.com/products/cloud-inf
 
 {{site.data.keyword.Bluemix_notm}} for VMware Solutions provides a comprehensive platform for extending and migrating VMware workloads to the cloud, offering a flexible and secure environment for running various types of applications.
 
-HCX provides the flexibility of extending the networks of on-premises data centers into {{site.data.keyword.Bluemix_notm}}, enabling the migration of virtual machines (VMs) to and from the {{site.data.keyword.Bluemix_notm}} without any conversion or change. HCX creates an abstraction layer that enables application mobility and infrastructure hybridity through securely stretched networks. You can modernize your VMware environment from legacy VMware vSphere software versions to the most recent vSphere version without having to refractor or modify your existing application. HCX allows you to bring your IP subnet ranges into {{site.data.keyword.Bluemix_notm}}, which can ensure IP consistency through a hybrid deployment, and it also provides high-level security with end-to-end suite B encryptions.
-
 For more information, see [HCX overview on {{site.data.keyword.Bluemix_notm}}](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations).
 
 ### Key features and benefits
@@ -97,52 +95,6 @@ For more information on deploying, review the following links:
 * [HCX Architecture-VCF on VPC](/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-hcx-con)
 * [HCX site peering and service mesh in {{site.data.keyword.Bluemix_notm}}](/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-hcx-xconnectivity)
 
-#### Prerequisites for migration
-{: #hcx-prereq}
-
-Deploying VMware HCX for migration requires meeting specific prerequisites on both the source side, on-premises, and target side ({{site.data.keyword.Bluemix_notm}}). Helping ensure these requirements are met is crucial for a seamless migration experience.
-
-##### On-premises requirements
-{: #hcx-prereq-onprem}
-
-* [Source site](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-source)
-* [Client deployment setup](/docs/vmwaresolutions?topic=vmwaresolutions-hcxclient-planning-prep-install)
-
-##### {{site.data.keyword.Bluemix_notm}} requirements
-{: #hcx-prereq-cloud}
-
-* [Target site with NSX-T deployments](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-target-t)
-
-##### Network connectivity requirements
-{: #hcx-prereq-networking}
-
-The following define the network connectivity requirements:
-
-* Internet connectivity to enable registration and product updates, and optionally network extension and migration.
-* Optionally, {{site.data.keyword.Bluemix_notm}} Direct Link for private, high-speed connectivity for network extension and migration.
-* The target site requires NSX-T integration for network segmentation and security enforcement.
-* Public IPs (if required for public-facing workloads).
-* Proper firewall and security policies configured to allow necessary traffic.
-* To extend on-premises networks to {{site.data.keyword.Bluemix_notm}}, HCX must connect to a vSphere Distributed Switch (vDS) or NSX-T on-premises.
-
-* For more information about networking port configuration and understanding the requirement, see [Network Port requirements](/docs/vmwaresolutions?topic=vmwaresolutions-hcx-archi-port-req).
-
-### VMware HCX deployment technical considerations  
-{: #hcxconsideration}
-
-Successful deployment of VMware HCX for cloud migration requires careful planning across several key areas, including network connectivity, migration methods, licensing, security and performance optimization**. This section outlines the critical factors to consider when implementing HCX for workload mobility to {{site.data.keyword.Bluemix_notm}}.  
-
-#### Network connectivity
-{: #hcx-prereq-networkconnectivity}
-
-Reliable and high-performance connectivity is essential for secure and efficient workload migration. HCX supports multiple connectivity options:
-
-* HCX over the Internet: Suitable for proof of concept (PoC), development, or small-scale migrations. HCX over a VPN is not recommended due to the additional overheads of the VPN. HCX uses encryption to protect the network extension or migration data transfer.  
-* HCX over {{site.data.keyword.Bluemix_notm}} Direct Link: Provides higher bandwidth, lower latency and improved security by avoiding public internet exposure.  
-
-For production environments, {{site.data.keyword.Bluemix_notm}} Direct Link is the recommended approach due to its SLA-backed performance and reliability.
-{: note}
-
 #### Migration methods
 {: #hcx-prereq-migrationmethods}
 
@@ -154,14 +106,6 @@ VMware HCX provides multiple migration techniques to accommodate different workl
 * Cold migration: Requires complete VM downtime, primarily used for nonproduction workloads or maintenance scenarios.  
 * OS Assisted migration: Allows the migration of non-vSphere workloads, extending HCX’s capabilities beyond traditional VMware environments.  
 
-#### Security and compliance considerations  
-{: #hcx-prereq-security}
-
-Data security is a key concern when migrating workloads across hybrid environments. HCX provides multiple mechanisms to help ensure data integrity:
-
-* Suite-B encryption: Secures all in-flight data by using military-grade Suite-B encryption.  
-* Direct Link: Provides private connectivity with enhanced security by eliminating exposure to the public internet.  
-
 #### Network extension and IP management  
 {: #hcx-prereq-network-extension}
 
@@ -172,25 +116,12 @@ Extending your network to {{site.data.keyword.Bluemix_notm}} during migration is
 
 For most use cases, the network extension service is used as it simplifies migration and reduces reconfiguration efforts.  
 
-#### Performance optimization with HCX WAN acceleration
-{: #hcx-prereq-optimization}
-
-To optimize network efficiency, HCX includes built-in WAN acceleration features:
-
-* Deduplication: Eliminates redundant data transmission to improve throughput.  
-* Compression: Reduces the data footprint for faster migration over constrained network links.
-
-#### Supported vSphere platforms
-{: #hcx-prereq-vsphere-platforms}
-
-HCX seamlessly extends the networks of on-premises data centers into IBM Cloud, which enables you to migrate virtual machines to and from the IBM Cloud without any conversion or change. For information about supported vSphere platforms, see [HCX supported platforms](https://cloud.ibm.com/infrastructure/vmware-solutions/console/newserviceentry/HCX/vcs_nsx_t).
-
-### Conclusion
+### HCX Conclusion
 {: #hcx-conclusion}
 
 Migrating VMware workloads to {{site.data.keyword.Bluemix_notm}} by using HCX provides a robust and flexible solution for enterprises seeking to migrate workloads from on-premises to {{site.data.keyword.Bluemix_notm}} for rehosting application workloads with cloud agility. With HCX, you can migrate workloads from vSphere and non-vSphere (KVM and Hyper-V) environments to {{site.data.keyword.Bluemix_notm}} with zero downtime and enable moving applications to the latest VCF software and hardware environment.
 
-### References
+### References for VMware HCX
 {: #hcx-reference}
 
 * [VMware HCX on {{site.data.keyword.Bluemix_notm}}](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations)
@@ -344,7 +275,7 @@ Key considerations for migrating to {{site.data.keyword.Bluemix_notm}} VCF using
 
 Migrating VMware workloads to {{site.data.keyword.Bluemix_notm}} by using Veeam provides a robust and flexible solution for enterprises seeking to enhance their data protection and disaster recovery capabilities. By using Veeam's seamless integration with {{site.data.keyword.Bluemix_notm}}'s VMware offerings, businesses can achieve high availability, secure backup and efficient recovery of critical applications and data. Careful planning and consideration of network configurations, resource allocation and compatibility are essential to ensure a smooth and successful migration process.
 
-### References
+### References for Veeam
 
 * [Veeam on {{site.data.keyword.Bluemix_notm}}](/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-con)
 * [Veeam Replication Connectivity on VMware Cloud Foundation](/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-xconnectivity)
@@ -563,7 +494,7 @@ For additional migration details, see [migrating workloads from an on-premises v
 
 Migrating VMware workloads to {{site.data.keyword.Bluemix_notm}} VCFaaS using VCDA provides a robust and flexible solution for enterprises seeking to migrate workloads from source vSphere environments to {{site.data.keyword.Bluemix_notm}} VCFaaS for rehosting application workloads with cloud agility. With VCDA, you can migrate workloads quickly and easily from vSphere environments to {{site.data.keyword.Bluemix_notm}} VCFaaS with options to host your VMware workloads on an IBM managed single-tenant or multitenant instance.
 
-### References
+### References for VCDA
 {: #vcda-reference}
 
 * [Getting started with VCF as a Service](/docs/vmware-service?topic=vmware-service-getting-started)
@@ -691,7 +622,7 @@ Supporting VCF for IBM Cloud VPC, PrimaryIO uses its flagship control plane SaaS
 
 The following architecture diagram reflects the typical components of a source site, destination site and SaaS control plane is support of a typical VM workload migration into IBM Cloud VPC.
 
-![PrimaryIO migration architecture to IBM Cloud VPC entironment](diagrams/On-premiseVPC.svg){: caption="PrimaryIO migration for VMware Workloads on {{site.data.keyword.Bluemix_notm}} VPC (VCF) architecture" caption-side="bottom"}
+![PrimaryIO migration architecture to IBM Cloud VPC environment](diagrams/On-premiseVPC.svg){: caption="PrimaryIO migration for VMware Workloads on {{site.data.keyword.Bluemix_notm}} VPC (VCF) architecture" caption-side="bottom"}
 
 Key architectural features:
 
