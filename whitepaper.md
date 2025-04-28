@@ -384,6 +384,13 @@ The following image is the migration pattern architecture for VMware workloads o
 
 ![Zerto migration architecture](diagrams/zerto_vpc.svg){: caption="Zerto migration for VMware Workloads on {{site.data.keyword.Bluemix_notm}} VPC (VCF) architecture" caption-side="bottom"}
 
+#### Reference for Zerto
+{: #zerto-reference}
+
+#### Conclusion for Zerto
+{: #zerto-Conclusions}
+
+
 ##  VMware Cloud Director Availability (VCDA) migration option
 {: #overview-vcda}
 
@@ -472,13 +479,13 @@ The migration architecture relies on a set of interconnected modules that bridge
 * In {{site.data.keyword.Bluemix_notm}}, the VCDA Cloud Appliances receive the data and integrates it into the target VDC through vCloud Director. vCloud Director assigns compute, storage and networking resources from the underlying VCFaaS stack.
 * NSX optionally enables Layer 2 network extension through the server L2 VPN session on the Edge Gateway. For layer 2 network extensions, see [on-premises stretching layer 2 networks to the Cloud Director site](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/availability-admin-guide-4-7/vcav-administration-on-premises/stretching-l2-on-premises-networks.html){: external}
 
-Source:
+On-premises components:
 
 * vCenter server: Manages the source vSphere environment, hosting the VMs and vApps targeted for migration. It provides the VCDA appliances with access to VM metadata and storage.
 * VCDA on-premises appliance: Comprises the replication managementaAppliance and tunnel appliance. The replication manager orchestrates replication tasks, while the tunnel appliance establishes a secure, encrypted connection (port 8048) to {{site.data.keyword.Bluemix_notm}} for data transfer.
 * ESXi hosts: Run the VMs and facilitate disk-level replication via integration with VCDA.
 
-VCFaaS:
+IBM Cloud VCFaaS (Single or Multi-tenent):
 
 * vCloud Director: Acts as the management layer for the VCFaaS environment, providing tenant isolation, resource allocation and the target VDC for migrated workloads.
 * VCDA Cloud Appliances: Deployed within {{site.data.keyword.Bluemix_notm}}, these include the Cloud Director replication Management Appliance (paired with vCloud Director) and the Tunnel Appliances, which receives and processes replicated data.
@@ -640,7 +647,7 @@ Key architectural features:
     * SQL database storing key metadata (not VM application data)
     * Red Hat OpenShift Kubernetes (ROKs) on IBM Cloud
 
-### References
+### References for PrimaryIO
 {: #primaryio-references}
 
 * [PrimaryIO](https://www.primaryio.com/){: external}
