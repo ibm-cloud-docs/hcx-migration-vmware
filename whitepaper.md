@@ -541,7 +541,7 @@ From a technology perspective, PrimaryIO provide an {{site.data.keyword.Bluemix_
 The key benefits of the PrimaryIO service include:
 
 1. Rapid, predictable relocation of VMware VMs to {{site.data.keyword.Bluemix_notm}} as either a primary site, DR site or even a tertiary DR site.
-2. Easy-to-consume ordering via a {{site.data.keyword.Bluemix_notm}} catalog tile.
+2. Easy-to-consume ordering via a catalog tile [Primaryio Catalog](https://cloud.ibm.com/catalog/services/protectio-draas-managed-service){: external}.
 3. Engagements are initiated with an assessment and discovery phase, enabling an optimization of cloud-based infrastructure, thereby reducing cost and using the most efficient cloud-available IaaS, such as Intel 4th Gen Xeon (“Sapphire Rapids”) server configurations.
 4. As an optional capability, VM conversion at scale through automation, is available to replatform to IBM Cloud-native VSIs.
 5. Due to PrimaryIO's proprietary Block Stream Protocol and the Continuous Data Protection of changed blocks, on-premises changes are synced with the cloud-based VMs, resulting in seamless migrations.
