@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2025
-lastupdated: "2025-04-28"
+lastupdated: "2025-04-29"
 
 keywords:
 
@@ -44,10 +44,10 @@ VMware HCX on {{site.data.keyword.Bluemix_notm}} is a robust solution for seamle
 
 For more information, see [VMware HCX](https://www.vmware.com/products/cloud-infrastructure/hcx){: external} and [VCF CORE TECH](https://vcfcore.tech){: external}, a blog with extensive HCX information.
 
-### Understanding {{site.data.keyword.Bluemix_notm}} VMware
+### Understanding {{site.data.keyword.Bluemix_notm}} VMware Solutions
 {: #hcx-ibmcloud-overview}
 
-{{site.data.keyword.Bluemix_notm}} for VMware Solutions is a cloud-based offering that allows organizations to extend or migrate their existing VMware-based virtualized data centers to the {{site.data.keyword.Bluemix_notm}}. The solution offers different deployment options, including self-managed and managed models, and can be used for both virtualized and cloud native applications. Key features and benefits include the following:
+{{site.data.keyword.Bluemix_notm}} VMware Solutions is a cloud-based offering that allows organizations to extend or migrate their existing VMware-based virtualized data centers to the {{site.data.keyword.Bluemix_notm}}. The solution offers different deployment options, including self-managed and managed models, and can be used for both virtualized and cloud native applications. Key features and benefits include the following:
 
 * Extending existing datacenters: The solution facilitates extending on-premises VMware environments to the cloud, allowing for flexible capacity management and resource allocation.
 * Migration to the cloud: It supports the migration of existing VMware workloads to the cloud, enabling businesses to modernize their infrastructure and use cloud services.
@@ -64,7 +64,7 @@ For more information, see [VMware HCX](https://www.vmware.com/products/cloud-inf
 
 For more information, see [HCX overview on {{site.data.keyword.Bluemix_notm}}](/docs/vmwaresolutions?topic=vmwaresolutions-hcx_considerations).
 
-### Key features and benefits
+### Key features and benefits of VMware HCX
 {: #hcx-ibmcloud-benefits}
 
 Review the key features and benefits of VMware HCX:
@@ -95,7 +95,7 @@ For more information on deploying, review the following links:
 * [HCX Architecture-VCF on VPC](/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-hcx-con)
 * [HCX site peering and service mesh in {{site.data.keyword.Bluemix_notm}}](/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-hcx-xconnectivity)
 
-#### Migration methods
+#### Migration methods with VMware HCX
 {: #hcx-prereq-migrationmethods}
 
 VMware HCX provides multiple migration techniques to accommodate different workload requirements, availability needs and operational constraints:
@@ -145,7 +145,7 @@ Migrating VMware workloads to the {{site.data.keyword.Bluemix_notm}} is a strate
 
 With Veeam’s advanced replication and continuous data protection technologies, organizations can move mission-critical applications such as Oracle and SAP HANA with zero impact on performance. Whether transferring entire virtual machines (VMs), critical application data, or hybrid workloads, Veeam can ensure high availability and reliability across on-premises, hybrid and public cloud environments.
 
-### Key benefits
+### Key benefits of Veeam
 {: #veeam-overview-benefits}
 
 Using Veeam to migrate workloads to {{site.data.keyword.Bluemix_notm}} VMware Solutions has the following benefits:
@@ -170,15 +170,15 @@ The following table depicts the key differences between the features of Veeam ba
 | Best fit for                   | Standard backups, restores, DR    | Mission-critical apps needing low RPO |
 {: caption="Veeam Backup Proxy and CDP Proxy comparison" caption-side="bottom"}
 
-### Deployment of Veeam in {{site.data.keyword.Bluemix_notm}} classic environment
-{: #veeam-ibmcloudclassic}
-
-#### Architecture of Veeam on {{site.data.keyword.Bluemix_notm}}
-{: #veeam-ibmcloudclassic-veeamarchitecture}
+### Deployment of Veeam on premises
+{: #veeam-on-premises-deployment}
 
 Typically in a migration scenario, the Veeam Backup & Replication (VBR) server is already deployed within the client's on-premises infrastructure. This setup allows for centralized management of backup and replication tasks. The VBR server coordinates with Veeam proxies and repositories to handle data processing and storage. Proxies are responsible for data movement, optimizing the transfer between source and target, while repositories serve as storage locations for the backup data. This configuration ensures efficient data protection and recovery processes.
 
 If the VBR server is not currently deployed, then the VBR server can be deployed in {{site.data.keyword.Bluemix_notm}}, with the required Veeam components deployed on-premises.
+
+### Deployment of Veeam in {{site.data.keyword.Bluemix_notm}} classic environment
+{: #veeam-ibmcloudclassic}
 
 #### Architecture of Veeam on {{site.data.keyword.Bluemix_notm}} VMware Solutions (VCF for classic)
 {: #veeam-ibmcloudclassic-vcfveeamclassis}
@@ -235,7 +235,7 @@ Veeam on {{site.data.keyword.Bluemix_notm}} VMware Solutions (VCF for classic) h
     1. Veeam ONE, part of the Veeam Availability Suite service, provides visibility into Veeam-protected workloads.
     2. Veeam ONE provides monitoring, reporting, alerting, diagnostics with automated resolutions and infrastructure utilization and capacity planning.
 
-#### Migration considerations and requirements
+#### Migration considerations and requirements with Veeam on VCF for Classic
 {: #veeam-ibmcloudclassic-vcfveeammigrationrequirements}
 
 When planning a migration to {{site.data.keyword.Bluemix_notm}} classic using Veeam, consider the following:
@@ -248,11 +248,6 @@ When planning a migration to {{site.data.keyword.Bluemix_notm}} classic using Ve
 ### Deployment of Veeam in {{site.data.keyword.Bluemix_notm}} VPC environment (VCF for VPC)
 {: #veeam-vcfveeamVCF}
 
-#### Architecture of Veeam on the client side
-{: #veeam-vcfveeamVCF-archclient}
-
-In a VCF environment, the client-side architecture remains similar, with the Veeam backup and replication server managing backup and replication tasks. The VBR server interfaces with Veeam proxies and repositories to handle data operations, ensuring efficient management of backup and replication processes.
-
 #### Architecture of Veeam on {{site.data.keyword.Bluemix_notm}} VCF side
 {: #veeam-vcfveeamVCF-archcloud}
 
@@ -260,7 +255,7 @@ Within the {{site.data.keyword.Bluemix_notm}} VCF environment, Veeam components 
 
 ![Veeam architecture on {{site.data.keyword.Bluemix_notm}} VPC](diagrams/Veeam-vpc.svg)
 
-#### Migration considerations and requirements
+#### Migration considerations and requirements with Veeam on VCF for VPC
 {: #veeam-vcfveeamVCF-considerations}
 
 Key considerations for migrating to {{site.data.keyword.Bluemix_notm}} VCF using Veeam include the following:
@@ -301,7 +296,7 @@ Zerto is a disaster recovery and migration solution that provides continuous dat
 
 For more information, see [Zerto overview on {{site.data.keyword.Bluemix_notm}}](https://www.ibm.com/products/zerto){: external}.
 
-### Key benefits
+### Key benefits of Zerto
 {: #zerto-overview-benefits}
 
 The key features and benefits of Zerto include:
@@ -321,7 +316,7 @@ In the {{site.data.keyword.Bluemix_notm}} environment, the architecture involves
 
 A Virtual Replication Appliance (VRA) needs to be installed in each hypervisor host where VMs are to be moved to or from. The VRA manages the replication of data from the on-premises to the {{site.data.keyword.Bluemix_notm}} by adjusting the compression level according to CPU usage. For more information, see [the Zerto solution architecture](https://help.zerto.com/bundle/Admin.VC.HTML/page/The_Zerto_Solution_Architecture.htm){: external}.
 
-#### Migration considerations and requirements
+#### Migration considerations and requirements with Zerto
 {: #zerto-deploy-classic-considerations}
 
 Consider the following when migrating using Zerto:
@@ -333,17 +328,17 @@ Consider the following when migrating using Zerto:
 * RPO and RTO requirements: Define acceptable recovery point and recovery time objectives.
 * Testing and validation: Test fail-overs before production migration.
 
-### Deployment of Zerto for {{site.data.keyword.Bluemix_notm}} VMware Cloud Foundation for Classic
-{: #zerto-deploymentclassic}
-
-#### Architecture of Zerto on the on-premises
-{: #zerto-deploymentclassic-architectureclassiconprem}
+### Deployment of Zerto on-premises
+{: #zerto-deploymentclassic-architectureonprem}
 
 The on-premises site architecture includes the following:
 
 * Zerto Virtual Manager Appliance (ZVMA): A Linux-based virtual appliance featuring microservices for security and authentication, logging and management. The z/VM appliance runs on a secure Linux operating system, managing replication and orchestrating recovery operations.
 * Zerto Virtual Replication Appliances (VRAs): Installed, from the z/VM console, to each ESXi host to replicate data continuously from the source to the target VRA.
 * WAN connection: Secure VPN or Direct Link connection between on-premises and {{site.data.keyword.Bluemix_notm}}.
+
+### Deployment of Zerto for {{site.data.keyword.Bluemix_notm}} VMware Cloud Foundation for Classic
+{: #zerto-deploymentclassic}
 
 #### Architecture of Zerto on {{site.data.keyword.Bluemix_notm}} VCF for Classic
 {: #zerto-deploymentclassic-architectureclassicvcf}
@@ -352,24 +347,15 @@ On {{site.data.keyword.Bluemix_notm}} VCF on Classic - Automated, the architectu
 
 * Zerto Virtual Manager (z/VM): Installed on a Microsoft Windows 2019 Virtual Server Instance (VSI) on Classic, managing replication and orchestrating recovery operations. The installation of the z/VM is automated on {{site.data.keyword.Bluemix_notm}} and can be done by adding the Zerto service to the VCF instance.
 * Zerto Virtual Replication Appliances (VRAs): Installed on each ESXi host to replicate data continuously. They are deployed by {{site.data.keyword.Bluemix_notm}} the automation into only the default cluster.
-* One portable private IP address for the Zerto Virtual Manager.
-* One private portable subnet dedicated to the VRA deployment.
+* One portable private IP address for the Zerto Virtual Manager
+* One private portable subnet dedicated to the VRA deployment
 
 The following image shows the migration pattern architecture for VMware workloads on {{site.data.keyword.Bluemix_notm}} VCF on Classic - Automated.
 
-![Zerto migration architecture](diagrams/zerto_classic.svg){: caption="Zerto migration for VMware Workloads on {{site.data.keyword.Bluemix_notm}} Classic (VCF) architecture" caption-side="bottom"}
+![Zerto migration architecture](diagrams/zerto_classic_updated.svg){: caption="Zerto migration for VMware Workloads on {{site.data.keyword.Bluemix_notm}} Classic (VCF) architecture" caption-side="bottom"}
 
 ### Deployment of Zerto for {{site.data.keyword.Bluemix_notm}} VCF for VPC
 {: #zerto-deploymentvpc}
-
-#### Architecture of Zerto on-premises
-{: #zerto-deploymentvpc-architecturevpconprem}
-
-There are no differences for the on-premises architecture to migrate to the {{site.data.keyword.Bluemix_notm}} VCF on VPC or to an {{site.data.keyword.Bluemix_notm}} VCF on Classic offering. In fact, the architecture is the same and includes the following:
-
-* Zerto Virtual Manager Appliance (ZVMA): a Linux-based virtual appliance featuring microservices for security and authentication, logging and management. The z/VM Appliance runs on a secure Linux operating system, managing replication and orchestrating recovery operations.
-* Zerto Virtual Replication Appliances (VRAs): Installed, from the z/VM console, to each ESXi host to replicate data continuously from the source to the target VRA.
-* WAN Connection: Secure VPN or Direct Link connection between on-premises and {{site.data.keyword.Bluemix_notm}}.
 
 #### Architecture of Zerto on {{site.data.keyword.Bluemix_notm}} VCF for VPC
 {: #zerto-deploymentvpc-architecturevpcvcf}
@@ -377,7 +363,7 @@ There are no differences for the on-premises architecture to migrate to the {{si
 There is no automated installation for Zerto on a VCF for VPC instance, so all the components need to be manually installed:
 
 * Zerto Virtual Manager Appliance (ZVMA): Deployed into the management overlay networks, managing replication and orchestrating recovery operations. It needs access to the public network to access the call home on Zerto for registration.
-* Zerto VRAs: Installed on each ESXi hosts within the VCF environment.
+* Zerto VRAs: Installed on each ESXi hosts within the VCF environment
 * Transit Gateway: Deployed and connected to the VMware VPC to allow connectivity between the VPC and the on-premises network by Direct Link
 
 The following image is the migration pattern architecture for VMware workloads on {{site.data.keyword.Bluemix_notm}} VCF on VPC.
@@ -396,10 +382,10 @@ The following image is the migration pattern architecture for VMware workloads o
 
 VCDA is a VMware-native migration tool designed for cloud service providers and enterprises by using VMware Cloud Director on {{site.data.keyword.Bluemix_notm}}. It offers an integrated approach for disaster recovery and migration. Key benefits include the following:
 
-* Designed for multitenant environments, making it a great choice for Managed Service Providers (MSPs).
-* Automated replication and recovery ensure smooth migrations.
-* Offers self-service capabilities for enterprises to manage their workloads.
-* Recommended for businesses already using VMware Cloud Director.
+* Designed for multitenant environments, making it a great choice for Managed Service Providers (MSPs)
+* Automated replication and recovery ensure smooth migrations
+* Offers self-service capabilities for enterprises to manage their workloads
+* Recommended for businesses already using VMware Cloud Director
 
 ### Understanding {{site.data.keyword.Bluemix_notm}} VCDA
 {: #vcda-ibmcloud-overview}
@@ -446,7 +432,7 @@ If the source environment is on-premises or an instance of VCF on Classic or VCF
 
 For more information, [installing VCDA on-premises in VMware vCenter server](/docs/vmware-service?topic=vmware-service-vcda-migrating). The same information can be used for installing VCDA on an instance of VCF on Classic or VCF on VPC.
 
-### Prerequisites
+### Prerequisites of VCDA
 {: #vcda-prereqs}
 
 Successful migration requires preparation at both the on-premises and {{site.data.keyword.Bluemix_notm}} ends.
@@ -535,7 +521,7 @@ From a technology perspective, PrimaryIO provide an {{site.data.keyword.Bluemix_
 3. Migration of VMware VMs to {{site.data.keyword.Bluemix_notm}}-native Virtual Server Instances (VSIs), thereby reducing dependence on VMware.  
 4. Migration of VMware VMs into IBM’s managed VCFaaS platform.
 
-### Key benefits
+### Key benefits of PrimaryIO
 {: #primaryio-benefits}
 
 The key benefits of the PrimaryIO service include:
@@ -552,7 +538,7 @@ After migration, customers can choose from various platform features including P
 
 Following migration, if protecting VMs with ProtectIO, the DR recovery Point Objective is near-zero while recovery Time Objective can be selected, based on the customer application criticality requirements and desire to reduce costs.
 
-#### Protection of on-premises and migrated VMs
+#### Protection of on-premises and migrated VMs with PrimaryIO
 {: #primaryio-protection}
 
 The following table describes the features of the ProtectIO service:
@@ -569,7 +555,7 @@ The following table describes the features of the ProtectIO service:
 | VMware dependency              | Support for current versions of vSphere. VIB installed on production (source) ESXi host                                                                                                                                                                  |
 | Best For                       | All VMware VMs, whether turned off and unused, to business-critical application workloads. These are “future-proof” migrations that, over time, can target cloud-native VSIs or containerized applications on a per-VM basis.                         |
 
-### Migration considerations and requirements
+### Migration considerations and requirements for PrimaryIO
 {: #primaryio-ibmcloudclassic-migration-requirement}
 
 When planning a migration to IBM Cloud using PrimaryIO, consider the following:
@@ -579,7 +565,7 @@ When planning a migration to IBM Cloud using PrimaryIO, consider the following:
 * Compatibility: On premises VMs including edge security must be provisioned in a compatible IBM Cloud environment.
 * Minimal impact planning: Methodology coupled with resource allocation needs to be well planned in order to minimize impact to the applications, and by extension to the business dependent on those applications.
 
-### Migration to IBM Cloud classic environment
+### Migration to IBM Cloud classic environment with PrimaryIO
 {: #primaryio-ibmcloudclassic}
 
 #### Architecture of PrimaryIO platform on IBM Cloud
@@ -612,7 +598,7 @@ Key architectural features:
     * SQL database storing key metadata (not VM application data)
     * Red Hat OpenShift Kubernetes on IBM Cloud
 
-### Migration to IBM Cloud VPC environment
+### Migration to IBM Cloud VPC environment with PrimaryIO
 {: #primaryio-vpc}
 
 PrimaryIO has no significant architectural differences distinguishing IBM Cloud VPC from its IBM Cloud classic offering. In fact, the SaaS platform is the same, whether on cloud classic or VPC. Due to differences between classic and VPC, there are infrastructure and functional differences between migrated VMs in the two cloud environments. The single most significant difference between a classic and VPC migration is the bare metal configuration options, coupled with the time it takes to implement configuration changes in the target account. The SLAs are purely a function of the IBM Cloud infrastructure limitations.
