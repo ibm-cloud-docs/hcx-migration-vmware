@@ -11,7 +11,7 @@ toc:
     category: solution_docs
     content-type: white-paper
     navigation: hidden
-  # industry: industry-value # Replace
+    industry: General # Replace
     use-case: VirtualPrivateCloud
    # compliance: compliance-value # Replaces
     description: VMware Migration options to  IBM Cloud environment
