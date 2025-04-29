@@ -17,6 +17,9 @@ toc:
     description: VMware Migration options to  IBM Cloud environment
     label: VMware Migration options to IBM Cloud environment
     authors:
+      - name: Dwarkanath Rao and Bertrand-David Cleret
+        title: STSM & Technical Solutions Architect IBM Cloud Complex Solutions
+        url: https://www.linkedin.com/in/dwarakanath/ https://www.linkedin.com/in/bdcleret/
       - name: Neil Taylor
         title: IBM Cloud IaaS Solution Architecture
         url: https://www.linkedin.com/in/neilrtaylor/
