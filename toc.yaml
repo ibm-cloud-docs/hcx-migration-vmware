@@ -1,0 +1,36 @@
+#  Name your file `toc.yaml`
+#  Make sure you include all nav file coding requirements, as defined in https://test.cloud.ibm.com/docs-internal/writing?topic=writing-code-nav
+#  Anything with a fully qualified URL with `http` or `https` will get an external link icon added to the nav entry
+---
+toc:
+  properties:
+    subcollection: hcx-migration-vmware
+    href: /docs/hcx-migration-vmware
+    path: hcx-migration-vmware
+    audience: solution
+    category: solution_docs
+    content-type: white-paper
+    navigation: hidden
+    industry: General # Replace
+    use-case: VirtualPrivateCloud
+   # compliance: compliance-value # Replaces
+    description: VMware Migration options to  IBM Cloud environment
+    label: VMware Migration options to IBM Cloud environment
+    authors:
+      - name: Bertrand-David Cleret
+        title: Technical Solutions Architect IBM Cloud Complex Solutions
+        url: https://www.linkedin.com/in/bdcleret/
+      - name: Neil Taylor
+        title: IBM Cloud IaaS Solution Architecture
+        url: https://www.linkedin.com/in/neilrtaylor/
+      - name: Sreejith Gopalakrishnan
+        title: Technical Solutions Architect IBM Cloud Complex Solutions
+        url: https://www.linkedin.com/in/sreejith-g-krishnan-aa350050/
+      - name: Alfredo Cappariello
+        title: Solution Architect, IBM Cloud Complex Solutions
+        url: https://www.linkedin.com/in/acappariello/
+  entries:
+  - navgroup:
+      id: overview
+      topics:
+      - whitepaper.md

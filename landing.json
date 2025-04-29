@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "title": "VMware workloads migration options to IBM Cloud environment",
+  "introduction": "VMware workloads migration options to IBM Cloud environment",
+  "section_topics": {
+    "links": [
+      {
+        "title": "Migrate with HCX",
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-migration-overview#overview-hcx"
+      },
+      {
+        "title": "Migrate with Veeam",
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-migration-overview#overview-veeam"
+      },
+      {
+        "title": "Migrate with VCDA",
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-migration-overview#overview-vcda"
+      },
+      {
+        "title": "Migrate with PrimaryIO",
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-migration-overview#overview-primaryio"
+      },
+      {
+        "title": "Migrate with Zerto",
+        "href": "/docs/hcx-migration-vmware?topic=hcx-migration-vmware-migration-overview#overview-zerto"
+      }
+    ]
+  },
+  "section_highlights": [
+    {
+      "title": "VMware on IBM Cloud",
+      "description": "VMware on IBM Cloud",
+      "href": "https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-getting-started",
+      "type": "white-paper"
+    }
+  ],
+  "section_architectures": [
+    {
+      "title": "Deploying HCX on VMware Cloud Foundation consolidated architecture",
+      "href": "/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-hcx-con",
+      "deployable": false
+    },
+    {
+      "title": "Veeam on IBM Cloud",
+      "href": "/docs/vmwaresolutions?topic=vmwaresolutions-veeamvm_overview",
+      "deployable": false
+    },
+    {
+      "title": "Migrating workloads from an on-premises vCenter environment to VCF as a Service",
+      "href": "/docs/vmware-service?topic=vmware-service-vcda-migrating-onprem",
+      "deployable": false
+    },
+    {
+      "title": "Architecture pattern for Zerto replication connectivity in IBM Cloud",
+      "href": "/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-zerto-xconnectivity",
+      "deployable": false
+    }
+  ]
+}
