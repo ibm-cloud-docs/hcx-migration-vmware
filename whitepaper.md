@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2025
-lastupdated: "2025-04-29"
+lastupdated: "2025-04-30"
 
 keywords:
 
@@ -253,7 +253,7 @@ When planning a migration to {{site.data.keyword.Bluemix_notm}} classic using Ve
 
 Within the {{site.data.keyword.Bluemix_notm}} VCF environment, Veeam components are deployed to integrate seamlessly with the client's VBR server. This includes setting up Veeam proxies within the management domain of the VCF architecture. These proxies handle data processing tasks, facilitating efficient backup and replication operations. Backup repositories can also be established within the {{site.data.keyword.Bluemix_notm}} VCF environment to store backup data securely. This setup ensures that data protection operations are optimized and aligned with the VCF infrastructure.
 
-![Veeam architecture on {{site.data.keyword.Bluemix_notm}} VPC](diagrams/Veeam-vpc.svg)
+![Veeam architecture on {{site.data.keyword.Bluemix_notm}} VPC](diagrams/Veeam-vpc.svg){: caption="Veeam architecture on {{site.data.keyword.Bluemix_notm}} VCF environment" caption-side="bottom"}
 
 #### Migration considerations and requirements with Veeam on VCF for VPC
 {: #veeam-vcfveeamVCF-considerations}
