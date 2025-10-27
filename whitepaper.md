@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-10-27"
 
 keywords:
 
@@ -13,6 +13,9 @@ subcollection: hcx-migration-vmware
 
 # Migrate VMware workloads to {{site.data.keyword.Bluemix_notm}} VMware environment
 {: #migration-overview}
+
+**End of Marketing**: As of 31 October 2025, new deployments of VMware Solutions offerings are no longer available for new customers. Existing customers can still use and expand their active VMware® workloads on {{site.data.keyword.cloud}}. For more information, see [End of Marketing for VMware on {{site.data.keyword.cloud_notm}}](/docs/vmwaresolutions?topic=vmwaresolutions-eos-vms).
+{: note}
 
 The VMware workload migration options for {{site.data.keyword.Bluemix_notm}} white paper introduces and provides options for customers who are considering migrating VMware workloads to an {{site.data.keyword.Bluemix_notm}} VMware environment.
 
@@ -56,8 +59,8 @@ For more information, see [VMware HCX](https://www.vmware.com/products/cloud-inf
 * Flexibility and scalability: The solution offers flexibility in deployment options and allows for scaling resources up or down as needed, based on workload demands.
 * Security and compliance: The solution provides a secure and compliant platform for running VMware workloads, with options for enhanced security features.
 * Deployment models:
-  * Self-managed: Provides single-tenant, bare-metal infrastructure with full control over the hypervisor and vCenter server, ideal for organizations needing high levels of isolation and control.
-  * Managed: Uses VMware Cloud Director for a managed, cost-effective solution, ideal for cost-conscious organizations or those needing quick migration of VMs to the cloud.
+   * Self-managed: Provides single-tenant, bare-metal infrastructure with full control over the hypervisor and vCenter server, ideal for organizations needing high levels of isolation and control.
+   * Managed: Uses VMware Cloud Director for a managed, cost-effective solution, ideal for cost-conscious organizations or those needing quick migration of VMs to the cloud.
 * Management and control: With the self-managed model, customers have access to the native VMware stack to manage resources and workloads, similar to their on-premises environments. In the managed model, IBm manages up to and including the hypervizor so that customers can focus on the workloads
 
 {{site.data.keyword.Bluemix_notm}} for VMware Solutions provides a comprehensive platform for extending and migrating VMware workloads to the cloud, offering a flexible and secure environment for running various types of applications.
@@ -100,21 +103,21 @@ For more information on deploying, review the following links:
 
 VMware HCX provides multiple migration techniques to accommodate different workload requirements, availability needs and operational constraints:
 
-* HCX vMotion: Enables live migration with zero downtime, best suited for critical workloads requiring continuous availability.  
-* Replication Assisted vMotion (RAV): Uses replication technology to achieve near-zero downtime, making it ideal for enterprise applications.  
-* Bulk migration: Designed for large-scale workload moves where scheduled downtime is acceptable.  
-* Cold migration: Requires complete VM downtime, primarily used for nonproduction workloads or maintenance scenarios.  
-* OS Assisted migration: Allows the migration of non-vSphere workloads, extending HCX’s capabilities beyond traditional VMware environments.  
+* HCX vMotion: Enables live migration with zero downtime, best suited for critical workloads requiring continuous availability.
+* Replication Assisted vMotion (RAV): Uses replication technology to achieve near-zero downtime, making it ideal for enterprise applications.
+* Bulk migration: Designed for large-scale workload moves where scheduled downtime is acceptable.
+* Cold migration: Requires complete VM downtime, primarily used for nonproduction workloads or maintenance scenarios.
+* OS Assisted migration: Allows the migration of non-vSphere workloads, extending HCX’s capabilities beyond traditional VMware environments.
 
-#### Network extension and IP management  
+#### Network extension and IP management
 {: #hcx-prereq-network-extension}
 
 Extending your network to {{site.data.keyword.Bluemix_notm}} during migration is critical to avoid reconfiguration of applications and minimize disruption:
 
-* Network extension service: Preserves existing IP and MAC addresses, can ensure seamless migration without requiring network changes.  
-* Re-IP workflows: Applied when IP conflicts arise, requiring address reassignment.  
+* Network extension service: Preserves existing IP and MAC addresses, can ensure seamless migration without requiring network changes.
+* Re-IP workflows: Applied when IP conflicts arise, requiring address reassignment.
 
-For most use cases, the network extension service is used as it simplifies migration and reduces reconfiguration efforts.  
+For most use cases, the network extension service is used as it simplifies migration and reduces reconfiguration efforts.
 
 ### HCX Conclusion
 {: #hcx-conclusion}
@@ -271,6 +274,7 @@ Key considerations for migrating to {{site.data.keyword.Bluemix_notm}} VCF using
 Migrating VMware workloads to {{site.data.keyword.Bluemix_notm}} by using Veeam provides a robust and flexible solution for enterprises seeking to enhance their data protection and disaster recovery capabilities. By using Veeam's seamless integration with {{site.data.keyword.Bluemix_notm}}'s VMware offerings, businesses can achieve high availability, secure backup and efficient recovery of critical applications and data. Careful planning and consideration of network configurations, resource allocation and compatibility are essential to ensure a smooth and successful migration process.
 
 ### References for Veeam
+{: #veeam-references}
 
 * [Veeam on {{site.data.keyword.Bluemix_notm}}](/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-con)
 * [Veeam Replication Connectivity on VMware Cloud Foundation](/docs/vmwaresolutions?topic=vmwaresolutions-arch-pattern-vcf-veeam-xconnectivity)
@@ -322,8 +326,8 @@ A Virtual Replication Appliance (VRA) needs to be installed in each hypervisor h
 Consider the following when migrating using Zerto:
 
 * Network connectivity: Establish {{site.data.keyword.Bluemix_notm}} Direct Link or VPN for seamless connectivity. On {{site.data.keyword.Bluemix_notm}} classic, the Direct Link or the VPN, can terminate to a Virtual Router Appliance, for example Juniper vSRX, to be deployed as edge cluster in the VMWare environment. In VPC, the Direct Link terminates into an instance of the transit gateway and a virtual firewall appliance on VPC (for example the Fortinet's FortiGate Next-Generation Firewall) can be deployed into the VPC to control the network traffic.
-  * The Zerto Virtual Manager needs to connect the call home feature for Zerto, on public internet. This requires configuring it by using a proxy or NAT connection to the public network.
-  * The Zerto replication doesn't support Network Address Translation (NAT) traversal. Establishing connectivity between the {{site.data.keyword.Bluemix_notm}} Zerto instance and your own data center might require customization of routes on the Zerto Virtual Manager appliances or Zerto Virtual Replication Appliances (VRAs) on either side.
+   * The Zerto Virtual Manager needs to connect the call home feature for Zerto, on public internet. This requires configuring it by using a proxy or NAT connection to the public network.
+   * The Zerto replication doesn't support Network Address Translation (NAT) traversal. Establishing connectivity between the {{site.data.keyword.Bluemix_notm}} Zerto instance and your own data center might require customization of routes on the Zerto Virtual Manager appliances or Zerto Virtual Replication Appliances (VRAs) on either side.
 * Storage and compute resources: Ensure your {{site.data.keyword.Bluemix_notm}} VCF instance has enough capacity to handle incoming workloads. The VRA appliances alone require 100 GB of disk.
 * RPO and RTO requirements: Define acceptable recovery point and recovery time objectives.
 * Testing and validation: Test fail-overs before production migration.
@@ -413,7 +417,7 @@ IBM provides public instance endpoints with VCDA. Endpoints are used to access t
 
 VCFaaS multitenant instances are deployed to all supported regions by IBM. You create your VDCs on the IBM managed infrastructure. VCFaaS single-tenant instances are provisioned by your organization. For both service models, IBM performs the configuration, hosting, operations, and lifecycle management of the VMware by Broadcom software so you can quickly deploy your VMware-based cloud computing environments.
 
-For more details, see [VCF as a Service overview](/docs/vmwaresolutions?topic=vmwaresolutions-vmware-aas-overview). To understand the VMware Cloud Director and VMware Cloud Director availability versions for VCFaaS, see [VCF as a Service BOM](https://cloud.ibm.com/docs/vmware-service?topic=vmware-service-vmaas-bom).
+For more details, see [VCF as a Service overview](/docs/vmwaresolutions?topic=vmwaresolutions-vmware-aas-overview). To understand the VMware Cloud Director and VMware Cloud Director availability versions for VCFaaS, see [VCF as a Service BOM](/docs/vmware-service?topic=vmware-service-vmaas-bom).
 
 ### Key VCDA components
 {: #vcda-key}
@@ -441,7 +445,7 @@ On-premises prerequisites:
 
 * VCDA deployment: Install and configure the VCDA on-premises to Cloud Director Replication Appliance. This requires downloading the OVF template from VMware and deploying it via vCenter.
 * Network connectivity: Ensure outbound access to {{site.data.keyword.Bluemix_notm}} for replication traffic. An Internet connection or a Direct Link to {{site.data.keyword.Bluemix_notm}} is necessary. Direct Link is preferred for low latency and faster migrations.
-    For more information, see [VMware Cloud Director Availability 4.7](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/on-prem-availability-install-config-and-upgrade-guide-4-7/installing-and-configuring-vcav-on-premises/on-premises-vcav-deployment-requirements.html){: external}
+    For more information, see [VMware Cloud Director Availability 4.7](https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/cloud-director-availability/4-7.html){: external}
 * Optional: For layer 2 network extension, to establish the client L2 VPN session in a site not managed by NSX, download and deploy a stand-alone VMware NSX edge appliance, called an NSX autonomous edge.
 
 {{site.data.keyword.Bluemix_notm}} prerequisites:
@@ -463,7 +467,7 @@ The migration architecture relies on a set of interconnected modules that bridge
 
 * The on-premises VCDA replication manager communicates with vCenter to identify VMs and initiate replication. It then coordinates with the Tunnel Appliance to send encrypted data over the Internet or a private connection to the {{site.data.keyword.Bluemix_notm}} Tunnel Appliance.
 * In {{site.data.keyword.Bluemix_notm}}, the VCDA Cloud Appliances receive the data and integrates it into the target VDC through vCloud Director. vCloud Director assigns compute, storage and networking resources from the underlying VCFaaS stack.
-* NSX optionally enables Layer 2 network extension through the server L2 VPN session on the Edge Gateway. For layer 2 network extensions, see [on-premises stretching layer 2 networks to the Cloud Director site](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/availability-admin-guide-4-7/vcav-administration-on-premises/stretching-l2-on-premises-networks.html){: external}
+* NSX optionally enables Layer 2 network extension through the server L2 VPN session on the Edge Gateway. For layer 2 network extensions, see [on-premises stretching layer 2 networks to the Cloud Director site](https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/cloud-director-availability/4-7/availability-admin-guide-4-7/vcav-administration-on-premises/stretching-l2-on-premises-networks.html){: external}
 
 On-premises components:
 
@@ -478,7 +482,7 @@ IBM Cloud VCFaaS (Single or Multi-tenent):
 * VMware Cloud Foundation stack: Includes vSphere, vSAN and NSX-T, hosted on {{site.data.keyword.Bluemix_notm}} infrastructure, serving as the runtime environment for migrated workloads.
 * Cloud networking : Ensures secure, high-speed connectivity between on-premises and cloud networks. VCDA endpoints are available on the Internet or the {{site.data.keyword.Bluemix_notm}} private network that can be reached from on-premises locations via Direct Link or VPN.
 
-For more VCDA architecture details, see [deployment architecture for the on-premises to Cloud Director Replication Appliance](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/on-prem-availability-install-config-and-upgrade-guide-4-7/installing-and-configuring-vcav-on-premises/deployment-architecture-on-premises.html){: external}
+For more VCDA architecture details, see [deployment architecture for the on-premises to Cloud Director Replication Appliance](https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/cloud-director-availability/4-7/on-prem-availability-install-config-and-upgrade-guide-4-7/installing-and-configuring-vcav-on-premises/deployment-architecture-on-premises.html){: external}
 
 For additional migration details, see [migrating workloads from an on-premises vCenter environment to VCF as a Service](/docs/vmware-service?topic=vmware-service-vcda-migrating-onprem).
 
@@ -491,7 +495,7 @@ Migrating VMware workloads to {{site.data.keyword.Bluemix_notm}} VCFaaS using VC
 {: #vcda-reference}
 
 * [Getting started with VCF as a Service](/docs/vmware-service?topic=vmware-service-getting-started)
-* [What is VMware Cloud Director availability](https://techdocs.broadcom.com/us/en/vmware-cis/cloud-director/availability/4-7/what-is-vcda.html){: external}
+* [What is VMware Cloud Director availability](https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/cloud-director-availability/4-7/what-is-vcda.html){: external}
 
 ## PrimaryIO migration option
 {: #overview-primaryio}
@@ -512,13 +516,13 @@ As a key step in the cloud journey, migration can deliver strategic benefits as 
 
 Cloud scalability and elasticity offer customers the ability to scale up and down according to their needs. Migrations are ideally tailored to the specific requirements, whether a swift “big bang” move, or a methodical, timed series of workload waves.
 
-Irrespective of approach, migrations need to be well planned and well executed to minimize time, risk and cost. Due to their unique tools, experience and technical depth, PrimaryIO is the leading provider of migrations into {{site.data.keyword.Bluemix_notm}}. Migrations have become a key offering from PrimaryIO, consumable through a tile in the {{site.data.keyword.Bluemix_notm}} catalog.  
+Irrespective of approach, migrations need to be well planned and well executed to minimize time, risk and cost. Due to their unique tools, experience and technical depth, PrimaryIO is the leading provider of migrations into {{site.data.keyword.Bluemix_notm}}. Migrations have become a key offering from PrimaryIO, consumable through a tile in the {{site.data.keyword.Bluemix_notm}} catalog.
 
 From a technology perspective, PrimaryIO provide an {{site.data.keyword.Bluemix_notm}}-native SaaS platform that supports migration into {{site.data.keyword.Bluemix_notm}}. Use cases supported include, but are not limited to:
 
 1. “Lift and shift” migration of VMware workloads into {{site.data.keyword.Bluemix_notm}} VCF.
 2. Migration of lower-tier applications, like Dev/Test, while simultaneously using {{site.data.keyword.Bluemix_notm}} as a DR site for on-prem production VMware VMs.
-3. Migration of VMware VMs to {{site.data.keyword.Bluemix_notm}}-native Virtual Server Instances (VSIs), thereby reducing dependence on VMware.  
+3. Migration of VMware VMs to {{site.data.keyword.Bluemix_notm}}-native Virtual Server Instances (VSIs), thereby reducing dependence on VMware.
 4. Migration of VMware VMs into IBM’s managed VCFaaS platform.
 
 ### Key benefits of PrimaryIO
@@ -554,6 +558,7 @@ The following table describes the features of the ProtectIO service:
 | Transport modes                | Block Stream Protocol, Continuous Data Protection                                                                                                                                                                                                        |
 | VMware dependency              | Support for current versions of vSphere. VIB installed on production (source) ESXi host                                                                                                                                                                  |
 | Best For                       | All VMware VMs, whether turned off and unused, to business-critical application workloads. These are “future-proof” migrations that, over time, can target cloud-native VSIs or containerized applications on a per-VM basis.                         |
+{: caption="Features of ProtectIO" caption-side="bottom"}
 
 ### Migration considerations and requirements for PrimaryIO
 {: #primaryio-ibmcloudclassic-migration-requirement}
@@ -653,6 +658,7 @@ The ideal migration strategy depends on your organization's priorities, whether 
 | Zerto                | Disaster recovery, near-zero downtime | Continuous replication, failover and failback |
 | VCDA                 | Multitenant cloud environments       | VMware-native integration, self-service     |
 | PrimaryIO            | Cost-optimized migration              | Selective data transfer, cloud efficiency   |
+{: caption="Migration option comparison" caption-side="bottom"}
 
 Migrating VMware workloads to IBM Cloud requires strategic planning and the right tools to ensure seamless execution. Whether you prioritize live migration with VMware HCX, disaster recovery with Zerto, back up-first migration with Veeam, native VMware integration with VCDA or cost-efficient migration with PrimaryIO, IBM Cloud provides a flexible and scalable platform to support your business needs.
 
