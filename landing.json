@@ -30,7 +30,7 @@
     {
       "title": "VMware on IBM Cloud",
       "description": "VMware on IBM Cloud",
-      "href": "https://cloud.ibm.com/docs/vmwaresolutions?topic=vmwaresolutions-getting-started",
+      "href": "/docs/vmwaresolutions?topic=vmwaresolutions-getting-started",
       "type": "white-paper"
     }
   ],
